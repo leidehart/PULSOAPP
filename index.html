@@ -3,158 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0b0d10" />
-  <title>PULSO 40+ | Treinos clicáveis</title>
+  <meta name="theme-color" content="#100b14" />
+  <title>PULSO 40+ | Terapia, linguagem e inglês</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="icon-180.png" />
   <style>
-:root {
-  --bg: #0b0d10;
-  --surface: rgba(18, 22, 28, 0.94);
-  --surface-soft: #171d24;
-  --text: #f5f1ea;
-  --muted: #a8b0ba;
-  --subtle: #747d89;
-  --primary: #c97a57;
-  --primary-strong: #e0a17e;
-  --accent: #e4bf77;
-  --success: #8fc6a1;
-  --danger: #d66b73;
-  --line: rgba(245, 241, 234, 0.12);
-  --line-strong: rgba(245, 241, 234, 0.22);
-  --shadow: 0 22px 60px rgba(0, 0, 0, 0.34);
-  --radius-lg: 24px;
-  --radius-md: 18px;
+:root{
+  --bg:#100b14; --surface:rgba(24,18,30,.94); --surface-2:#211829; --surface-3:#2c2037;
+  --text:#fff7ef; --muted:#cbbecf; --subtle:#9b8ea3; --line:rgba(255,247,239,.14); --line2:rgba(255,247,239,.24);
+  --rose:#d9888b; --rose2:#f0b4aa; --gold:#f0c47a; --plum:#a679c8; --green:#9dd2aa; --red:#e27a84;
+  --shadow:0 24px 72px rgba(0,0,0,.40); --r-lg:26px; --r-md:18px;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--text);
-  background:
-    radial-gradient(circle at 12% 0%, rgba(201, 122, 87, 0.18), transparent 32%),
-    radial-gradient(circle at 88% 8%, rgba(228, 191, 119, 0.10), transparent 30%),
-    linear-gradient(135deg, #080a0d 0%, #0b0d10 46%, #11151b 100%);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .08;
-  background-image: linear-gradient(rgba(245,241,234,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(245,241,234,.08) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
-}
-button { font: inherit; cursor: pointer; }
-.app-shell { position: relative; width: min(100%, 540px); margin: 0 auto; padding: 0 16px 110px; }
-.hero { padding: max(30px, env(safe-area-inset-top)) 4px 18px; display: grid; gap: 14px; }
-.hero-top { display: flex; gap: 14px; align-items: flex-start; justify-content: space-between; }
-.eyebrow { text-transform: uppercase; letter-spacing: .18em; color: var(--accent); font-size: .72rem; font-weight: 850; margin: 0 0 10px; }
-.eyebrow.small { font-size: .64rem; margin-bottom: 6px; }
-h1, h2, h3, p { margin-top: 0; }
-h1 { font-size: clamp(2.45rem, 11vw, 4.8rem); line-height: .86; margin: 0 0 14px; letter-spacing: -0.08em; text-transform: uppercase; font-weight: 950; }
-h2 { font-size: 1.18rem; margin-bottom: 0; letter-spacing: -0.03em; font-weight: 880; }
-h3 { font-size: 1.06rem; margin-bottom: 8px; letter-spacing: -0.02em; font-weight: 830; }
-.subtitle { color: var(--muted); line-height: 1.5; margin-bottom: 0; font-weight: 540; }
-.card, .mini-card {
-  position: relative;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 18px;
-  box-shadow: var(--shadow);
-  margin-bottom: 16px;
-  overflow: hidden;
-  backdrop-filter: blur(14px);
-}
-.card::before, .mini-card::before { content: ""; position: absolute; left: 18px; right: 18px; top: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(245,241,234,.40), transparent); }
-.section-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
-.pill, .progress-pill { display:inline-flex; align-items:center; gap:6px; background: rgba(228, 191, 119, 0.10); color: var(--accent); border: 1px solid rgba(228, 191, 119, 0.22); border-radius: 999px; padding: 8px 10px; font-weight: 830; font-size: .76rem; white-space: nowrap; }
-.progress-pill { background: rgba(143, 198, 161, 0.10); color: var(--success); border-color: rgba(143,198,161,.24); }
-.ghost, .primary, .secondary { border-radius: 16px; min-height: 48px; padding: 0 16px; font-weight: 830; letter-spacing: .01em; }
-.ghost { background: rgba(245,241,234,.055); color: var(--text); border: 1px solid var(--line); }
-.primary { background: var(--primary); color: #11151b; border: 0; width: 100%; box-shadow: 0 14px 30px rgba(201,122,87,.16); }
-.secondary { background: rgba(201,122,87,.10); color: var(--primary-strong); border: 1px solid rgba(201,122,87,.24); }
-.primary:active, .secondary:active, .ghost:active, .choice:active, .tab:active { transform: translateY(1px); }
-.hidden { display: none !important; }
-.top-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; position: sticky; top: 0; z-index: 5; padding: 8px 0 10px; background: linear-gradient(180deg, #0b0d10 0%, rgba(11,13,16,.92) 74%, transparent 100%); }
-.tab { min-height: 44px; border: 1px solid var(--line); border-radius: 15px; color: var(--muted); background: rgba(245,241,234,.045); font-weight: 820; font-size: .74rem; }
-.tab.active { background: rgba(201,122,87,.16); border-color: rgba(201,122,87,.58); color: var(--text); }
-.today-line { color: var(--subtle); font-size: .9rem; margin-bottom: 5px; font-weight: 650; }
-.dashboard-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.metric-card { background: rgba(245,241,234,.042); border: 1px solid var(--line); border-radius: 16px; padding: 12px 8px; text-align: center; }
-.metric-card span { display: block; font-size: 1.35rem; font-weight: 880; color: var(--accent); line-height: 1; margin-bottom: 6px; }
-.metric-card p { margin: 0; color: var(--muted); font-size: .69rem; font-weight: 720; line-height: 1.15; }
-.choice-grid { display: grid; gap: 10px; }
-.choice-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
-.choice-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-.choice { width: 100%; min-height: 54px; border: 1px solid var(--line); background: rgba(245,241,234,.048); color: var(--text); border-radius: 17px; padding: 12px; text-align: left; font-weight: 760; line-height: 1.25; transition: .16s ease; }
-.choice.center { text-align:center; display:flex; align-items:center; justify-content:center; }
-.choice:hover { border-color: rgba(201,122,87,.50); background: rgba(245,241,234,.070); transform: translateY(-1px); }
-.choice.selected { background: rgba(201,122,87,.16); border-color: rgba(201,122,87,.74); box-shadow: 0 0 0 4px rgba(201,122,87,.10); }
-.choice.correct { border-color: rgba(143,198,161,.65); background: rgba(143,198,161,.15); }
-.choice.wrong { border-color: rgba(214,107,115,.65); background: rgba(214,107,115,.12); }
-.block-title { color: var(--muted); font-weight: 790; font-size: .82rem; margin: 16px 0 10px; }
-.category-card { background: linear-gradient(135deg, rgba(245,241,234,.055), rgba(201,122,87,.07)); border: 1px solid var(--line); border-radius: 20px; padding: 16px; margin-bottom: 12px; }
-.category-top { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; }
-.icon-badge { width: 42px; height: 42px; border-radius: 15px; display: grid; place-items: center; background: rgba(228,191,119,.10); border: 1px solid rgba(228,191,119,.24); font-size: 1.3rem; flex: 0 0 auto; }
-.category-card p, .helper, .result-box p, .exercise-goal, .support-note { color: var(--muted); line-height: 1.45; }
-.category-card p { margin-bottom: 12px; }
-.card-actions { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
-.note-badge { color: var(--success); font-weight: 850; font-size: .78rem; }
-.panel { display:none; }
-.panel.active { display:block; }
-.runner { position: fixed; inset: 0; background: rgba(5,7,9,.82); backdrop-filter: blur(12px); z-index: 30; padding: 14px; overflow:auto; }
-.runner-card { width: min(100%, 540px); margin: max(18px, env(safe-area-inset-top)) auto 30px; }
-.progress-bar { height: 10px; background: rgba(245,241,234,.070); border-radius: 999px; overflow: hidden; border: 1px solid var(--line); margin: 12px 0 16px; }
-.progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 999px; transition: width .22s ease; }
-.question-text { font-size: 1.15rem; line-height: 1.35; font-weight: 850; margin: 8px 0 16px; }
-.feedback { margin: 12px 0 0; border-radius: 16px; padding: 12px; font-weight: 760; line-height: 1.35; border: 1px solid var(--line); background: rgba(245,241,234,.045); color: var(--muted); }
-.feedback.good { background: rgba(143,198,161,.12); border-color: rgba(143,198,161,.28); color: var(--success); }
-.feedback.bad { background: rgba(214,107,115,.10); border-color: rgba(214,107,115,.25); color: #efb0b5; }
-.runner-controls { display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top: 14px; }
-.result-box { background: linear-gradient(135deg, rgba(143,198,161,.11), rgba(228,191,119,.08)); border: 1px solid rgba(143,198,161,.24); border-radius: 22px; padding: 16px; margin-top: 12px; }
-.grade { font-size: 3.2rem; line-height: 1; font-weight: 950; letter-spacing: -.08em; color: var(--accent); margin: 4px 0 8px; }
-.week-list { display: grid; gap: 10px; }
-.day-row { display: grid; grid-template-columns: 64px 1fr 52px; gap: 10px; align-items: center; color: var(--muted); font-weight: 760; font-size: .82rem; }
-.day-track { height: 13px; background: rgba(245,241,234,.060); border-radius: 999px; border: 1px solid var(--line); overflow: hidden; }
-.day-fill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--accent)); border-radius: 999px; min-width: 0; }
-.history-list { display:grid; gap:10px; }
-.history-item { border: 1px solid var(--line); border-radius: 18px; padding: 12px; background: rgba(245,241,234,.042); }
-.history-top { display:flex; justify-content:space-between; gap:8px; color:var(--accent); font-weight:850; margin-bottom:6px; }
-.history-item p { margin:0; color: var(--muted); line-height:1.36; }
-.empty-state { color: var(--muted); background: rgba(245,241,234,.045); border-radius: 16px; padding: 14px; margin: 0; }
-.install-row { display:grid; grid-template-columns: 1fr auto; gap:10px; align-items:center; }
-.sos-card { border-color: rgba(228,191,119,.20); background: rgba(228,191,119,.055); }
-.bottom-nav { position: fixed; left: 50%; bottom: 12px; transform: translateX(-50%); width: min(calc(100% - 24px), 510px); background: rgba(12,15,19,.90); border: 1px solid var(--line); box-shadow: var(--shadow); border-radius: 22px; display: grid; grid-template-columns: repeat(4, 1fr); padding: 8px; backdrop-filter: blur(16px); z-index: 10; }
-.bottom-nav button { text-align: center; color: var(--muted); background: transparent; border:0; font-weight: 790; padding: 10px 2px; border-radius: 15px; font-size: .70rem; }
-.bottom-nav button.active, .bottom-nav button:hover { background: rgba(201,122,87,.11); color: var(--text); }
-.toast { position: fixed; left: 50%; bottom: 94px; transform: translateX(-50%); background: #111018; color: #fff7ff; padding: 12px 16px; border-radius: 999px; font-weight: 850; box-shadow: 0 12px 30px rgba(0,0,0,.45); z-index: 50; max-width: calc(100% - 32px); text-align: center; }
-@media (max-width: 430px) {
-  .hero-top { flex-direction: column; }
-  .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
-  .choice-grid.cols-2, .choice-grid.cols-3 { grid-template-columns: 1fr; }
-  .card-actions, .runner-controls, .install-row { grid-template-columns: 1fr; }
-  .top-tabs .tab { font-size: .66rem; padding-inline:4px; }
-  .bottom-nav button { font-size: .62rem; }
-  .day-row { grid-template-columns: 54px 1fr 45px; }
-}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 8% -5%,rgba(217,136,139,.23),transparent 34%),radial-gradient(circle at 92% 0%,rgba(240,196,122,.15),transparent 30%),linear-gradient(135deg,#09070d 0%,#100b14 45%,#19111e 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility} body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,247,239,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,247,239,.06) 1px,transparent 1px);background-size:34px 34px;opacity:.10;mask-image:linear-gradient(to bottom,#000 0%,transparent 74%)}
+button,input,textarea{font:inherit} button{cursor:pointer}.shell{position:relative;width:min(100%,620px);margin:0 auto;padding:0 16px 116px}.hero{padding:max(30px,env(safe-area-inset-top)) 4px 12px}.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:900;font-size:.72rem;margin:0 0 9px}.eyebrow.small{font-size:.63rem;margin-bottom:6px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.8rem,11.4vw,5.2rem);line-height:.86;letter-spacing:-.085em;font-weight:980;margin:0 0 12px;text-transform:uppercase}h2{font-size:1.22rem;letter-spacing:-.035em;margin-bottom:0;font-weight:900}h3{font-size:1.04rem;letter-spacing:-.02em;margin-bottom:7px;font-weight:870}.subtitle{color:var(--muted);line-height:1.55;font-weight:540;margin:0}.top-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:sticky;top:0;z-index:8;padding:8px 0 12px;background:linear-gradient(180deg,#100b14 0%,rgba(16,11,20,.93) 76%,transparent 100%)}.tab{min-height:44px;border-radius:15px;border:1px solid var(--line);background:rgba(255,247,239,.045);color:var(--muted);font-weight:850;font-size:.70rem}.tab.active,.tab:hover{background:rgba(217,136,139,.17);border-color:rgba(217,136,139,.56);color:var(--text)}.card,.mini-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:18px;margin:0 0 16px;overflow:hidden;backdrop-filter:blur(14px)}.card:before,.mini-card:before{content:"";position:absolute;left:18px;right:18px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,247,239,.42),transparent)}.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:15px}.pill,.progress-pill{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:999px;font-size:.73rem;font-weight:900;white-space:nowrap}.pill{background:rgba(240,196,122,.10);border:1px solid rgba(240,196,122,.26);color:var(--gold)}.progress-pill{background:rgba(157,210,170,.10);border:1px solid rgba(157,210,170,.27);color:var(--green)}.ghost,.primary,.secondary,.danger{min-height:48px;border-radius:16px;padding:0 16px;font-weight:880;letter-spacing:.01em}.ghost{background:rgba(255,247,239,.055);color:var(--text);border:1px solid var(--line)}.primary{background:var(--rose);color:#150d12;border:0;box-shadow:0 14px 30px rgba(217,136,139,.18);width:100%}.secondary{background:rgba(240,196,122,.10);color:var(--gold);border:1px solid rgba(240,196,122,.25)}.danger{background:rgba(226,122,132,.10);color:#ffc9ce;border:1px solid rgba(226,122,132,.28)}.hidden{display:none!important}.panel{display:none}.panel.active{display:block}.dashboard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{background:rgba(255,247,239,.046);border:1px solid var(--line);border-radius:18px;padding:12px 8px;text-align:center}.metric span{display:block;font-size:1.36rem;font-weight:950;line-height:1;color:var(--gold);margin-bottom:6px}.metric p{margin:0;color:var(--muted);font-size:.68rem;line-height:1.18;font-weight:780}.helper,.support,.exercise-goal,.category p,.result-box p,.insight p{color:var(--muted);line-height:1.52}.support{font-size:.86rem}.block-title{color:var(--muted);font-weight:860;font-size:.82rem;margin:15px 0 9px}.choice-grid{display:grid;gap:10px}.cols-2{grid-template-columns:repeat(2,1fr)}.cols-3{grid-template-columns:repeat(3,1fr)}.cols-5{grid-template-columns:repeat(5,1fr)}.choice{width:100%;min-height:54px;text-align:left;border:1px solid var(--line);background:rgba(255,247,239,.048);color:var(--text);border-radius:18px;padding:12px;font-weight:780;line-height:1.28;transition:.16s ease}.choice.center{text-align:center;display:flex;align-items:center;justify-content:center}.choice small{display:block;color:var(--subtle);font-weight:740;margin-top:4px}.choice:hover{border-color:rgba(217,136,139,.52);background:rgba(255,247,239,.071);transform:translateY(-1px)}.choice.selected{background:rgba(217,136,139,.17);border-color:rgba(217,136,139,.72);box-shadow:0 0 0 4px rgba(217,136,139,.10)}.choice.correct{border-color:rgba(157,210,170,.68);background:rgba(157,210,170,.14)}.choice.wrong{border-color:rgba(226,122,132,.68);background:rgba(226,122,132,.13)}.category{background:linear-gradient(135deg,rgba(255,247,239,.055),rgba(217,136,139,.075));border:1px solid var(--line);border-radius:22px;padding:16px;margin-bottom:12px}.category-top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}.icon{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:rgba(240,196,122,.10);border:1px solid rgba(240,196,122,.25);font-size:1.35rem;flex:0 0 auto}.meta-row{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0 12px}.tag{font-size:.70rem;color:var(--gold);font-weight:860;border:1px solid rgba(240,196,122,.20);background:rgba(240,196,122,.07);border-radius:999px;padding:6px 8px}.card-actions{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.note{color:var(--green);font-weight:850;font-size:.78rem;margin:10px 0 0}.today-line{color:var(--subtle);font-size:.9rem;font-weight:750;margin-bottom:5px}.index-box,.insight{background:linear-gradient(135deg,rgba(157,210,170,.10),rgba(240,196,122,.08));border:1px solid rgba(157,210,170,.24);border-radius:22px;padding:16px;margin-top:12px}.index-main{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center}.pulse-number{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gold) var(--angle),rgba(255,247,239,.08) 0);border:1px solid rgba(240,196,122,.28);box-shadow:inset 0 0 0 12px rgba(16,11,20,.75);font-size:1.9rem;font-weight:980;color:var(--gold)}.week-list{display:grid;gap:10px}.day-row{display:grid;grid-template-columns:64px 1fr 54px;gap:10px;align-items:center;color:var(--muted);font-weight:790;font-size:.82rem}.day-track{height:13px;background:rgba(255,247,239,.06);border-radius:999px;border:1px solid var(--line);overflow:hidden}.day-fill{height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px}.history-list{display:grid;gap:10px}.history-item{border:1px solid var(--line);border-radius:18px;padding:12px;background:rgba(255,247,239,.044)}.history-top{display:flex;justify-content:space-between;gap:10px;color:var(--gold);font-weight:900;margin-bottom:6px}.history-item p{margin:0;color:var(--muted);line-height:1.42}.empty{color:var(--muted);background:rgba(255,247,239,.045);border-radius:16px;padding:14px;margin:0}.runner{position:fixed;inset:0;background:rgba(8,6,10,.83);backdrop-filter:blur(13px);z-index:40;padding:14px;overflow:auto}.runner-card{width:min(100%,620px);margin:max(18px,env(safe-area-inset-top)) auto 30px}.progress-bar{height:10px;background:rgba(255,247,239,.07);border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:12px 0 16px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px;transition:width .22s ease}.question-text{font-size:1.13rem;line-height:1.38;font-weight:900;margin:8px 0 16px}.feedback{margin:12px 0 0;border-radius:17px;padding:12px;border:1px solid var(--line);background:rgba(255,247,239,.045);color:var(--muted);font-weight:760;line-height:1.4}.feedback.good{background:rgba(157,210,170,.12);border-color:rgba(157,210,170,.28);color:var(--green)}.feedback.bad{background:rgba(226,122,132,.10);border-color:rgba(226,122,132,.25);color:#ffc3c9}.runner-controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.result-box{background:linear-gradient(135deg,rgba(157,210,170,.11),rgba(240,196,122,.08));border:1px solid rgba(157,210,170,.24);border-radius:22px;padding:16px;margin-top:12px}.grade{font-size:3.2rem;line-height:1;font-weight:980;letter-spacing:-.08em;color:var(--gold);margin:4px 0 8px}.text-lab{width:100%;min-height:130px;border-radius:18px;border:1px solid var(--line);background:rgba(255,247,239,.055);color:var(--text);padding:13px;resize:vertical;outline:none;line-height:1.5}.text-lab:focus{border-color:rgba(240,196,122,.50);box-shadow:0 0 0 4px rgba(240,196,122,.09)}.toast{position:fixed;left:50%;bottom:95px;transform:translateX(-50%);background:#17101d;color:#fff7ef;border:1px solid var(--line2);padding:12px 16px;border-radius:999px;font-weight:900;box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:80;text-align:center;max-width:calc(100% - 32px)}.bottom-nav{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);width:min(calc(100% - 24px),590px);background:rgba(17,12,21,.92);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(5,1fr);padding:8px;backdrop-filter:blur(16px);z-index:15}.bottom-nav button{background:transparent;border:0;color:var(--muted);font-weight:840;border-radius:16px;padding:10px 2px;font-size:.64rem}.bottom-nav button.active,.bottom-nav button:hover{background:rgba(217,136,139,.13);color:var(--text)}.install-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;color:var(--gold)}
+@media(max-width:520px){.hero-top{flex-direction:column}.top-tabs{grid-template-columns:repeat(5,minmax(76px,1fr));overflow:auto}.dashboard-grid{grid-template-columns:repeat(2,1fr)}.cols-2,.cols-3,.cols-5{grid-template-columns:1fr}.card-actions,.runner-controls,.install-row,.index-main{grid-template-columns:1fr}.pulse-number{margin:auto}.bottom-nav button{font-size:.58rem}.day-row{grid-template-columns:54px 1fr 45px}}
   </style>
 </head>
 <body>
-  <div id="app" class="app-shell">
+  <div class="shell" id="app">
     <header class="hero">
       <div class="hero-top">
         <div>
-          <p class="eyebrow">PULSO 40+</p>
+          <p class="eyebrow">PULSO 40+ • versão robusta</p>
           <h1>PULSO 40+</h1>
-          <p class="subtitle">Agora em formato de múltipla escolha: toque, responda, receba sua nota e acompanhe sua evolução diária em terapia, português e inglês.</p>
+          <p class="subtitle">Um laboratório pessoal de presença: terapia como prática diária, português sofisticado para pensamento e fala, e inglês intermediário para destravar voz, escrita e autoconfiança.</p>
         </div>
         <button id="installBtn" class="ghost hidden" type="button">Instalar</button>
       </div>
@@ -162,7 +36,8 @@ h3 { font-size: 1.06rem; margin-bottom: 8px; letter-spacing: -0.02em; font-weigh
         <button class="tab active" data-panel="hoje" type="button">Hoje</button>
         <button class="tab" data-panel="terapia" type="button">Terapia</button>
         <button class="tab" data-panel="portugues" type="button">Português</button>
-        <button class="tab" data-panel="ingles" type="button">Inglês</button>
+        <button class="tab" data-panel="ingles" type="button">English</button>
+        <button class="tab" data-panel="evolucao" type="button">Evolução</button>
       </nav>
     </header>
 
@@ -172,490 +47,332 @@ h3 { font-size: 1.06rem; margin-bottom: 8px; letter-spacing: -0.02em; font-weigh
           <div class="section-head">
             <div>
               <p class="today-line" id="todayText"></p>
-              <h2 id="hoje-title">Sua evolução diária</h2>
+              <h2 id="hoje-title">Seu painel de continuidade</h2>
             </div>
             <span class="pill" id="streakText">0 dias</span>
           </div>
           <div class="dashboard-grid" aria-label="Resumo do dia">
-            <article class="metric-card"><span id="todaySessions">0</span><p>exercícios hoje</p></article>
-            <article class="metric-card"><span id="todayGrade">0</span><p>nota média hoje</p></article>
-            <article class="metric-card"><span id="weekSessions">0</span><p>feitos em 7 dias</p></article>
-            <article class="metric-card"><span id="bestCategory">—</span><p>melhor área</p></article>
+            <article class="metric"><span id="todaySessions">0</span><p>práticas hoje</p></article>
+            <article class="metric"><span id="pulseScore">0</span><p>índice pulso</p></article>
+            <article class="metric"><span id="therapyTrend">—</span><p>terapia</p></article>
+            <article class="metric"><span id="weekSessions">0</span><p>práticas 14 dias</p></article>
           </div>
+          <div class="index-box" id="todayInsight"></div>
         </section>
 
         <section class="card" aria-labelledby="checkin-title">
           <div class="section-head">
             <div>
-              <p class="eyebrow small">Check-in clicável</p>
-              <h2 id="checkin-title">Como está seu pulso hoje?</h2>
+              <p class="eyebrow small">Termômetro terapêutico</p>
+              <h2 id="checkin-title">Como está seu sistema interno hoje?</h2>
             </div>
-            <span class="progress-pill">múltipla escolha</span>
+            <span class="progress-pill">salvo no aparelho</span>
+          </div>
+          <p class="helper">Responda sem tentar parecer melhor do que está. O app observa tendência, não julga dia isolado.</p>
+
+          <p class="block-title">Estado emocional geral</p>
+          <div class="choice-grid cols-5" data-choice-group="mood">
+            <button class="choice center" data-value="1" type="button">1<br><small>frágil</small></button>
+            <button class="choice center" data-value="2" type="button">2<br><small>oscilante</small></button>
+            <button class="choice center" data-value="3" type="button">3<br><small>estável</small></button>
+            <button class="choice center" data-value="4" type="button">4<br><small>presente</small></button>
+            <button class="choice center" data-value="5" type="button">5<br><small>inteira</small></button>
           </div>
 
-          <p class="block-title">Humor agora</p>
-          <div class="choice-grid cols-3" data-choice-group="mood">
-            <button class="choice center" data-value="baixo" type="button">Baixo</button>
-            <button class="choice center" data-value="tenso" type="button">Tenso</button>
-            <button class="choice center" data-value="estavel" type="button">Estável</button>
-            <button class="choice center" data-value="aceso" type="button">Aceso</button>
-            <button class="choice center" data-value="inteiro" type="button">Inteiro</button>
+          <p class="block-title">Carga de ansiedade ou pressão</p>
+          <div class="choice-grid cols-5" data-choice-group="anxiety">
+            <button class="choice center" data-value="1" type="button">1<br><small>baixa</small></button>
+            <button class="choice center" data-value="2" type="button">2</button>
+            <button class="choice center" data-value="3" type="button">3<br><small>média</small></button>
+            <button class="choice center" data-value="4" type="button">4</button>
+            <button class="choice center" data-value="5" type="button">5<br><small>alta</small></button>
           </div>
 
-          <p class="block-title">Energia de hoje</p>
-          <div class="choice-grid cols-3" data-choice-group="energy">
-            <button class="choice center" data-value="descanso" type="button">Preciso descansar</button>
-            <button class="choice center" data-value="equilibrio" type="button">Estou equilibrada</button>
-            <button class="choice center" data-value="acao" type="button">Tenho energia para agir</button>
+          <p class="block-title">Clareza mental</p>
+          <div class="choice-grid cols-5" data-choice-group="clarity">
+            <button class="choice center" data-value="1" type="button">1</button><button class="choice center" data-value="2" type="button">2</button><button class="choice center" data-value="3" type="button">3</button><button class="choice center" data-value="4" type="button">4</button><button class="choice center" data-value="5" type="button">5</button>
           </div>
 
-          <p class="block-title">Foco do dia</p>
+          <p class="block-title">Autoestima em ação</p>
+          <div class="choice-grid cols-5" data-choice-group="esteem">
+            <button class="choice center" data-value="1" type="button">1</button><button class="choice center" data-value="2" type="button">2</button><button class="choice center" data-value="3" type="button">3</button><button class="choice center" data-value="4" type="button">4</button><button class="choice center" data-value="5" type="button">5</button>
+          </div>
+
+          <p class="block-title">Voz interna predominante</p>
+          <div class="choice-grid cols-2" data-choice-group="innerVoice">
+            <button class="choice" data-value="critica" type="button">Crítica <small>exige, acusa, diminui</small></button>
+            <button class="choice" data-value="alerta" type="button">Alerta <small>preocupa, mas tenta proteger</small></button>
+            <button class="choice" data-value="adulta" type="button">Adulta <small>observa, decide, organiza</small></button>
+            <button class="choice" data-value="acolhedora" type="button">Acolhedora <small>cuida sem infantilizar</small></button>
+          </div>
+
+          <p class="block-title">Foco de hoje</p>
           <div class="choice-grid cols-2" data-choice-group="focus">
-            <button class="choice" data-value="autocuidado" type="button">Cuidar de mim sem culpa</button>
-            <button class="choice" data-value="limite" type="button">Respeitar meus limites</button>
-            <button class="choice" data-value="fala" type="button">Falar com mais presença</button>
-            <button class="choice" data-value="ingles" type="button">Treinar inglês sem medo</button>
+            <button class="choice" data-value="regulacao" type="button">Regular antes de reagir</button>
+            <button class="choice" data-value="limite" type="button">Sustentar limite sem culpa</button>
+            <button class="choice" data-value="linguagem" type="button">Falar com precisão e presença</button>
+            <button class="choice" data-value="ingles" type="button">Praticar inglês com coragem</button>
           </div>
-          <button id="saveCheckin" class="primary" type="button" style="margin-top:14px;">Salvar check-in</button>
+          <button id="saveCheckin" class="primary" type="button" style="margin-top:14px">Salvar termômetro de hoje</button>
         </section>
 
         <section class="card">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow small">Próximo toque</p>
-              <h2>Escolha uma área para começar</h2>
-            </div>
-          </div>
+          <div class="section-head"><div><p class="eyebrow small">Prática orientada</p><h2>Seu próximo movimento</h2></div></div>
           <div id="quickStartList"></div>
         </section>
 
-        <section class="card sos-card">
-          <h2>Quando a autoestima cair</h2>
-          <p class="helper">Use uma sequência curta e clicável. Este app é apoio e não substitui terapia, atendimento médico ou emergência.</p>
+        <section class="card">
+          <h2>Protocolo de 90 segundos</h2>
+          <p class="helper">Para momentos de queda abrupta de autoestima: primeiro regule o corpo, depois interprete a história. Este app é apoio educacional e não substitui terapia, avaliação médica ou atendimento de emergência.</p>
           <div class="choice-grid">
-            <button class="choice" type="button" data-sos="Mão no peito + três respirações profundas.">1. Mão no peito + respirar</button>
-            <button class="choice" type="button" data-sos="Eu estou num momento difícil, mas eu não sou um problema.">2. Frase de segurança</button>
-            <button class="choice" type="button" data-sos="Nomeie três coisas reais que você vê agora.">3. Voltar ao presente</button>
-            <button class="choice" type="button" data-sos="Escolha água, banho, caminhada curta ou mensagem para alguém seguro.">4. Ato pequeno e firme</button>
+            <button class="choice" type="button" data-sos="Mão no peito, pés no chão, solte o ar mais longo do que inspira. Repita três vezes.">1. Voltar ao corpo</button>
+            <button class="choice" type="button" data-sos="Diga: 'Isto é um estado, não a minha identidade. Eu posso atravessar este minuto.'">2. Separar estado de identidade</button>
+            <button class="choice" type="button" data-sos="Nomeie três objetos, duas sensações físicas e uma ação pequena possível.">3. Orientar a atenção</button>
+            <button class="choice" type="button" data-sos="Escolha uma ação mínima: água, banho, caminhar 5 minutos, pedir presença a alguém seguro.">4. Ação mínima segura</button>
           </div>
           <p id="sosResult" class="feedback"></p>
-          <p class="support-note">Se você estiver em risco ou pensando em se machucar, procure ajuda de emergência local ou fale com alguém de confiança agora.</p>
+          <p class="support">Se houver risco imediato ou vontade de se machucar, procure ajuda presencial de emergência ou avise uma pessoa de confiança agora.</p>
         </section>
       </section>
 
       <section id="panel-terapia" class="panel" aria-labelledby="terapia-title">
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">Categoria 1</p><h2 id="terapia-title">Exercícios de terapia</h2></div><span class="progress-pill" id="terapiaProgress">0 feitos</span></div><p class="helper">Tudo em múltipla escolha: toque na resposta, avance e veja sua nota ao final.</p><div id="terapiaList"></div></section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">Camada 1</p><h2 id="terapia-title">Terapia como prática observável</h2></div><span class="progress-pill" id="terapiaProgress">0 feitos</span></div><p class="helper">Exercícios de autorregulação, narrativa interna e limites. A meta não é “ficar bem o tempo todo”; é ganhar consciência, tempo de resposta e repertório.</p><div id="terapiaList"></div></section>
       </section>
 
       <section id="panel-portugues" class="panel" aria-labelledby="portugues-title">
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">Categoria 2</p><h2 id="portugues-title">Língua portuguesa</h2></div><span class="progress-pill" id="portuguesProgress">0 feitos</span></div><p class="helper">Vocabulário, clareza e fala com presença em exercícios clicáveis.</p><div id="portuguesList"></div></section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">Camada 2</p><h2 id="portugues-title">Português: pensamento, presença e sofisticação</h2></div><span class="progress-pill" id="portuguesProgress">0 feitos</span></div><p class="helper">Vocabulário mais elaborado, construção de argumentos, transição de ideias e fala com autoridade sem dureza.</p><div id="portuguesList"></div></section>
+        <section class="card"><h2>Ateliê de escrita em português</h2><p class="helper">Escreva um parágrafo curto usando três palavras: <span class="mono">discernimento</span>, <span class="mono">nuance</span> e <span class="mono">coerência</span>.</p><textarea id="ptWriting" class="text-lab" placeholder="Ex.: Hoje percebi que amadurecer não é endurecer; é ganhar discernimento para reconhecer nuances sem perder coerência..."></textarea><button id="savePtWriting" class="secondary" type="button" style="margin-top:10px;width:100%">Salvar parágrafo</button></section>
       </section>
 
       <section id="panel-ingles" class="panel" aria-labelledby="ingles-title">
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">Categoria 3</p><h2 id="ingles-title">Inglês</h2></div><span class="progress-pill" id="inglesProgress">0 feitos</span></div><p class="helper">Frases úteis, tradução e respostas simples. Alguns exercícios têm botão de áudio.</p><div id="inglesList"></div></section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">Layer 3</p><h2 id="ingles-title">Intermediate English: voice and writing</h2></div><span class="progress-pill" id="inglesProgress">0 feitos</span></div><p class="helper">Frases em nível intermediário para falar de si, defender ideias, pedir clareza e apresentar projetos. Use o botão “ouvir” e repita em voz alta.</p><div id="inglesList"></div></section>
+        <section class="card"><h2>English writing lab</h2><p class="helper">Prompt: <span class="mono">What have you been learning about yourself lately?</span> Escreva 3 a 5 frases em inglês. Não busque perfeição; busque continuidade.</p><textarea id="enWriting" class="text-lab" placeholder="Lately, I have been learning that confidence is not the absence of fear. I can speak slowly, organize my ideas and keep practicing..."></textarea><div class="runner-controls"><button id="speakWritingPrompt" class="secondary" type="button">Ouvir prompt</button><button id="saveEnWriting" class="primary" type="button">Salvar escrita</button></div></section>
       </section>
 
-      <section class="card" id="evolucao-card" aria-labelledby="evolucao-title">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow small">Histórico automático</p>
-            <h2 id="evolucao-title">Evolução dos últimos 7 dias</h2>
-          </div>
-          <button id="clearData" class="ghost" type="button">Apagar dados</button>
-        </div>
-        <div id="weekChart" class="week-list"></div>
-        <p class="block-title">Últimas notas</p>
-        <div id="historyList" class="history-list"></div>
+      <section id="panel-evolucao" class="panel" aria-labelledby="evolucao-title">
+        <section class="card">
+          <div class="section-head"><div><p class="eyebrow small">Efeito percebido</p><h2 id="evolucao-title">A terapia está ajudando?</h2></div><button id="exportSummary" class="secondary" type="button">Gerar resumo</button></div>
+          <div id="therapyEffect"></div>
+        </section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">14 dias</p><h2>Mapa de continuidade</h2></div></div><div id="weekChart" class="week-list"></div></section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">Registros recentes</p><h2>Histórico</h2></div><button id="clearData" class="ghost" type="button">Apagar</button></div><div id="historyList" class="history-list"></div></section>
       </section>
     </main>
-
-    <nav class="bottom-nav" aria-label="Navegação inferior">
-      <button class="active" data-panel="hoje" type="button">Hoje</button>
-      <button data-panel="terapia" type="button">Terapia</button>
-      <button data-panel="portugues" type="button">Português</button>
-      <button data-panel="ingles" type="button">Inglês</button>
-    </nav>
   </div>
 
-  <div id="runner" class="runner hidden" role="dialog" aria-modal="true" aria-labelledby="runnerTitle">
-    <article class="card runner-card">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow small" id="runnerCategory">Exercício</p>
-          <h2 id="runnerTitle">Título</h2>
-        </div>
-        <button id="closeRunner" class="ghost" type="button">Fechar</button>
-      </div>
-      <p class="exercise-goal" id="runnerGoal"></p>
-      <div id="runnerProgressText" class="pill">Pergunta 1 de 4</div>
-      <div class="progress-bar"><div id="runnerProgressFill" class="progress-fill"></div></div>
+  <div id="runner" class="runner hidden" role="dialog" aria-modal="true">
+    <section class="card runner-card">
+      <div class="section-head"><div><p class="eyebrow small" id="runnerCategory">Categoria</p><h2 id="runnerTitle">Exercício</h2><p class="exercise-goal" id="runnerGoal"></p></div><button id="closeRunner" class="ghost" type="button">Fechar</button></div>
+      <p class="support" id="runnerLevel"></p>
+      <div class="progress-bar"><div class="progress-fill" id="runnerProgressFill"></div></div>
+      <p class="today-line" id="runnerProgressText"></p>
       <div id="questionArea"></div>
       <div id="resultArea" class="hidden"></div>
-    </article>
+    </section>
   </div>
 
+  <nav class="bottom-nav" aria-label="Navegação inferior">
+    <button class="active" data-panel="hoje" type="button">Hoje</button><button data-panel="terapia" type="button">Terapia</button><button data-panel="portugues" type="button">Português</button><button data-panel="ingles" type="button">English</button><button data-panel="evolucao" type="button">Evolução</button>
+  </nav>
+
   <script>
-const STORAGE_KEY = "pulso40_click_data_v2";
-const EXERCISES = {"terapia":{"label":"Terapia","subtitle":"Exercícios clicáveis para autoestima, presença e segurança emocional.","icon":"🫶","items":[{"id":"voz-critica","title":"Reduzir a voz crítica","duration":"4 perguntas","goal":"Trocar ataque interno por resposta justa e adulta.","questions":[{"prompt":"Quando a crítica interna aparece, qual é o primeiro passo mais útil?","options":["Acreditar nela imediatamente","Perceber a frase sem se confundir com ela","Responder com outra crítica","Ignorar tudo o que sente"],"answer":1,"tip":"Perceber a frase cria distância e reduz o automático."},{"prompt":"Qual frase é mais terapêutica e firme?","options":["Eu estrago tudo","Eu sou um problema","Eu posso melhorar sem me humilhar","Eu nunca vou conseguir"],"answer":2,"tip":"A frase reconhece possibilidade de melhora sem autoagressão."},{"prompt":"Que pergunta ajuda a testar se a crítica é justa?","options":["Eu falaria isso para alguém que respeito?","Quem está me julgando?","Por que eu sou assim?","Como eu escondo isso?"],"answer":0,"tip":"Essa pergunta costuma revelar quando o tom interno está cruel."},{"prompt":"Depois de reescrever a frase crítica, o melhor fechamento é:","options":["Guardar como prova de fracasso","Ler com presença e escolher um passo possível","Apagar tudo sem olhar","Comparar-se com outra pessoa"],"answer":1,"tip":"A prática termina em presença e ação pequena."}]},{"id":"limite-assertivo","title":"Limite assertivo","duration":"4 perguntas","goal":"Treinar limites com respeito, sem agressividade e sem culpa excessiva.","questions":[{"prompt":"Qual frase mostra limite assertivo?","options":["Você sempre me irrita","Eu aceito tudo para evitar conflito","Hoje não posso conversar sobre isso","Tanto faz, faça o que quiser"],"answer":2,"tip":"Ela é clara, respeitosa e protege seu espaço."},{"prompt":"Um limite saudável começa por reconhecer:","options":["O que eu sinto e do que preciso","Como agradar todo mundo","Como vencer a discussão","Quem deve sentir culpa"],"answer":0,"tip":"Sentimento e necessidade dão base a um limite adulto."},{"prompt":"Ser gentil significa:","options":["Aceitar tudo","Falar com respeito sem abandonar a si","Nunca discordar","Se explicar por horas"],"answer":1,"tip":"Gentileza não exige se apagar."},{"prompt":"Qual final é mais objetivo para um limite?","options":["Por isso, hoje vou me preservar","Você nunca entende nada","Deixa pra lá, esquece","Vou sumir sem explicar"],"answer":0,"tip":"A frase define uma ação concreta e cuidadosa."}]},{"id":"postura-presenca","title":"Postura de presença","duration":"4 perguntas","goal":"Usar corpo, respiração e foco para sinalizar confiança.","questions":[{"prompt":"Qual postura ajuda mais a presença?","options":["Coluna alongada e ombros relaxados","Olhar sempre para baixo","Braços travados e respiração curta","Pressa para terminar"],"answer":0,"tip":"O corpo envia sinais de segurança ao cérebro."},{"prompt":"Uma respiração simples para voltar ao eixo é:","options":["Inspirar 4, soltar 6","Prender o ar o máximo possível","Respirar cada vez mais rápido","Suspirar com raiva"],"answer":0,"tip":"Soltar mais longo ajuda o corpo a desacelerar."},{"prompt":"A frase de presença mais útil é:","options":["Eu preciso desaparecer","Minha presença tem valor","Ninguém pode me ver","Vou falhar de novo"],"answer":1,"tip":"Ela reforça dignidade e lugar no mundo."},{"prompt":"O objetivo desse exercício é:","options":["Virar outra pessoa","Fingir perfeição","Ocupar seu lugar com respeito","Eliminar toda emoção"],"answer":2,"tip":"Presença é firmeza com humanidade."}]},{"id":"provas-competencia","title":"Provas de competência","duration":"4 perguntas","goal":"Lembrar fatos reais de força, não apenas inseguranças barulhentas.","questions":[{"prompt":"O que conta como prova de competência?","options":["Só grandes conquistas públicas","Situações que enfrentei, resolvi ou suportei","A opinião de todos sobre mim","Nunca ter errado"],"answer":1,"tip":"Competência também aparece em sustentação, aprendizado e resolução."},{"prompt":"Depois de lembrar uma situação superada, devo identificar:","options":["A força que usei","A pessoa que me julgou","O erro mais vergonhoso","O motivo de não tentar"],"answer":0,"tip":"Nomear a força transforma memória em recurso."},{"prompt":"Qual frase consolida essa prática?","options":["Foi sorte","Minha história tem evidências da minha força","Nada do que fiz importa","Eu deveria ter feito mais"],"answer":1,"tip":"A frase valoriza fatos concretos da sua trajetória."},{"prompt":"Esse exercício combate principalmente:","options":["Fome","Memória seletiva negativa","Sono","Vocabulário"],"answer":1,"tip":"O cérebro inseguro costuma lembrar mais falhas do que evidências de capacidade."}]},{"id":"acao-corajosa","title":"Ação corajosa pequena","duration":"4 perguntas","goal":"Construir confiança por movimento pequeno, não por espera de coragem perfeita.","questions":[{"prompt":"A confiança cresce melhor quando eu:","options":["Espero não sentir medo","Dou um passo pequeno mesmo com medo","Exijo perfeição","Adio até ter certeza absoluta"],"answer":1,"tip":"Coragem prática costuma nascer depois do primeiro passo."},{"prompt":"Qual é um bom tamanho para o primeiro passo?","options":["Até 10 minutos","Um plano de seis meses inteiro","Tudo de uma vez","Algo impossível hoje"],"answer":0,"tip":"Passos pequenos reduzem travamento e aumentam continuidade."},{"prompt":"Qual registro fortalece autoestima?","options":["Eu me movi, mesmo com medo","Só vale se ficar perfeito","Foi pouco, não conta","Eu deveria ter feito antes"],"answer":0,"tip":"Registrar movimento ajuda o cérebro a reconhecer progresso."},{"prompt":"Se eu não conseguir fazer hoje, a alternativa mais saudável é:","options":["Me atacar","Rebaixar o passo e remarcar com honestidade","Desistir de tudo","Comparar-me com alguém"],"answer":1,"tip":"Flexibilidade mantém o compromisso sem virar punição."}]},{"id":"sos-autoestima","title":"SOS autoestima","duration":"4 perguntas","goal":"Voltar ao presente quando a autoestima cair.","questions":[{"prompt":"No SOS de 90 segundos, a primeira ação pode ser:","options":["Mão no peito e três respirações","Abrir redes sociais para comparar","Discutir imediatamente","Tomar uma grande decisão no impulso"],"answer":0,"tip":"Toque e respiração ajudam o corpo a se orientar no agora."},{"prompt":"Qual frase é mais segura para um momento difícil?","options":["Eu sou um problema","Eu estou num momento difícil, mas eu não sou um problema","Nada vai melhorar","Eu tenho que resolver tudo agora"],"answer":1,"tip":"A frase separa a pessoa do momento."},{"prompt":"Nomear três coisas reais ao redor serve para:","options":["Voltar ao presente","Provar que estou errada","Evitar toda emoção","Criar culpa"],"answer":0,"tip":"A orientação sensorial reduz a avalanche mental."},{"prompt":"Qual ato pequeno e firme combina com SOS?","options":["Água, banho, caminhada curta ou mensagem segura","Autoisolamento total","Ofender alguém","Tomar decisão definitiva"],"answer":0,"tip":"Ações simples dão suporte sem exigir grandes soluções."}]}]},"portugues":{"label":"Português","subtitle":"Língua portuguesa com clareza, vocabulário e fala de presença.","icon":"🗣️","items":[{"id":"assertividade","title":"Fala assertiva","duration":"4 perguntas","goal":"Escolher frases firmes, claras e respeitosas.","questions":[{"prompt":"O que significa falar de forma assertiva?","options":["Falar com agressividade","Falar com clareza e respeito","Ficar em silêncio sempre","Falar para agradar"],"answer":1,"tip":"Assertividade une clareza, respeito e limite."},{"prompt":"Qual versão tem mais presença?","options":["Ah, tanto faz","Eu prefiro essa opção por ser mais viável","Você que sabe sempre","Desculpa existir"],"answer":1,"tip":"A frase apresenta preferência e justificativa objetiva."},{"prompt":"Qual palavra combina com uma fala direta e precisa?","options":["Incisiva","Confusa","Vaga","Apressada"],"answer":0,"tip":"Incisiva é uma fala que vai ao ponto."},{"prompt":"Qual frase evita agressividade?","options":["Você nunca entende","Eu preciso explicar meu limite com clareza","Cala a boca","Você sempre erra"],"answer":1,"tip":"Ela fala de necessidade própria sem atacar o outro."}]},{"id":"vocabulario-impacto","title":"Vocabulário de impacto","duration":"4 perguntas","goal":"Aprender palavras formais para se expressar melhor.","questions":[{"prompt":"Qual palavra significa proteger ou preservar?","options":["Resguardar","Apressar","Desistir","Confundir"],"answer":0,"tip":"Resguardar é proteger algo importante."},{"prompt":"Complete: “Essa decisão é ____ com meus valores.”","options":["coerente","barulhenta","invisível","aleatória"],"answer":0,"tip":"Coerente é aquilo que faz sentido com valores e escolhas."},{"prompt":"Qual palavra significa pensar com calma antes de decidir?","options":["Ponderar","Atropelar","Supor","Esconder"],"answer":0,"tip":"Ponderar é avaliar com cuidado."},{"prompt":"“Meu incômodo é legítimo” quer dizer:","options":["Meu incômodo é válido","Meu incômodo é falso","Meu incômodo deve ser escondido","Meu incômodo é exagero sempre"],"answer":0,"tip":"Legítimo significa válido, justo ou verdadeiro."}]},{"id":"clareza-frases","title":"Clareza em frases","duration":"4 perguntas","goal":"Escolher frases com sentido completo e menos ruído.","questions":[{"prompt":"Qual frase está mais clara?","options":["Então, tipo, talvez, né","Hoje vou priorizar meu bem-estar","Aquela coisa lá","Sei lá, qualquer coisa"],"answer":1,"tip":"Ela tem sujeito, ação e objetivo."},{"prompt":"Qual conector indica conclusão?","options":["Portanto","Mas","Enquanto","Embora"],"answer":0,"tip":"Portanto apresenta consequência ou conclusão."},{"prompt":"Qual frase evita excesso de desculpas?","options":["Desculpa, desculpa, acho que talvez","Obrigada por esperar. Posso falar agora","Foi mal por tudo sempre","Nem precisava me ouvir"],"answer":1,"tip":"Ela é educada sem diminuir sua voz."},{"prompt":"Para soar mais objetiva, prefira:","options":["Frases intermináveis","Uma ideia principal por frase","Muitas justificativas","Palavras vagas"],"answer":1,"tip":"Uma ideia por frase melhora compreensão."}]},{"id":"pontuacao-presenca","title":"Pontuação com presença","duration":"4 perguntas","goal":"Usar pontuação para dar ritmo e clareza.","questions":[{"prompt":"Qual frase está melhor pontuada?","options":["Hoje eu escolho calma firmeza e respeito","Hoje, eu escolho calma, firmeza e respeito","Hoje eu, escolho calma firmeza, e respeito","Hoje eu escolho, calma firmeza e respeito"],"answer":1,"tip":"A vírgula organiza os elementos da lista."},{"prompt":"O ponto final ajuda a transmitir:","options":["Clareza e fechamento","Dúvida infinita","Grito","Ironia obrigatória"],"answer":0,"tip":"Ponto final dá conclusão e segurança."},{"prompt":"Qual opção usa dois-pontos corretamente?","options":["Hoje preciso de: descanso e silêncio","Hoje preciso: de descanso e silêncio","Hoje: preciso de descanso e silêncio","Hoje preciso de descanso: e silêncio"],"answer":0,"tip":"Dois-pontos podem introduzir uma explicação ou lista."},{"prompt":"Em mensagens importantes, pontuar melhor ajuda a:","options":["Criar confusão","Dar ritmo e evitar mal-entendido","Aumentar agressividade","Esconder a ideia"],"answer":1,"tip":"Pontuação é aliada da clareza."}]},{"id":"tom-respeitoso","title":"Tom respeitoso","duration":"4 perguntas","goal":"Transformar frases duras em comunicação madura.","questions":[{"prompt":"Qual frase é mais respeitosa?","options":["Você é impossível","Eu não concordo com essa forma","Você só fala besteira","Nem vou responder"],"answer":1,"tip":"Ela discorda sem atacar a identidade do outro."},{"prompt":"Troque “você me desrespeita” por uma versão mais clara:","options":["Quando isso acontece, eu me sinto desrespeitada","Você é horrível","Não ligo","Sempre foi assim"],"answer":0,"tip":"Falar do fato e do sentimento reduz ataque."},{"prompt":"Qual palavra combina com respeito dos dois lados?","options":["Recíproco","Solto","Inútil","Confuso"],"answer":0,"tip":"Recíproco significa mútuo, de ambos os lados."},{"prompt":"Para encerrar com firmeza, escolha:","options":["Vou parar por aqui e retomar quando houver respeito","Vou te destruir na resposta","Esquece, eu sou nada","Você manda em mim"],"answer":0,"tip":"A frase protege o limite sem violência."}]},{"id":"substituicoes-elegantes","title":"Substituições elegantes","duration":"4 perguntas","goal":"Trocar fala comum por fala mais clara e confiante.","questions":[{"prompt":"Substitua “dá pra fazer sem me quebrar” por:","options":["Essa alternativa é viável para mim","Tanto faz","Não sei de nada","Vou sofrer calada"],"answer":0,"tip":"Viável significa possível nas condições atuais."},{"prompt":"Substitua “isso tem tudo a ver” por:","options":["Esse ponto é pertinente","Esse ponto é nada","Esse ponto é fraco","Esse ponto é estranho"],"answer":0,"tip":"Pertinente é adequado e relacionado ao assunto."},{"prompt":"Substitua “eu mando na minha vida” por:","options":["Sou soberana sobre minhas escolhas","Eu não escolho nada","Tanto faz minha vida","Não tenho voz"],"answer":0,"tip":"Soberana transmite autoridade sobre si."},{"prompt":"Substitua “hoje ninguém me derruba fácil” por:","options":["Hoje mantenho uma postura inabalável","Hoje estou sumida","Hoje sou impossível","Hoje fujo de tudo"],"answer":0,"tip":"Inabalável transmite firmeza diante de pressão."}]}]},"ingles":{"label":"Inglês","subtitle":"Inglês básico com frases úteis, tradução e escolha clicável.","icon":"🌎","items":[{"id":"frases-confianca","title":"Frases de confiança","duration":"4 perguntas","goal":"Reconhecer frases simples para autoestima em inglês.","speak":"I am strong and I keep going.","questions":[{"prompt":"O que significa “I am strong”?","options":["Eu estou perdida","Eu sou forte","Eu estou atrasada","Eu preciso dormir"],"answer":1,"tip":"I am strong = Eu sou forte."},{"prompt":"Escolha a tradução de “I can do this”.","options":["Eu consigo fazer isso","Eu não quero isso","Eu esqueci isso","Eu vejo isso"],"answer":0,"tip":"Can indica capacidade: consigo/posso."},{"prompt":"Qual frase significa “Tenho orgulho de mim mesma”?","options":["I am proud of myself","I am tired of myself","I am late today","I am very busy"],"answer":0,"tip":"Proud of myself = orgulho de mim mesma."},{"prompt":"“Keep going” significa:","options":["Pare agora","Continue","Volte amanhã","Esqueça"],"answer":1,"tip":"Keep going é um incentivo para continuar."}]},{"id":"limites-ingles","title":"Limites em inglês","duration":"4 perguntas","goal":"Treinar frases educadas para dizer não e pedir espaço.","speak":"No, thank you. I need space.","questions":[{"prompt":"“No, thank you” significa:","options":["Sim, por favor","Não, obrigada","Talvez amanhã","Eu não entendi"],"answer":1,"tip":"É uma forma educada de recusar."},{"prompt":"Qual frase significa “Eu preciso de espaço”?","options":["I need space","I need coffee","I need money","I need a chair"],"answer":0,"tip":"Space aqui é espaço/tempo pessoal."},{"prompt":"Qual opção é educada e firme?","options":["No, thank you. I need rest","You are terrible","Go away forever","I hate this"],"answer":0,"tip":"A frase recusa e explica necessidade sem ataque."},{"prompt":"“Not today” quer dizer:","options":["Hoje não","Ontem sim","Nunca mais","Muito cedo"],"answer":0,"tip":"Not today = Hoje não."}]},{"id":"pedir-repeticao","title":"Pedir repetição","duration":"4 perguntas","goal":"Aprender frases para entender melhor uma conversa em inglês.","speak":"Can you repeat, please? Speak slowly, please.","questions":[{"prompt":"“Can you repeat, please?” significa:","options":["Pode repetir, por favor?","Pode sair, por favor?","Pode comprar, por favor?","Pode escrever amanhã?"],"answer":0,"tip":"Repeat significa repetir."},{"prompt":"Como pedir para alguém falar devagar?","options":["Speak slowly, please","Speak loudly forever","Stop speaking","Run quickly"],"answer":0,"tip":"Slowly = devagar."},{"prompt":"Qual resposta combina com “Can you repeat, please?”","options":["Sure","Never","Yesterday","Blue"],"answer":0,"tip":"Sure significa claro/com certeza."},{"prompt":"Se você não entendeu, a opção mais útil é:","options":["Fingir que entendeu","Pedir repetição com educação","Desistir do inglês","Responder qualquer coisa"],"answer":1,"tip":"Pedir repetição é parte normal do aprendizado."}]},{"id":"rotina-basica","title":"Rotina básica","duration":"4 perguntas","goal":"Reconhecer frases úteis do dia a dia.","speak":"I am learning English little by little.","questions":[{"prompt":"“I am learning English little by little” significa:","options":["Estou aprendendo inglês aos poucos","Estou esquecendo inglês rápido","Estou vendendo inglês","Estou viajando hoje"],"answer":0,"tip":"Little by little = aos poucos."},{"prompt":"“Thank you very much” significa:","options":["Muito obrigada","Boa noite","Até amanhã","Com licença"],"answer":0,"tip":"Thank you = obrigada; very much = muito."},{"prompt":"Qual resposta combina com agradecimento?","options":["You are welcome","I am late","Not today","Repeat slowly"],"answer":0,"tip":"You are welcome = de nada."},{"prompt":"Qual frase mostra aprendizado com calma?","options":["Little by little","All or nothing","Never again","Too late"],"answer":0,"tip":"Aos poucos também é progresso."}]},{"id":"apresentacao-simples","title":"Apresentação simples","duration":"4 perguntas","goal":"Responder perguntas básicas sobre você.","speak":"My name is Ana. Nice to meet you.","questions":[{"prompt":"“My name is Ana” significa:","options":["Meu nome é Ana","Minha casa é Ana","Minha amiga é Ana","Meu dia é Ana"],"answer":0,"tip":"My name is = Meu nome é."},{"prompt":"“Nice to meet you” significa:","options":["Prazer em conhecer você","Boa viagem","Estou cansada","Até logo"],"answer":0,"tip":"É uma saudação educada ao conhecer alguém."},{"prompt":"Qual pergunta pede seu nome?","options":["What is your name?","Where is the door?","How much is it?","When is lunch?"],"answer":0,"tip":"What is your name? = Qual é o seu nome?"},{"prompt":"Qual resposta é correta para “What is your name?”","options":["My name is Maria","I need space","No, thank you","Speak slowly"],"answer":0,"tip":"A resposta apresenta o nome."}]},{"id":"respostas-uteis","title":"Respostas úteis","duration":"4 perguntas","goal":"Escolher respostas curtas para conversas simples.","speak":"Yes, you can. No problem. Of course.","questions":[{"prompt":"“No problem” significa:","options":["Sem problema","Muito problema","Não hoje","Eu não posso"],"answer":0,"tip":"É uma resposta amigável e comum."},{"prompt":"“Of course” significa:","options":["Claro","Talvez nunca","Muito longe","De repente"],"answer":0,"tip":"Of course = claro/com certeza."},{"prompt":"Qual frase incentiva alguém?","options":["Yes, you can","No, you never","Stop now","Forget it"],"answer":0,"tip":"Yes, you can = Sim, você consegue."},{"prompt":"Qual resposta combina com “Thank you”?","options":["You are welcome","Not today","I need space","Slowly please"],"answer":0,"tip":"You are welcome é a resposta comum a obrigado/obrigada."}]}]}};
-const state = { panel: "hoje", current: null, questionIndex: 0, answers: [], selectedCheckin: {} };
-const $ = (id) => document.getElementById(id);
-
-function todayKey(date = new Date()) {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, "0");
-  const d = String(date.getDate()).padStart(2, "0");
-  return `${y}-${m}-${d}`;
-}
-function parseDateKey(key) { return new Date(`${key}T12:00:00`); }
-function formatDate(key) { return parseDateKey(key).toLocaleDateString("pt-BR", { weekday: "short", day: "2-digit", month: "short" }); }
-function formatNumber(value) { return Number.isInteger(value) ? String(value) : value.toFixed(1).replace(".", ","); }
-function escapeHTML(value = "") { return String(value).replace(/[&<>'"]/g, (char) => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#039;",'"':"&quot;"}[char])); }
-function loadData() {
-  try {
-    const raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    return { sessions: Array.isArray(raw?.sessions) ? raw.sessions : [], checkins: Array.isArray(raw?.checkins) ? raw.checkins : [] };
-  } catch { return { sessions: [], checkins: [] }; }
-}
-function saveData(data) { localStorage.setItem(STORAGE_KEY, JSON.stringify({ sessions: data.sessions || [], checkins: data.checkins || [] })); }
-function average(values) { const nums = values.filter(Number.isFinite); return nums.length ? nums.reduce((a,b)=>a+b,0) / nums.length : 0; }
-function categoryLabel(key) { return EXERCISES[key]?.label || key; }
-function getAllExercises() {
-  return Object.entries(EXERCISES).flatMap(([category, data]) => data.items.map(item => ({ ...item, category, categoryLabel: data.label, categoryIcon: data.icon })));
-}
-function getExercise(category, id) { return EXERCISES[category].items.find(item => item.id === id); }
-function sessionsFor(category) { return loadData().sessions.filter(item => item.category === category); }
-function lastSession(category, id) { return loadData().sessions.filter(item => item.category === category && item.exerciseId === id).sort((a,b)=>b.completedAt.localeCompare(a.completedAt))[0]; }
-function gradeMessage(grade) {
-  if (grade >= 9) return "Excelente. Você dominou esse exercício com muita presença.";
-  if (grade >= 7) return "Muito bom. Revise as dicas e siga praticando.";
-  if (grade >= 5) return "Bom começo. Repetir esse exercício amanhã pode fortalecer sua base.";
-  return "Treino salvo. A nota é ponto de partida, não sentença. Refaça com calma.";
-}
-function toast(message) {
-  document.querySelector(".toast")?.remove();
-  const el = document.createElement("div");
-  el.className = "toast";
-  el.textContent = message;
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), 2400);
-}
-
-function setPanel(panel) {
-  state.panel = panel;
-  document.querySelectorAll(".panel").forEach(el => el.classList.toggle("active", el.id === `panel-${panel}`));
-  document.querySelectorAll(".tab, .bottom-nav button").forEach(btn => btn.classList.toggle("active", btn.dataset.panel === panel));
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-function renderTodayText() {
-  const now = new Date();
-  $("todayText").textContent = now.toLocaleDateString("pt-BR", { weekday: "long", day: "2-digit", month: "long" });
-}
-function calculateStreak() {
-  const data = loadData();
-  const days = new Set([...data.checkins.map(x => x.date), ...data.sessions.map(x => x.date)]);
-  let count = 0;
-  const cursor = new Date();
-  while (days.has(todayKey(cursor))) { count++; cursor.setDate(cursor.getDate() - 1); }
-  return count;
-}
-function lastNDays(n=7) {
-  const days = [];
-  const cursor = new Date();
-  for (let i = n - 1; i >= 0; i--) {
-    const d = new Date(cursor); d.setDate(cursor.getDate() - i); days.push(todayKey(d));
-  }
-  return days;
-}
-function renderDashboard() {
-  const data = loadData();
-  const today = todayKey();
-  const todaySessions = data.sessions.filter(item => item.date === today);
-  const weekDays = new Set(lastNDays(7));
-  const weekSessions = data.sessions.filter(item => weekDays.has(item.date));
-  const todayAvg = average(todaySessions.map(item => item.grade));
-  const byCategory = Object.keys(EXERCISES).map(category => {
-    const list = data.sessions.filter(item => item.category === category);
-    return { category, avg: average(list.map(item => item.grade)), count: list.length };
-  }).filter(item => item.count > 0).sort((a,b)=>b.avg-a.avg)[0];
-
-  $("todaySessions").textContent = todaySessions.length;
-  $("todayGrade").textContent = todayAvg ? formatNumber(Math.round(todayAvg * 10) / 10) : "0";
-  $("weekSessions").textContent = weekSessions.length;
-  $("bestCategory").textContent = byCategory ? categoryLabel(byCategory.category).slice(0, 3) : "—";
-  $("streakText").textContent = `${calculateStreak()} dias`;
-
-  Object.keys(EXERCISES).forEach(category => {
-    const count = sessionsFor(category).length;
-    const avg = average(sessionsFor(category).map(item => item.grade));
-    const el = $(`${category}Progress`);
-    if (el) el.textContent = count ? `${count} feitos • média ${formatNumber(Math.round(avg * 10) / 10)}` : "0 feitos";
-  });
-}
-function renderWeekChart() {
-  const data = loadData();
-  const days = lastNDays(7);
-  $("weekChart").innerHTML = days.map(day => {
-    const sessions = data.sessions.filter(item => item.date === day);
-    const avg = average(sessions.map(item => item.grade));
-    const pct = Math.max(0, Math.min(100, avg * 10));
-    return `<div class="day-row"><span>${formatDate(day)}</span><div class="day-track"><div class="day-fill" style="width:${pct}%"></div></div><strong>${avg ? formatNumber(Math.round(avg * 10) / 10) : "—"}</strong></div>`;
-  }).join("");
-}
-function renderHistory() {
-  const data = loadData();
-  const items = data.sessions.slice().sort((a,b)=>b.completedAt.localeCompare(a.completedAt)).slice(0, 8);
-  if (!items.length) {
-    $("historyList").innerHTML = `<p class="empty-state">Suas notas aparecem aqui depois do primeiro exercício concluído.</p>`;
-    return;
-  }
-  $("historyList").innerHTML = items.map(item => `
-    <article class="history-item">
-      <div class="history-top"><span>${formatDate(item.date)} • ${escapeHTML(categoryLabel(item.category))}</span><span>Nota ${formatNumber(item.grade)}</span></div>
-      <p>${escapeHTML(item.title)} — ${item.correct} de ${item.total} respostas certas. ${escapeHTML(item.message)}</p>
-    </article>
-  `).join("");
-}
-
-function renderCategory(category) {
-  const data = EXERCISES[category];
-  const target = $(`${category}List`);
-  target.innerHTML = data.items.map(item => {
-    const last = lastSession(category, item.id);
-    const lastText = last ? `Última nota: ${formatNumber(last.grade)}` : "Ainda não feito";
-    const audio = item.speak ? `<button class="secondary" type="button" data-speak="${escapeHTML(item.speak)}">Ouvir</button>` : "";
-    return `
-      <article class="category-card">
-        <div class="category-top">
-          <div class="icon-badge">${data.icon}</div>
-          <div style="flex:1">
-            <h3>${escapeHTML(item.title)}</h3>
-            <p>${escapeHTML(item.goal)}</p>
-          </div>
-        </div>
-        <div class="card-actions">
-          <button class="primary" type="button" data-start-category="${category}" data-start-id="${escapeHTML(item.id)}">Começar múltipla escolha</button>
-          ${audio}
-        </div>
-        <p class="note-badge" style="margin:10px 0 0;">${lastText} • ${escapeHTML(item.duration)}</p>
-      </article>
-    `;
-  }).join("");
-}
-function renderQuickStart() {
-  const daily = Object.entries(EXERCISES).map(([category, data]) => {
-    const index = new Date().getDate() % data.items.length;
-    const item = data.items[index];
-    return `
-      <article class="category-card">
-        <div class="category-top">
-          <div class="icon-badge">${data.icon}</div>
-          <div style="flex:1"><h3>${escapeHTML(data.label)}: ${escapeHTML(item.title)}</h3><p>${escapeHTML(item.goal)}</p></div>
-        </div>
-        <button class="secondary" type="button" data-start-category="${category}" data-start-id="${escapeHTML(item.id)}">Fazer exercício de hoje</button>
-      </article>
-    `;
-  }).join("");
-  $("quickStartList").innerHTML = daily;
-}
-
-function startExercise(category, id) {
-  const exercise = getExercise(category, id);
-  if (!exercise) return;
-  state.current = { ...exercise, category, categoryLabel: categoryLabel(category) };
-  state.questionIndex = 0;
-  state.answers = [];
-  $("runner").classList.remove("hidden");
-  $("resultArea").classList.add("hidden");
-  $("questionArea").classList.remove("hidden");
-  renderQuestion();
-}
-function closeRunner() {
-  $("runner").classList.add("hidden");
-  state.current = null;
-}
-function renderQuestion() {
-  const exercise = state.current;
-  const question = exercise.questions[state.questionIndex];
-  const total = exercise.questions.length;
-  $("runnerCategory").textContent = exercise.categoryLabel;
-  $("runnerTitle").textContent = exercise.title;
-  $("runnerGoal").textContent = exercise.goal;
-  $("runnerProgressText").textContent = `Pergunta ${state.questionIndex + 1} de ${total}`;
-  $("runnerProgressFill").style.width = `${(state.questionIndex / total) * 100}%`;
-  $("questionArea").innerHTML = `
-    <p class="question-text">${escapeHTML(question.prompt)}</p>
-    <div class="choice-grid" id="answerOptions">
-      ${question.options.map((option, index) => `<button class="choice" type="button" data-answer-index="${index}">${escapeHTML(option)}</button>`).join("")}
-    </div>
-    <p id="answerFeedback" class="feedback hidden"></p>
-    <div class="runner-controls">
-      <button id="skipQuestion" class="ghost" type="button">Pular</button>
-      <button id="nextQuestion" class="primary" type="button" disabled>Próxima</button>
-    </div>
-  `;
-}
-function chooseAnswer(index) {
-  const exercise = state.current;
-  const question = exercise.questions[state.questionIndex];
-  const isCorrect = index === question.answer;
-  document.querySelectorAll("[data-answer-index]").forEach(btn => {
-    const btnIndex = Number(btn.dataset.answerIndex);
-    btn.disabled = true;
-    btn.classList.toggle("selected", btnIndex === index);
-    btn.classList.toggle("correct", btnIndex === question.answer);
-    btn.classList.toggle("wrong", btnIndex === index && !isCorrect);
-  });
-  state.answers[state.questionIndex] = { index, correct: isCorrect };
-  const feedback = $("answerFeedback");
-  feedback.className = `feedback ${isCorrect ? "good" : "bad"}`;
-  feedback.textContent = `${isCorrect ? "Resposta certa." : "Quase."} ${question.tip}`;
-  feedback.classList.remove("hidden");
-  $("nextQuestion").disabled = false;
-}
-function nextQuestion() {
-  if (!state.answers[state.questionIndex]) { state.answers[state.questionIndex] = { index: null, correct: false }; }
-  if (state.questionIndex < state.current.questions.length - 1) {
-    state.questionIndex += 1;
-    renderQuestion();
-  } else { finishExercise(); }
-}
-function finishExercise() {
-  const exercise = state.current;
-  const total = exercise.questions.length;
-  const correct = state.answers.filter(item => item?.correct).length;
-  const grade = Math.round((correct / total) * 100) / 10;
-  const message = gradeMessage(grade);
-  const data = loadData();
-  const session = {
-    id: `${exercise.category}-${exercise.id}-${Date.now()}`,
-    exerciseId: exercise.id,
-    category: exercise.category,
-    title: exercise.title,
-    date: todayKey(),
-    completedAt: new Date().toISOString(),
-    total,
-    correct,
-    grade,
-    scorePercent: Math.round((correct / total) * 100),
-    message
-  };
-  data.sessions.push(session);
-  saveData(data);
-  $("runnerProgressFill").style.width = "100%";
-  $("questionArea").classList.add("hidden");
-  $("resultArea").classList.remove("hidden");
-  $("resultArea").innerHTML = `
-    <div class="result-box">
-      <p class="eyebrow small">Nota final do exercício</p>
-      <div class="grade">${formatNumber(grade)}/10</div>
-      <h3>${correct} de ${total} respostas certas</h3>
-      <p>${escapeHTML(message)}</p>
-      <div class="runner-controls">
-        <button class="secondary" type="button" data-repeat-current>Refazer</button>
-        <button class="primary" type="button" data-finish-close>Salvar e voltar</button>
-      </div>
-    </div>
-  `;
-  renderAll();
-  toast("Nota salva na evolução diária.");
-}
-
-function saveCheckin() {
-  const required = ["mood", "energy", "focus"];
-  const missing = required.filter(key => !state.selectedCheckin[key]);
-  if (missing.length) { toast("Toque em uma opção de cada bloco."); return; }
-  const data = loadData();
-  const today = todayKey();
-  const current = data.checkins.find(item => item.date === today);
-  const record = { date: today, updatedAt: new Date().toISOString(), ...state.selectedCheckin };
-  if (current) Object.assign(current, record); else data.checkins.push(record);
-  saveData(data);
-  renderAll();
-  toast("Check-in clicável salvo.");
-}
-function restoreCheckin() {
-  const today = loadData().checkins.find(item => item.date === todayKey());
-  state.selectedCheckin = today ? { mood: today.mood, energy: today.energy, focus: today.focus } : {};
-  document.querySelectorAll("[data-choice-group]").forEach(group => {
-    const key = group.dataset.choiceGroup;
-    group.querySelectorAll(".choice").forEach(btn => btn.classList.toggle("selected", btn.dataset.value === state.selectedCheckin[key]));
-  });
-}
-function speak(text) {
-  if (!("speechSynthesis" in window)) { toast("Seu navegador não liberou áudio de voz."); return; }
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "en-US";
-  utterance.rate = 0.82;
-  speechSynthesis.cancel();
-  speechSynthesis.speak(utterance);
-}
-function setupInstall() {
-  let deferredPrompt;
-  const btn = $("installBtn");
-  window.addEventListener("beforeinstallprompt", (event) => { event.preventDefault(); deferredPrompt = event; btn.classList.remove("hidden"); });
-  btn.addEventListener("click", async () => { if (!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; btn.classList.add("hidden"); });
-}
-function renderAll() {
-  renderTodayText();
-  renderDashboard();
-  renderWeekChart();
-  renderHistory();
-  renderQuickStart();
-  Object.keys(EXERCISES).forEach(renderCategory);
-  restoreCheckin();
-}
-function wireEvents() {
-  document.addEventListener("click", (event) => {
-    const panelBtn = event.target.closest("[data-panel]");
-    if (panelBtn) setPanel(panelBtn.dataset.panel);
-
-    const startBtn = event.target.closest("[data-start-category]");
-    if (startBtn) startExercise(startBtn.dataset.startCategory, startBtn.dataset.startId);
-
-    const answerBtn = event.target.closest("[data-answer-index]");
-    if (answerBtn) chooseAnswer(Number(answerBtn.dataset.answerIndex));
-
-    const groupBtn = event.target.closest("[data-choice-group] .choice");
-    if (groupBtn) {
-      const group = groupBtn.closest("[data-choice-group]");
-      group.querySelectorAll(".choice").forEach(btn => btn.classList.remove("selected"));
-      groupBtn.classList.add("selected");
-      state.selectedCheckin[group.dataset.choiceGroup] = groupBtn.dataset.value;
-    }
-
-    const sosBtn = event.target.closest("[data-sos]");
-    if (sosBtn) { $("sosResult").textContent = sosBtn.dataset.sos; $("sosResult").className = "feedback good"; }
-
-    const speakBtn = event.target.closest("[data-speak]");
-    if (speakBtn) speak(speakBtn.dataset.speak);
-
-    if (event.target.closest("[data-repeat-current]") && state.current) startExercise(state.current.category, state.current.id);
-    if (event.target.closest("[data-finish-close]")) closeRunner();
-  });
-
-  $("saveCheckin").addEventListener("click", saveCheckin);
-  $("closeRunner").addEventListener("click", closeRunner);
-  document.addEventListener("click", (event) => {
-    if (event.target?.id === "nextQuestion") nextQuestion();
-    if (event.target?.id === "skipQuestion") nextQuestion();
-  });
-  $("clearData").addEventListener("click", () => {
-    const ok = confirm("Deseja apagar todo o histórico de notas e check-ins deste aparelho?");
-    if (!ok) return;
-    localStorage.removeItem(STORAGE_KEY);
-    state.selectedCheckin = {};
-    renderAll();
-    toast("Histórico apagado.");
-  });
-}
-function init() {
-  renderAll();
-  wireEvents();
-  setupInstall();
-  if ("serviceWorker" in navigator) navigator.serviceWorker.register("service-worker.js").catch(() => {});
-}
-document.addEventListener("DOMContentLoaded", init);
+const STORAGE_KEY = "pulso40_robusto_v4";
+const EXERCISES = {
+  terapia: { label: "Terapia", icon: "🫶", items: [
+    { id:"critico-nuance", title:"Crítica interna com nuance", level:"Terapia • consciência cognitiva", duration:"6 perguntas", goal:"Diferenciar autocrítica, responsabilidade e autoagressão para responder com maturidade.", questions:[
+      {prompt:"Quando a crítica interna diz “você sempre estraga tudo”, qual resposta é mais adulta?", options:["Aceitar a frase como verdade absoluta","Procurar fatos, contexto e proporção","Revidar com outra ofensa contra si","Fingir que nada aconteceu"], answer:1, tip:"A mente ansiosa generaliza. Maturidade é devolver proporção ao pensamento."},
+      {prompt:"Qual palavra descreve melhor uma leitura que considera contexto, limites e exceções?", options:["Nuance","Catástrofe","Sentença","Submissão"], answer:0, tip:"Nuance impede que uma experiência vire identidade."},
+      {prompt:"Assumir responsabilidade sem autoagressão significa:", options:["Reconhecer o que posso reparar e parar de me destruir","Culpar alguém rapidamente","Passar dias me punindo","Não admitir nada"], answer:0, tip:"Responsabilidade é ação; autoagressão é paralisia disfarçada de cobrança."},
+      {prompt:"A pergunta que desmonta uma crítica cruel é:", options:["Que evidências sustentam isso e que evidências contradizem?","Por que eu sou impossível?","Quem vai me rejeitar agora?","Como escondo minha falha?"], answer:0, tip:"A pergunta abre espaço para pensamento crítico, não para humilhação."},
+      {prompt:"Qual frase é mais terapêutica?", options:["Eu errei, posso reparar e aprender","Eu sou um erro","Nada tem solução","Preciso ser perfeita para merecer respeito"], answer:0, tip:"Ela separa comportamento, reparo e identidade."},
+      {prompt:"O sinal de evolução nessa prática é:", options:["Nunca mais sentir crítica","Perceber a crítica mais cedo e responder melhor","Controlar todas as emoções","Agrada todo mundo"], answer:1, tip:"Evolução costuma aparecer como tempo de resposta, não como ausência de desconforto."}
+    ]},
+    { id:"limite-sem-culpa", title:"Limite sem culpa performática", level:"Terapia • assertividade", duration:"6 perguntas", goal:"Treinar limites que não pedem licença para existir, mas preservam respeito.", questions:[
+      {prompt:"Qual frase sustenta um limite com clareza?", options:["Eu entendo sua expectativa, mas hoje não consigo assumir isso","Você está errado em me pedir qualquer coisa","Tanto faz, faço do jeito que quiser","Vou sumir para não explicar"], answer:0, tip:"A frase reconhece o outro sem abandonar a própria capacidade."},
+      {prompt:"Culpa depois de dizer não pode indicar:", options:["Que o limite foi necessariamente errado","Um hábito antigo de agradar para se sentir segura","Que você deve voltar atrás sempre","Que assertividade é egoísmo"], answer:1, tip:"Nem toda culpa é bússola moral; às vezes é memória de adaptação."},
+      {prompt:"Um limite saudável precisa de:", options:["Clareza, brevidade e consequência possível","Longas justificativas para convencer","Ataque à intenção do outro","Silêncio punitivo"], answer:0, tip:"Limite bom é compreensível e praticável."},
+      {prompt:"Qual expressão evita dureza excessiva?", options:["No momento, essa não é uma possibilidade para mim","Você não manda em mim","Problema seu","Nunca mais conte comigo"], answer:0, tip:"É firme e respeitosa, sem agressão."},
+      {prompt:"Depois de comunicar um limite, o treino é:", options:["Tolerar o desconforto sem cancelar a si mesma","Pedir desculpas até o outro aceitar","Explicar de novo infinitamente","Atacar para parecer forte"], answer:0, tip:"Sustentar o desconforto é parte central do limite."},
+      {prompt:"Evolução em limites aparece quando:", options:["Você evita toda conversa difícil","Você consegue ser clara antes de explodir","Todos concordam com você","Você nunca sente medo"], answer:1, tip:"O avanço é falar antes do acúmulo virar explosão."}
+    ]},
+    { id:"regulacao-sistema", title:"Regulação do sistema nervoso", level:"Terapia • corpo e presença", duration:"6 perguntas", goal:"Usar corpo e atenção para reduzir reatividade antes de interpretar a situação.", questions:[
+      {prompt:"Quando o corpo está em alerta, o primeiro passo útil é:", options:["Discutir imediatamente","Alongar a expiração e sentir os pés no chão","Tomar uma decisão definitiva","Abrir redes sociais"], answer:1, tip:"A regulação vem antes da análise sofisticada."},
+      {prompt:"Soltar o ar mais longo do que inspira costuma ajudar porque:", options:["Sinaliza desaceleração ao corpo","Prova que o problema acabou","Elimina todas as emoções","Evita qualquer conversa"], answer:0, tip:"O corpo precisa receber sinais de segurança."},
+      {prompt:"Qual frase separa sensação de realidade?", options:["Estou sentindo ameaça; ainda preciso verificar os fatos","Se eu senti, é verdade absoluta","Nada presta","Tenho que resolver agora"], answer:0, tip:"Sensação informa, mas não conclui sozinha."},
+      {prompt:"Uma prática de aterramento é:", options:["Nomear cinco coisas que vejo","Repetir a preocupação vinte vezes","Prender a respiração","Mandar mensagem impulsiva"], answer:0, tip:"Orientação sensorial traz a atenção para o presente."},
+      {prompt:"Sinal de que a regulação ajudou:", options:["Você ganhou alguns segundos antes de reagir","Você ficou perfeita","Você nunca mais sentiu ansiedade","Você venceu alguém"], answer:0, tip:"Ganhar segundos já muda escolhas."},
+      {prompt:"A meta da regulação é:", options:["Escolher melhor, não se anestesiar","Virar uma pessoa fria","Apagar memórias","Agradar mais"], answer:0, tip:"Regulação aumenta liberdade interna."}
+    ]},
+    { id:"apego-rejeicao", title:"Medo de rejeição e apego", level:"Terapia • vínculos", duration:"6 perguntas", goal:"Reconhecer quando o medo de perder o vínculo começa a mandar na sua voz.", questions:[
+      {prompt:"Um sinal de medo de rejeição ativado é:", options:["Concordar enquanto o corpo diz não","Expressar preferência com calma","Pedir tempo para pensar","Manter coerência"], answer:0, tip:"O corpo costuma denunciar a autoanulação antes da mente admitir."},
+      {prompt:"Qual pensamento é mais regulado?", options:["A discordância não é necessariamente abandono","Se discordarem, acabou tudo","Preciso ser indispensável","Meu valor depende da aprovação"], answer:0, tip:"Ele amplia a leitura do vínculo."},
+      {prompt:"Apego seguro se treina quando você:", options:["Pede clareza sem implorar por valor","Vigia cada reação do outro","Some antes de ser deixada","Aceita tudo para não perder"], answer:0, tip:"Pedir clareza é diferente de pedir permissão para existir."},
+      {prompt:"Qual frase ajuda antes de responder uma mensagem difícil?", options:["Eu posso esperar meu corpo baixar antes de responder","Preciso responder agora para não perder a pessoa","Vou mandar um texto enorme","Vou me culpar preventivamente"], answer:0, tip:"Tempo de resposta protege dignidade."},
+      {prompt:"Evolução nessa área é:", options:["Não precisar de ninguém","Precisar de vínculo sem negociar a própria identidade","Nunca sentir saudade","Ser indiferente"], answer:1, tip:"Autonomia não é frieza; é presença com eixo."},
+      {prompt:"Quando a insegurança grita, o gesto mais maduro é:", options:["Nomear a necessidade e escolher uma ação proporcional","Testar o amor do outro","Acusar para receber prova","Desaparecer"], answer:0, tip:"Proporção é antídoto contra dramatização."}
+    ]},
+    { id:"diario-terapia", title:"Diário de sessão: insight vira prática", level:"Terapia • integração", duration:"6 perguntas", goal:"Transformar uma sessão, reflexão ou conversa terapêutica em comportamento observável.", questions:[
+      {prompt:"Depois de uma sessão de terapia, o melhor registro é:", options:["Um insight, uma emoção e uma ação pequena","A transcrição perfeita da conversa","A lista de tudo que deu errado","Nada, para não mexer no assunto"], answer:0, tip:"Integração exige síntese e prática."},
+      {prompt:"Insight sem prática costuma virar:", options:["Consciência bonita, mas pouco incorporada","Mudança automática garantida","Cura definitiva","Prova de superioridade"], answer:0, tip:"O corpo aprende por repetição aplicada."},
+      {prompt:"Uma boa ação pós-terapia deve ser:", options:["Pequena, concreta e realizável em 24 horas","Grandiosa e impossível","Dependente da aprovação de todos","Perfeita"], answer:0, tip:"Ação pequena vence a abstração."},
+      {prompt:"Qual pergunta mostra se a terapia está ajudando?", options:["Tenho reagido com um pouco mais de consciência?","Nunca mais sofro?","Todos me tratam melhor?","Fiquei imune a conflitos?"], answer:0, tip:"Efeito terapêutico costuma aparecer na relação com a experiência, não no fim da experiência."},
+      {prompt:"Registrar recaída serve para:", options:["Identificar padrão e ajustar estratégia","Provar fracasso","Cancelar progresso","Punir-se"], answer:0, tip:"Recaída observada vira dado; recaída escondida vira repetição."},
+      {prompt:"Um bom fechamento de diário é:", options:["O que vou praticar até amanhã?","Por que não sou perfeita?","Quem me decepcionou?","Como evito sentir?"], answer:0, tip:"A pergunta converte reflexão em direção."}
+    ]},
+    { id:"identidade-futura", title:"Identidade futura realista", level:"Terapia • narrativa", duration:"6 perguntas", goal:"Criar uma imagem de futuro que seja inspiradora sem virar cobrança tirânica.", questions:[
+      {prompt:"Uma identidade futura saudável é:", options:["Uma direção flexível apoiada em valores","Uma versão perfeita e inalcançável","Uma fantasia para fugir do presente","Uma exigência para merecer amor"], answer:0, tip:"Futuro bom orienta, não chicoteia."},
+      {prompt:"Qual frase é mais madura?", options:["Estou me tornando alguém que se escuta antes de se abandonar","Serei perfeita em breve","Quando eu mudar, serei digna","Não posso errar mais"], answer:0, tip:"Ela fala de processo, não de perfeição."},
+      {prompt:"O que dá consistência à mudança?", options:["Ritual pequeno repetido","Promessa intensa e rara","Vergonha","Comparação"], answer:0, tip:"Identidade se consolida por evidências repetidas."},
+      {prompt:"Qual pergunta aproxima futuro e presente?", options:["Que gesto de 10 minutos prova essa direção hoje?","Quem preciso impressionar?","Como acelero tudo?","Por que ainda não cheguei?"], answer:0, tip:"O futuro precisa caber no dia."},
+      {prompt:"Quando falhar, a identidade futura deve:", options:["Ser ajustada com humanidade","Ser abandonada","Virar punição","Exigir segredo"], answer:0, tip:"Flexibilidade mantém continuidade."},
+      {prompt:"Evolução nessa prática é:", options:["Mais coerência entre valor e ação","Autoimagem inflada","Controle total","Ausência de dúvidas"], answer:0, tip:"Coerência é sinal mais confiável que euforia."}
+    ]}
+  ]},
+  portugues: { label:"Português", icon:"🗣️", items:[
+    { id:"vocabulario-sofisticado", title:"Vocabulário de precisão", level:"Português • repertório", duration:"6 perguntas", goal:"Ampliar palavras para pensar com mais precisão e falar com mais presença.", questions:[
+      {prompt:"“Discernimento” significa:", options:["Capacidade de distinguir e avaliar com clareza","Desejo de vencer discussões","Fala bonita sem conteúdo","Medo de decidir"], answer:0, tip:"Discernimento é inteligência prática diante de escolhas."},
+      {prompt:"Qual palavra indica diferença sutil de sentido?", options:["Nuance","Ruído","Exagero","Sentença"], answer:0, tip:"Nuance deixa a fala mais fina e menos simplista."},
+      {prompt:"“Coerência” é:", options:["Alinhamento entre ideias, fala e ação","Falar difícil sempre","Mudar de assunto rápido","Evitar opinião"], answer:0, tip:"Coerência dá credibilidade à presença."},
+      {prompt:"Qual frase usa “pertinente” corretamente?", options:["Sua observação é pertinente ao tema","Sua observação é pertinente de comer","Estou pertinente de sono","O dia ficou pertinente"], answer:0, tip:"Pertinente é adequado, relevante, relacionado."},
+      {prompt:"“Ambivalência” descreve:", options:["Presença de sentimentos ou desejos contraditórios","Certeza absoluta","Indiferença total","Falta de vocabulário"], answer:0, tip:"Nomear ambivalência ajuda a não se violentar em escolhas complexas."},
+      {prompt:"Qual palavra substitui “muito importante” com elegância?", options:["Relevante","Barulhento","Qualquer","Disperso"], answer:0, tip:"Relevante é claro, formal e funcional."}
+    ]},
+    { id:"frase-com-presenca", title:"Frase com presença", level:"Português • fala assertiva", duration:"6 perguntas", goal:"Transformar frases frágeis em formulações claras, adultas e elegantes.", questions:[
+      {prompt:"Melhor versão de “ah, não sei, tanto faz”:", options:["Ainda estou avaliando, mas minha preferência inicial é esta","Qualquer coisa serve","Você decide porque não tenho voz","Nem ligo"], answer:0, tip:"A frase preserva processo e posicionamento."},
+      {prompt:"Melhor versão de “isso é ruim”:", options:["Vejo fragilidades nesse ponto e gostaria de discutir alternativas","Isso é lixo","Nada presta","Horrível e pronto"], answer:0, tip:"Crítica madura aponta fragilidade e caminho."},
+      {prompt:"Qual frase é firme sem ser agressiva?", options:["Eu discordo desse encaminhamento por três razões","Você não entende nada","Vou fazer do meu jeito e acabou","Isso é ridículo"], answer:0, tip:"Discordância com estrutura aumenta autoridade."},
+      {prompt:"“Em outras palavras” serve para:", options:["Reformular uma ideia com mais clareza","Encerrar uma conversa","Provar superioridade","Fugir do assunto"], answer:0, tip:"É recurso de coesão e didática."},
+      {prompt:"Qual abertura demonstra maturidade?", options:["Posso estar deixando algo de fora, mas minha leitura é...","Tenho certeza absoluta de tudo","Você vai ter que aceitar","Não quero ouvir mais nada"], answer:0, tip:"Autoridade não precisa fingir onisciência."},
+      {prompt:"Falar com presença é:", options:["Unir clareza, ritmo, pausa e intenção","Falar rápido para impressionar","Usar palavras difíceis sempre","Nunca demonstrar emoção"], answer:0, tip:"Presença é forma e conteúdo trabalhando juntos."}
+    ]},
+    { id:"argumentacao", title:"Argumentação elegante", level:"Português • raciocínio", duration:"6 perguntas", goal:"Construir argumentos com tese, evidência, contraste e fechamento.", questions:[
+      {prompt:"Um argumento sólido começa por:", options:["Uma tese clara","Um ataque pessoal","Uma conclusão escondida","Uma palavra difícil"], answer:0, tip:"A tese orienta o leitor ou ouvinte."},
+      {prompt:"Qual conector introduz contraste?", options:["No entanto","Além disso","Portanto","Por exemplo"], answer:0, tip:"No entanto cria tensão argumentativa."},
+      {prompt:"Qual conector indica consequência?", options:["Portanto","Apesar disso","Enquanto","Talvez"], answer:0, tip:"Portanto conduz a conclusão."},
+      {prompt:"Uma evidência pode ser:", options:["Dado, exemplo, experiência observável ou referência","Grito","Impressão sem contexto","Ironia"], answer:0, tip:"Evidência sustenta a tese."},
+      {prompt:"Qual frase fecha com elegância?", options:["Por isso, a decisão mais coerente é avançar com cautela","É isso e pronto","Quem discordar está errado","Fim"], answer:0, tip:"O fechamento retoma tese e direção."},
+      {prompt:"Argumentar bem exige:", options:["Organizar pensamento antes de elevar o tom","Vencer a qualquer custo","Falar sem pausa","Evitar perguntas"], answer:0, tip:"Tom alto raramente compensa estrutura fraca."}
+    ]},
+    { id:"fala-publica", title:"Fala pública com autoridade", level:"Português • comunicação", duration:"6 perguntas", goal:"Preparar apresentações, reuniões e conversas importantes com voz clara e confiante.", questions:[
+      {prompt:"Uma boa abertura de apresentação deve:", options:["Situar tema, relevância e objetivo","Pedir desculpas por existir","Contar tudo sem ordem","Começar com detalhes técnicos demais"], answer:0, tip:"Abertura boa dá mapa."},
+      {prompt:"Qual frase cria credibilidade?", options:["Vou apresentar o problema, a proposta e o próximo passo","Talvez eu fale qualquer coisa","Não preparei nada","Vocês entenderam, né?"], answer:0, tip:"Estrutura transmite segurança."},
+      {prompt:"Pausa na fala serve para:", options:["Dar peso à ideia e permitir compreensão","Parecer que esqueceu tudo","Encher vazio sem sentido","Evitar contato"], answer:0, tip:"Pausa é recurso de autoridade."},
+      {prompt:"Qual recurso torna a mensagem memorável?", options:["Exemplo concreto","Jargão em excesso","Frase longa sem respiração","Assunto paralelo"], answer:0, tip:"Exemplo transforma abstração em imagem."},
+      {prompt:"Ao ser interrompida, uma resposta elegante é:", options:["Vou concluir este ponto e já abro para sua observação","Cale a boca","Esqueci tudo","Então fala você"], answer:0, tip:"A frase preserva condução sem agressividade."},
+      {prompt:"O fechamento ideal deve conter:", options:["Síntese e chamada para próxima ação","Pedido de aprovação pessoal","Desculpa longa","Silêncio abrupto"], answer:0, tip:"Fechamento bom deixa direção."}
+    ]},
+    { id:"reescrita-complexa", title:"Reescrita sofisticada", level:"Português • estilo", duration:"6 perguntas", goal:"Substituir frases simples por formulações mais maduras e profissionais.", questions:[
+      {prompt:"Melhor versão de “isso ajuda muito”:", options:["Essa medida contribui de forma significativa para o resultado","Isso é top","Ajuda demais mesmo","É muito legal"], answer:0, tip:"A versão é formal sem ficar artificial."},
+      {prompt:"Melhor versão de “não gostei”:", options:["Tenho ressalvas em relação a esse encaminhamento","Achei péssimo","Não curti","Sem chance"], answer:0, tip:"Ressalvas sinaliza crítica específica e adulta."},
+      {prompt:"Melhor versão de “tem problema aí”:", options:["Há uma inconsistência que precisa ser analisada","Tem rolo","Está estranho","Deu ruim"], answer:0, tip:"Inconsistência é precisa e profissional."},
+      {prompt:"Melhor versão de “vamos melhorar isso”:", options:["Podemos refinar a proposta para torná-la mais consistente","Vamos dar um tapa","Arruma aí","Melhora qualquer coisa"], answer:0, tip:"Refinar indica aprimoramento criterioso."},
+      {prompt:"Melhor versão de “não dá tempo”:", options:["O prazo atual compromete a qualidade da entrega","Impossível e pronto","Sem tempo, sem conversa","Não vai rolar"], answer:0, tip:"A frase explica consequência, não só recusa."},
+      {prompt:"Melhor versão de “eu sei fazer isso”:", options:["Tenho repertório e experiência para conduzir essa entrega","Eu mando muito","Deixa comigo sem pergunta","Sou a melhor"], answer:0, tip:"Autoridade elegante evita arrogância vazia."}
+    ]},
+    { id:"leitura-critica", title:"Leitura crítica de situações", level:"Português • interpretação", duration:"6 perguntas", goal:"Ler cenários complexos sem reduzir tudo a drama, culpa ou certeza precipitada.", questions:[
+      {prompt:"Uma leitura crítica madura considera:", options:["Fatos, contexto, interesses e consequências","Só a primeira impressão","A opinião de quem fala mais alto","O medo do momento"], answer:0, tip:"Complexidade pede múltiplas camadas."},
+      {prompt:"Qual expressão indica hipótese, não certeza?", options:["É possível que","É óbvio que","Com certeza absoluta","Não existe dúvida"], answer:0, tip:"Hipótese preserva abertura intelectual."},
+      {prompt:"Qual pergunta melhora discernimento?", options:["O que eu sei, o que suponho e o que preciso verificar?","Quem está contra mim?","Como provo que tenho razão?","Como evito pensar nisso?"], answer:0, tip:"Separar fato de interpretação reduz ruído emocional."},
+      {prompt:"Quando uma situação é ambígua, o melhor é:", options:["Buscar mais dados antes de concluir","Completar lacunas com medo","Reagir no impulso","Escolher a pior interpretação"], answer:0, tip:"Ambiguidade não autoriza catástrofe."},
+      {prompt:"Qual palavra combina com análise equilibrada?", options:["Ponderação","Precipitação","Rigidez","Exaltação"], answer:0, tip:"Ponderar é pesar elementos antes de decidir."},
+      {prompt:"Uma conclusão responsável deve ser:", options:["Proporcional às evidências disponíveis","Mais dramática que os fatos","A mais rápida possível","Baseada em orgulho ferido"], answer:0, tip:"Proporção é sofisticação emocional e cognitiva."}
+    ]}
+  ]},
+  ingles: { label:"English", icon:"🌎", items:[
+    { id:"self-introduction", title:"Self-introduction with confidence", level:"English • B1", duration:"6 questions", goal:"Falar sobre trajetória, habilidades e momento atual com naturalidade.", speak:"Hi, I am learning to express myself with more confidence and clarity.", questions:[
+      {prompt:"Choose the best translation: “I have been working on my confidence.”", options:["Eu tenho trabalhado a minha confiança","Eu trabalhei amanhã","Eu perdi minha confiança","Eu nunca trabalho"], answer:0, tip:"Have been + verb-ing indica continuidade até o presente."},
+      {prompt:"Complete: “I am interested ___ communication, design and technology.”", options:["in","on","at","for"], answer:0, tip:"Interested in é a combinação correta."},
+      {prompt:"Which sentence sounds more natural?", options:["My background combines communication, branding and UX","My background combine communication","My background is make UX","I background communications"], answer:0, tip:"Background combines = trajetória combina."},
+      {prompt:"“I would like to improve my speaking skills” means:", options:["Eu gostaria de melhorar minha fala","Eu preciso esquecer inglês","Eu vou parar de falar","Eu não entendo habilidades"], answer:0, tip:"Would like to é forma educada de desejo."},
+      {prompt:"Choose a confident but humble sentence:", options:["I am still learning, but I can communicate my ideas clearly","I am perfect in English","I cannot say anything","English is impossible"], answer:0, tip:"Confiança madura admite processo e capacidade."},
+      {prompt:"How do you say “aos poucos” in English?", options:["Little by little","Very never","Fastly now","All nothing"], answer:0, tip:"Little by little é excelente para treino contínuo."}
+    ]},
+    { id:"therapy-reflection-en", title:"Talking about therapy and growth", level:"English • B1", duration:"6 questions", goal:"Criar frases intermediárias para falar de processo emocional e evolução pessoal.", speak:"Therapy has helped me notice my patterns and respond with more awareness.", questions:[
+      {prompt:"Translate: “Therapy has helped me notice my patterns.”", options:["A terapia tem me ajudado a perceber meus padrões","A terapia me impede de pensar","A terapia é meu padrão","Eu nunca percebo nada"], answer:0, tip:"Has helped me = tem me ajudado."},
+      {prompt:"Complete: “I am learning to respond instead ___ react.”", options:["of","to","with","about"], answer:0, tip:"Instead of = em vez de."},
+      {prompt:"“I feel more grounded” means:", options:["Eu me sinto mais centrada","Eu me sinto atrasada","Eu me sinto perdida no chão","Eu estou com pressa"], answer:0, tip:"Grounded é centrada, com os pés no chão."},
+      {prompt:"Choose the best sentence:", options:["I can recognize my inner critic more quickly now","I can recognizes my critic","I recognizing critic now","My critic recognize me"], answer:0, tip:"Can + verbo base: can recognize."},
+      {prompt:"What does “healing is not linear” mean?", options:["A cura não é linear","A cura é uma linha perfeita","Eu não posso curar","Linha é terapia"], answer:0, tip:"Frase útil para falar de altos e baixos."},
+      {prompt:"A good reflection sentence is:", options:["I still have difficult days, but I recover faster","I never have problems","I am broken forever","I cannot learn anything"], answer:0, tip:"A frase reconhece dificuldade e progresso."}
+    ]},
+    { id:"meetings-clarity", title:"Clear communication in meetings", level:"English • B1/B2", duration:"6 questions", goal:"Pedir esclarecimento, organizar ideias e participar de reuniões com mais segurança.", speak:"Could you clarify the main point, please? I want to make sure I understood correctly.", questions:[
+      {prompt:"“Could you clarify the main point?” means:", options:["Você poderia esclarecer o ponto principal?","Você poderia fechar a porta?","Você poderia comprar isso?","Você entendeu meu nome?"], answer:0, tip:"Clarify = esclarecer."},
+      {prompt:"Choose the most polite sentence:", options:["Could you repeat that, please?","Repeat now","You speak wrong","I don't care"], answer:0, tip:"Could you... please? é educado e profissional."},
+      {prompt:"Complete: “I want to make sure I understood ___.”", options:["correctly","correct","correction","correcting"], answer:0, tip:"Correctly é advérbio: corretamente."},
+      {prompt:"How do you introduce your opinion?", options:["From my perspective...","In my refrigerator...","Very more opinion...","I am agree..."], answer:0, tip:"From my perspective é natural e elegante."},
+      {prompt:"“Let me summarize” is used to:", options:["Organizar e resumir uma ideia","Encerrar a internet","Pedir café","Discordar agressivamente"], answer:0, tip:"Ótima frase para reuniões."},
+      {prompt:"Choose the sentence that shows clarity:", options:["The main challenge is access, and the next step is validation","Challenge access next validation is","The next step are validation","Access very main"], answer:0, tip:"Sujeito, verbo e complemento claros."}
+    ]},
+    { id:"project-pitch-en", title:"Pitching a project in English", level:"English • B1/B2", duration:"6 questions", goal:"Apresentar um app ou ideia com problema, solução e impacto.", speak:"This project helps people access services with less friction and more clarity.", questions:[
+      {prompt:"Translate: “This project helps people access services.”", options:["Este projeto ajuda pessoas a acessar serviços","Este projeto esconde serviços","As pessoas ajudam o projeto dormir","Serviços acessam pessoas"], answer:0, tip:"Helps people access = ajuda pessoas a acessar."},
+      {prompt:"Complete: “The main problem is the lack ___ clear information.”", options:["of","in","at","to"], answer:0, tip:"Lack of = falta de."},
+      {prompt:"Which sentence presents a solution?", options:["Our app organizes requests, reminders and progress tracking","Our app is maybe nice","People have problems","The city is complicated"], answer:0, tip:"Uma solução precisa dizer o que faz."},
+      {prompt:"“User-friendly” means:", options:["Fácil de usar","Difícil de entender","Sem usuário","Muito técnico"], answer:0, tip:"User-friendly é uma palavra-chave excelente."},
+      {prompt:"Choose the impact sentence:", options:["It can reduce missed appointments and improve communication","It is pink and beautiful only","It has many buttons maybe","It is not possible"], answer:0, tip:"Impacto mostra efeito real."},
+      {prompt:"How do you say “próximo passo”?", options:["Next step","Near walk","After foot","Following shoe"], answer:0, tip:"Next step é essencial em pitch."}
+    ]},
+    { id:"boundaries-en", title:"Boundaries in English", level:"English • B1", duration:"6 questions", goal:"Dizer não, pedir tempo e manter respeito em inglês.", speak:"I appreciate the invitation, but I am not available today.", questions:[
+      {prompt:"Translate: “I am not available today.”", options:["Eu não estou disponível hoje","Eu não sou avaliada hoje","Eu estou atrasada hoje","Eu não entendo hoje"], answer:0, tip:"Available = disponível."},
+      {prompt:"A polite refusal is:", options:["Thank you for asking, but I cannot commit to that","No. Bad idea. Go away","I hate this","Never talk to me"], answer:0, tip:"A frase é firme e educada."},
+      {prompt:"“I need some time to think about it” means:", options:["Eu preciso de um tempo para pensar sobre isso","Eu preciso de dinheiro","Eu penso muito rápido","Eu não quero tempo"], answer:0, tip:"Some time = algum tempo."},
+      {prompt:"Complete: “I cannot take ___ more tasks right now.”", options:["on","in","at","of"], answer:0, tip:"Take on tasks = assumir tarefas."},
+      {prompt:"Choose the boundary sentence:", options:["I understand, but this does not work for me","You are impossible","Fine, I will do everything","I have no opinion"], answer:0, tip:"This does not work for me é claro e respeitoso."},
+      {prompt:"“I appreciate your understanding” is used to:", options:["Fechar uma mensagem com respeito","Pedir desculpa por existir","Atacar alguém","Desistir do limite"], answer:0, tip:"Boa frase para emails e mensagens."}
+    ]},
+    { id:"writing-connector-en", title:"Connectors for better writing", level:"English • B1/B2", duration:"6 questions", goal:"Usar conectores para escrever frases mais ricas e coerentes.", speak:"However, I believe we can improve the process by making the information clearer.", questions:[
+      {prompt:"Which connector shows contrast?", options:["However","Also","Because","For example"], answer:0, tip:"However = no entanto."},
+      {prompt:"Which connector introduces a reason?", options:["Because","However","In addition","Finally"], answer:0, tip:"Because = porque."},
+      {prompt:"“In addition” means:", options:["Além disso","Apesar disso","Por isso","Na verdade"], answer:0, tip:"Use para adicionar argumentos."},
+      {prompt:"Choose the best sentence:", options:["The app is simple; however, the strategy behind it is robust","The app however simple behind robust","However app simple is","The strategy robust however it"], answer:0, tip:"Boa pontuação deixa a escrita mais madura."},
+      {prompt:"“Therefore” indicates:", options:["Conclusão ou consequência","Exemplo","Contraste","Dúvida"], answer:0, tip:"Therefore = portanto."},
+      {prompt:"Complete: “For example, users can confirm appointments ___ cancel them.”", options:["or","but","because","therefore"], answer:0, tip:"Or apresenta alternativa."}
+    ]}
+  ]}
+};
+const state = { panel:"hoje", current:null, questionIndex:0, answers:[], selectedCheckin:{} };
+const $ = id => document.getElementById(id);
+function todayKey(date=new Date()){const y=date.getFullYear();const m=String(date.getMonth()+1).padStart(2,"0");const d=String(date.getDate()).padStart(2,"0");return `${y}-${m}-${d}`;}
+function parseDateKey(k){return new Date(`${k}T12:00:00`)}
+function formatDate(k){return parseDateKey(k).toLocaleDateString("pt-BR",{weekday:"short",day:"2-digit",month:"short"})}
+function formatNumber(v){if(!Number.isFinite(v)) return "0"; return Number.isInteger(v)?String(v):v.toFixed(1).replace(".",",")}
+function escapeHTML(v=""){return String(v).replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#039;",'"':"&quot;"}[c]))}
+function loadData(){try{const raw=JSON.parse(localStorage.getItem(STORAGE_KEY));return {sessions:Array.isArray(raw?.sessions)?raw.sessions:[],checkins:Array.isArray(raw?.checkins)?raw.checkins:[],writings:Array.isArray(raw?.writings)?raw.writings:[]}}catch{return {sessions:[],checkins:[],writings:[]}}}
+function saveData(data){localStorage.setItem(STORAGE_KEY,JSON.stringify({sessions:data.sessions||[],checkins:data.checkins||[],writings:data.writings||[]}))}
+function average(values){const nums=values.map(Number).filter(Number.isFinite);return nums.length?nums.reduce((a,b)=>a+b,0)/nums.length:0}
+function daysAgo(n){const d=new Date();d.setDate(d.getDate()-n);return todayKey(d)}
+function lastNDays(n){return Array.from({length:n},(_,i)=>{const d=new Date();d.setDate(d.getDate()-(n-1-i));return todayKey(d)})}
+function categoryLabel(key){return EXERCISES[key]?.label||key}
+function getExercise(category,id){return EXERCISES[category].items.find(x=>x.id===id)}
+function sessionsFor(category){return loadData().sessions.filter(x=>x.category===category)}
+function lastSession(category,id){return loadData().sessions.filter(x=>x.category===category&&x.exerciseId===id).sort((a,b)=>b.completedAt.localeCompare(a.completedAt))[0]}
+function gradeMessage(grade){if(grade>=9)return "Excelente. Você não apenas acertou; mostrou repertório, atenção e capacidade de discriminar nuances."; if(grade>=7)return "Muito bom. Há consistência suficiente para avançar, revisando as dicas como refinamento."; if(grade>=5)return "Bom começo. O exercício revelou base; repetir amanhã pode consolidar o aprendizado."; return "Registro salvo. A nota é dado de treino, não sentença. Refaça com calma e observe o padrão."}
+function toast(message){document.querySelector(".toast")?.remove();const el=document.createElement("div");el.className="toast";el.textContent=message;document.body.appendChild(el);setTimeout(()=>el.remove(),2600)}
+function checkinScore(c){if(!c)return 0;const mood=Number(c.mood||0), clarity=Number(c.clarity||0), esteem=Number(c.esteem||0), anxiety=Number(c.anxiety||0);return Math.max(0,Math.min(10,((mood+clarity+esteem+(6-anxiety))/20)*10))}
+function setPanel(panel){state.panel=panel;document.querySelectorAll(".panel").forEach(el=>el.classList.toggle("active",el.id===`panel-${panel}`));document.querySelectorAll(".tab,.bottom-nav button").forEach(btn=>btn.classList.toggle("active",btn.dataset.panel===panel));window.scrollTo({top:0,behavior:"smooth"})}
+function calculateStreak(){const data=loadData();const days=new Set([...data.checkins.map(x=>x.date),...data.sessions.map(x=>x.date),...data.writings.map(x=>x.date)]);let count=0;const cursor=new Date();while(days.has(todayKey(cursor))){count++;cursor.setDate(cursor.getDate()-1)}return count}
+function calculatePulse(){const data=loadData();const days=lastNDays(14);const recentSessions=data.sessions.filter(x=>days.includes(x.date));const recentCheckins=data.checkins.filter(x=>days.includes(x.date));const distinctDays=new Set([...recentSessions.map(x=>x.date),...recentCheckins.map(x=>x.date)]).size;const consistency=(distinctDays/14)*35;const practice=Math.min(recentSessions.length/18,1)*25;const grades=(average(recentSessions.map(x=>x.grade))/10)*20;const check=(average(recentCheckins.map(checkinScore))/10)*20;return Math.round(consistency+practice+grades+check)}
+function therapyTrend(){const data=loadData();const days=lastNDays(14);const checkins=data.checkins.filter(x=>days.includes(x.date)).sort((a,b)=>a.date.localeCompare(b.date));if(checkins.length<4)return {label:"observando",text:"Ainda há poucos registros para interpretar tendência. Continue por pelo menos 7 a 14 dias."};const half=Math.ceil(checkins.length/2);const first=average(checkins.slice(0,half).map(checkinScore));const second=average(checkins.slice(half).map(checkinScore));const diff=second-first;if(diff>=.8)return {label:"ajudando",text:"Os registros sugerem melhora percebida: mais clareza, autoestima ou menor carga de ansiedade nos dias recentes."};if(diff<=-.8)return {label:"atenção",text:"Os registros sugerem aumento de carga emocional. Leve esse padrão para a terapia e reduza a cobrança sobre desempenho."};return {label:"estável",text:"A tendência está relativamente estável. Isso pode indicar sustentação, mas ainda pede observação e prática contínua."}}
+function renderTodayText(){$("todayText").textContent=new Date().toLocaleDateString("pt-BR",{weekday:"long",day:"2-digit",month:"long"})}
+function renderDashboard(){const data=loadData();const today=todayKey();const todaySessions=data.sessions.filter(x=>x.date===today);const days=lastNDays(14);const recentSessions=data.sessions.filter(x=>days.includes(x.date));const pulse=calculatePulse();const trend=therapyTrend();$("todaySessions").textContent=todaySessions.length;$("pulseScore").textContent=pulse;$("therapyTrend").textContent=trend.label;$("weekSessions").textContent=recentSessions.length;$("streakText").textContent=`${calculateStreak()} dias`;$("todayInsight").innerHTML=`<div class="index-main"><div class="pulse-number" style="--angle:${pulse*3.6}deg">${pulse}</div><div><h3>Índice Pulso</h3><p>${escapeHTML(trend.text)}</p><p class="support">Leitura orientativa: combina consistência, check-ins, práticas e notas. Não é diagnóstico clínico nem substitui avaliação profissional.</p></div></div>`}
+function renderCategory(category){const data=EXERCISES[category];$( `${category}Progress`).textContent=`${sessionsFor(category).length} feitos`;$( `${category}List`).innerHTML=data.items.map(item=>{const last=lastSession(category,item.id);const lastText=last?`Última nota: ${formatNumber(last.grade)}/10`:"Ainda não feito";const audio=item.speak?`<button class="secondary" type="button" data-speak="${escapeHTML(item.speak)}">Ouvir</button>`:"";return `<article class="category"><div class="category-top"><div class="icon">${data.icon}</div><div style="flex:1"><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.goal)}</p><div class="meta-row"><span class="tag">${escapeHTML(item.level)}</span><span class="tag">${escapeHTML(item.duration)}</span></div></div></div><div class="card-actions"><button class="primary" type="button" data-start-category="${category}" data-start-id="${escapeHTML(item.id)}">Começar treino</button>${audio}</div><p class="note">${lastText}</p></article>`}).join("")}
+function renderQuickStart(){const html=Object.entries(EXERCISES).map(([category,data])=>{const idx=new Date().getDate()%data.items.length;const item=data.items[idx];return `<article class="category"><div class="category-top"><div class="icon">${data.icon}</div><div style="flex:1"><h3>${escapeHTML(data.label)}: ${escapeHTML(item.title)}</h3><p>${escapeHTML(item.goal)}</p></div></div><button class="secondary" type="button" data-start-category="${category}" data-start-id="${escapeHTML(item.id)}" style="width:100%">Fazer prática sugerida</button></article>`}).join("");$("quickStartList").innerHTML=html}
+function startExercise(category,id){const exercise=getExercise(category,id);if(!exercise)return;state.current={...exercise,category,categoryLabel:categoryLabel(category)};state.questionIndex=0;state.answers=[];$("runner").classList.remove("hidden");$("resultArea").classList.add("hidden");$("questionArea").classList.remove("hidden");renderQuestion()}
+function closeRunner(){$("runner").classList.add("hidden");state.current=null}
+function renderQuestion(){const ex=state.current;const q=ex.questions[state.questionIndex];const total=ex.questions.length;$("runnerCategory").textContent=ex.categoryLabel;$("runnerTitle").textContent=ex.title;$("runnerGoal").textContent=ex.goal;$("runnerLevel").textContent=`${ex.level} • ${ex.duration}`;$("runnerProgressText").textContent=`Pergunta ${state.questionIndex+1} de ${total}`;$("runnerProgressFill").style.width=`${(state.questionIndex/total)*100}%`;$("questionArea").innerHTML=`<p class="question-text">${escapeHTML(q.prompt)}</p><div class="choice-grid" id="answerOptions">${q.options.map((opt,i)=>`<button class="choice" type="button" data-answer-index="${i}">${escapeHTML(opt)}</button>`).join("")}</div><p id="answerFeedback" class="feedback hidden"></p><div class="runner-controls"><button id="skipQuestion" class="ghost" type="button">Pular</button><button id="nextQuestion" class="primary" type="button" disabled>Próxima</button></div>`}
+function chooseAnswer(index){const ex=state.current;const q=ex.questions[state.questionIndex];const ok=index===q.answer;document.querySelectorAll("[data-answer-index]").forEach(btn=>{const i=Number(btn.dataset.answerIndex);btn.disabled=true;btn.classList.toggle("selected",i===index);btn.classList.toggle("correct",i===q.answer);btn.classList.toggle("wrong",i===index&&!ok)});state.answers[state.questionIndex]={index,correct:ok};const fb=$("answerFeedback");fb.className=`feedback ${ok?"good":"bad"}`;fb.textContent=`${ok?"Resposta precisa.":"Quase."} ${q.tip}`;fb.classList.remove("hidden");$("nextQuestion").disabled=false}
+function nextQuestion(){if(!state.answers[state.questionIndex])state.answers[state.questionIndex]={index:null,correct:false};if(state.questionIndex<state.current.questions.length-1){state.questionIndex++;renderQuestion()}else finishExercise()}
+function finishExercise(){const ex=state.current;const total=ex.questions.length;const correct=state.answers.filter(x=>x?.correct).length;const grade=Math.round((correct/total)*100)/10;const data=loadData();const session={id:`${ex.category}-${ex.id}-${Date.now()}`,exerciseId:ex.id,category:ex.category,title:ex.title,date:todayKey(),completedAt:new Date().toISOString(),total,correct,grade,scorePercent:Math.round((correct/total)*100)};data.sessions.push(session);saveData(data);$("runnerProgressFill").style.width="100%";$("questionArea").classList.add("hidden");$("resultArea").classList.remove("hidden");$("resultArea").innerHTML=`<div class="result-box"><p class="eyebrow small">Nota final</p><div class="grade">${formatNumber(grade)}/10</div><h3>${correct} de ${total} respostas certas</h3><p>${escapeHTML(gradeMessage(grade))}</p><p class="support">Pergunta terapêutica: depois deste treino, você se sente mais consciente, mais regulada ou mais capaz de nomear o que acontece?</p><div class="choice-grid cols-2" data-choice-group="afterEffect"><button class="choice" data-value="mais_clara" type="button">Mais clara</button><button class="choice" data-value="mais_regulada" type="button">Mais regulada</button><button class="choice" data-value="igual" type="button">Igual</button><button class="choice" data-value="mais_pesada" type="button">Mais pesada</button></div><div class="runner-controls"><button class="secondary" type="button" data-repeat-current>Refazer</button><button class="primary" type="button" data-finish-close>Salvar e voltar</button></div></div>`;renderAll();toast("Prática salva na evolução.")}
+function saveCheckin(){const required=["mood","anxiety","clarity","esteem","innerVoice","focus"];const missing=required.filter(k=>!state.selectedCheckin[k]);if(missing.length){toast("Toque em uma opção de cada bloco.");return}const data=loadData();const today=todayKey();const current=data.checkins.find(x=>x.date===today);const record={date:today,updatedAt:new Date().toISOString(),...state.selectedCheckin};if(current)Object.assign(current,record);else data.checkins.push(record);saveData(data);renderAll();toast("Termômetro terapêutico salvo.")}
+function restoreCheckin(){const today=loadData().checkins.find(x=>x.date===todayKey());state.selectedCheckin=today?{mood:String(today.mood),anxiety:String(today.anxiety),clarity:String(today.clarity),esteem:String(today.esteem),innerVoice:today.innerVoice,focus:today.focus}:{};document.querySelectorAll("[data-choice-group]").forEach(group=>{const key=group.dataset.choiceGroup;group.querySelectorAll(".choice").forEach(btn=>btn.classList.toggle("selected",btn.dataset.value===state.selectedCheckin[key]))})}
+function renderEvolution(){const data=loadData();const days=lastNDays(14);const trend=therapyTrend();const pulse=calculatePulse();const checkins=data.checkins.filter(x=>days.includes(x.date));const sessions=data.sessions.filter(x=>days.includes(x.date));const therapyAvg=average(sessions.filter(x=>x.category==="terapia").map(x=>x.grade));const voiceCounts=checkins.reduce((acc,c)=>{acc[c.innerVoice]=(acc[c.innerVoice]||0)+1;return acc},{});const mainVoice=Object.entries(voiceCounts).sort((a,b)=>b[1]-a[1])[0]?.[0]||"sem dados";$("therapyEffect").innerHTML=`<div class="index-main"><div class="pulse-number" style="--angle:${pulse*3.6}deg">${pulse}</div><div><h3>${trend.label==="ajudando"?"Há sinais de que está ajudando":trend.label==="atenção"?"Há sinais para levar à terapia":"Processo em observação"}</h3><p>${escapeHTML(trend.text)}</p><p class="support">Média dos treinos terapêuticos: <strong>${formatNumber(therapyAvg)}/10</strong>. Voz interna mais frequente: <strong>${escapeHTML(mainVoice)}</strong>. Use isso como material de conversa terapêutica, não como laudo.</p></div></div><div class="insight"><h3>Leitura qualitativa</h3><p>${sessions.length>=8?"Você já tem volume suficiente para começar a observar padrões: horários, temas que elevam nota, temas que pesam e áreas que pedem repetição.":"Ainda estamos formando amostra. O app fica mais inteligente quando você registra check-ins e práticas por vários dias seguidos."}</p></div>`;$("weekChart").innerHTML=days.map(day=>{const daySessions=data.sessions.filter(x=>x.date===day);const chk=data.checkins.find(x=>x.date===day);const score=Math.round(((daySessions.length?Math.min(daySessions.length,3)/3*5:0)+checkinScore(chk))/15*100);return `<div class="day-row"><span>${formatDate(day)}</span><div class="day-track"><div class="day-fill" style="width:${score}%"></div></div><strong>${score}%</strong></div>`}).join("");const history=[...data.sessions.map(x=>({...x,type:"prática"})),...data.checkins.map(x=>({...x,type:"check-in",title:"Termômetro terapêutico"})),...data.writings.map(x=>({...x,type:"escrita"}))].sort((a,b)=>(b.completedAt||b.updatedAt||b.createdAt||b.date).localeCompare(a.completedAt||a.updatedAt||a.createdAt||a.date)).slice(0,18);$("historyList").innerHTML=history.length?history.map(item=>`<article class="history-item"><div class="history-top"><span>${escapeHTML(item.title||item.type)}</span><span>${formatDate(item.date)}</span></div><p>${item.type==="prática"?`${escapeHTML(categoryLabel(item.category))} • nota ${formatNumber(item.grade)}/10`:item.type==="check-in"?`Pulso percebido ${formatNumber(checkinScore(item))}/10 • voz interna: ${escapeHTML(item.innerVoice||"—")}`:`${escapeHTML(item.language||"texto")} • ${escapeHTML((item.text||"").slice(0,120))}`}</p></article>`).join(""):`<p class="empty">Ainda não há histórico. Faça um check-in ou complete uma prática para iniciar o mapa.</p>`}
+function speak(text,lang="en-US"){if(!("speechSynthesis" in window)){toast("Seu navegador não liberou áudio de voz.");return}const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.82;speechSynthesis.cancel();speechSynthesis.speak(u)}
+function saveWriting(language, text){if(!text.trim()){toast("Escreva algumas linhas antes de salvar.");return}const data=loadData();data.writings.push({id:`writing-${Date.now()}`,language,date:todayKey(),createdAt:new Date().toISOString(),title:language==="English"?"English writing lab":"Ateliê de português",text:text.trim()});saveData(data);renderAll();toast("Escrita salva na evolução.")}
+function exportSummary(){const data=loadData();const days=lastNDays(14);const sessions=data.sessions.filter(x=>days.includes(x.date));const checkins=data.checkins.filter(x=>days.includes(x.date));const trend=therapyTrend();const text=`PULSO 40+ | Resumo para terapia\nPeríodo: últimos 14 dias\nÍndice Pulso: ${calculatePulse()}/100\nTendência percebida: ${trend.label}\nLeitura: ${trend.text}\nPráticas concluídas: ${sessions.length}\nCheck-ins registrados: ${checkins.length}\nMédia terapia: ${formatNumber(average(sessions.filter(x=>x.category==="terapia").map(x=>x.grade)))}/10\nObservação: estes dados são autorrelato e apoio reflexivo, não diagnóstico clínico.`;navigator.clipboard?.writeText(text).then(()=>toast("Resumo copiado para a área de transferência."),()=>{alert(text)})}
+function setupInstall(){let deferredPrompt;const btn=$("installBtn");window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;btn.classList.remove("hidden")});btn.addEventListener("click",async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;btn.classList.add("hidden")})}
+function renderAll(){renderTodayText();renderDashboard();renderQuickStart();Object.keys(EXERCISES).forEach(renderCategory);renderEvolution();restoreCheckin()}
+function wireEvents(){document.addEventListener("click",event=>{const panelBtn=event.target.closest("[data-panel]");if(panelBtn)setPanel(panelBtn.dataset.panel);const startBtn=event.target.closest("[data-start-category]");if(startBtn)startExercise(startBtn.dataset.startCategory,startBtn.dataset.startId);const answerBtn=event.target.closest("[data-answer-index]");if(answerBtn)chooseAnswer(Number(answerBtn.dataset.answerIndex));const groupBtn=event.target.closest("[data-choice-group] .choice");if(groupBtn){const group=groupBtn.closest("[data-choice-group]");group.querySelectorAll(".choice").forEach(btn=>btn.classList.remove("selected"));groupBtn.classList.add("selected");state.selectedCheckin[group.dataset.choiceGroup]=groupBtn.dataset.value}const sosBtn=event.target.closest("[data-sos]");if(sosBtn){$("sosResult").textContent=sosBtn.dataset.sos;$("sosResult").className="feedback good"}const speakBtn=event.target.closest("[data-speak]");if(speakBtn)speak(speakBtn.dataset.speak);if(event.target.closest("[data-repeat-current]")&&state.current)startExercise(state.current.category,state.current.id);if(event.target.closest("[data-finish-close]"))closeRunner();if(event.target?.id==="nextQuestion")nextQuestion();if(event.target?.id==="skipQuestion")nextQuestion()});$("saveCheckin").addEventListener("click",saveCheckin);$("closeRunner").addEventListener("click",closeRunner);$("clearData").addEventListener("click",()=>{if(confirm("Deseja apagar histórico, check-ins e textos salvos neste aparelho?")){localStorage.removeItem(STORAGE_KEY);state.selectedCheckin={};renderAll();toast("Histórico apagado.")}});$("savePtWriting").addEventListener("click",()=>saveWriting("Português",$("ptWriting").value));$("saveEnWriting").addEventListener("click",()=>saveWriting("English",$("enWriting").value));$("speakWritingPrompt").addEventListener("click",()=>speak("What have you been learning about yourself lately?"));$("exportSummary").addEventListener("click",exportSummary)}
+function init(){renderAll();wireEvents();setupInstall();if("serviceWorker" in navigator)navigator.serviceWorker.register("service-worker.js").catch(()=>{})}
+document.addEventListener("DOMContentLoaded",init);
   </script>
 </body>
 </html>
