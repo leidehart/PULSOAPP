@@ -1,20 +1,25 @@
-# PULSO 40+ · TCC, Apego Ansioso, Autoestima e Evolução
+# PULSO 40+ · TCC, idiomas e evolução
 
-Aplicativo pessoal em HTML/PWA para transformar terapia em continuidade diária: check-in emocional, TCC aplicada, análise profunda de padrões, apego ansioso, autoestima, insegurança, português sofisticado, inglês intermediário e biblioteca terapêutica.
+Protótipo PWA em HTML/CSS/JavaScript puro para apoio de rotina terapêutica, estudo de português e inglês progressivo.
 
-## Novidades da versão v6
+## Módulos
 
-- Termômetro expandido com apego ansioso, insegurança e impulso de buscar confirmação.
-- Evolução automática por eixos: apego, autoestima, segurança interna e autonomia emocional.
-- Hábitos rápidos de 3 a 7 minutos sugeridos conforme o momento do usuário.
-- Exercícios novos de TCC para apego ansioso, autoestima comportamental, insegurança e exposição à incerteza afetiva.
-- Biblioteca ampliada com leituras voltadas a apego, autoestima, limites, vergonha e comunicação.
-- Resumo copiável para levar à terapia.
+- Check-in diário TCC + apego ansioso, autoestima e insegurança.
+- Hábitos rápidos automáticos conforme padrão emocional do dia.
+- Biblioteca com livros indicados para ler online/e-book legal ou comprar físico.
+- Terapia: práticas guiadas de TCC, apego ansioso, autoestima, insegurança e limites.
+- Português: fala, escrita, leitura, argumentação e estilo.
+- English: programa A1, A2, B1, B2, C1 e C2 com speaking, writing, reading and conversation.
+- Evolução automática com índice Pulso, eixos emocionais, idiomas, histórico e resumo copiável.
 
-## Observação ética
+## Aviso importante
 
-Este app é apoio educacional e reflexivo. Não realiza diagnóstico, não substitui psicoterapia, psiquiatria, atendimento médico ou ajuda emergencial. Os registros ficam salvos localmente no aparelho via `localStorage`.
+Este app é um material de apoio, autoconhecimento e organização de rotina. Não substitui terapia, psicóloga, psiquiatra, diagnóstico ou atendimento de emergência.
 
 ## Como publicar no GitHub Pages
 
-Envie todos os arquivos deste pacote para o repositório e ative o GitHub Pages em `Settings > Pages`, usando a branch `main` e a pasta `/root`.
+1. Envie todos os arquivos para o repositório.
+2. Vá em Settings → Pages.
+3. Em Branch, selecione `main` e `/root`.
+4. Clique em Save.
+5. Aguarde o link do GitHub Pages atualizar.

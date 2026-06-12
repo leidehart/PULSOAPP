@@ -1,14 +1,14 @@
 {
-  "name": "PULSO 40+ TCC TCC TCC",
-  "short_name": "PULSO 40+ TCC TCC",
-  "description": "App pessoal de TCC, análise profunda, evolução terapêutica, português e inglês intermediário.",
+  "name": "PULSO 40+ · TCC, idiomas e evolução",
+  "short_name": "PULSO 40+",
+  "description": "App de apoio com TCC profunda, apego ansioso, autoestima, português, inglês progressivo e biblioteca terapêutica.",
   "start_url": "./index.html",
-  "scope": "./",
   "display": "standalone",
-  "background_color": "#120915",
-  "theme_color": "#120915",
+  "background_color": "#120a17",
+  "theme_color": "#120a17",
+  "orientation": "portrait-primary",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {"src":"icon-192.png", "sizes":"192x192", "type":"image/png", "purpose":"any maskable"},
+    {"src":"icon-512.png", "sizes":"512x512", "type":"image/png", "purpose":"any maskable"}
   ]
 }
