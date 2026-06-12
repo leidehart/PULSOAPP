@@ -1,6 +1,6 @@
 # PULSO 40+
 
-App PWA de autoestima, confiança, língua portuguesa e inglês básico para mulheres 40+.
+App concept for improving access, scheduling, communication and care flow in public health units.
 
 ## O que foi alterado nesta versão
 
