@@ -1,43 +1,32 @@
-# PULSO 40+ — versão robusta
+# PULSO 40+ · TCC profunda
 
-PWA pessoal para mulheres 40+ que desejam acompanhar evolução emocional, praticar conteúdos terapêuticos, ampliar repertório de português e treinar inglês intermediário de forma contínua.
+Aplicativo pessoal em PWA para transformar terapia em continuidade prática: check-ins diários, exercícios de TCC, análise profunda de padrões, português sofisticado, inglês intermediário, evolução percebida e recomendações de livros conforme os registros.
 
-## O que esta versão entrega
+## O que esta versão inclui
 
-- **Terapia como prática observável**: exercícios sobre crítica interna, limites, regulação emocional, apego, diário de terapia e identidade futura.
-- **Termômetro terapêutico diário**: humor, ansiedade, clareza, autoestima, voz interna e foco do dia.
-- **Leitura de evolução**: o app calcula um Índice Pulso e mostra sinais de tendência, como “ajudando”, “estável”, “observando” ou “atenção”.
-- **Português mais sofisticado**: vocabulário, fala pública, argumentação, reescrita profissional e leitura crítica.
-- **Inglês intermediário**: autoapresentação, terapia em inglês, reuniões, pitch de projeto, limites e conectores de escrita.
-- **Laboratórios de escrita**: campos para praticar português e inglês, com histórico local.
-- **Resumo para terapia**: botão para gerar um texto copiável com os últimos 14 dias.
-- **PWA instalável**: funciona como app pelo navegador e salva dados no aparelho.
+- Termômetro TCC diário: humor, ansiedade, clareza, autoestima, voz interna, padrão profundo e foco.
+- Exercícios de TCC: registro de pensamento automático, distorções cognitivas, seta descendente, experimento comportamental, ativação comportamental e limites.
+- Camada de análise profunda: hipóteses de desvalor, abandono/rejeição, exigência/perfeccionismo e autossacrifício.
+- Português trabalhado: vocabulário, argumentação e escrita com precisão.
+- English intermediate: vocabulary for CBT, emotional self-expression and boundaries.
+- Evolução terapêutica: Índice Pulso, tendência percebida, mapa de continuidade, histórico e resumo copiável para terapia.
+- Biblioteca dinâmica: livros sugeridos conforme ansiedade, voz interna, padrão profundo, foco e consistência de uso.
 
-## Observação de segurança
+## Segurança e cuidado
 
-Este app é um apoio de autoconhecimento, educação emocional e prática de linguagem. Ele não substitui psicoterapia, atendimento médico, avaliação psicológica, psiquiátrica ou atendimento de emergência. Os indicadores são baseados em autorrelato e servem como pistas para reflexão.
+Este app não faz diagnóstico e não substitui terapia, avaliação médica ou atendimento de emergência. Os dados ficam salvos no próprio aparelho via `localStorage`.
 
-## Arquivos
+## Publicação no GitHub Pages
 
-- `index.html`: aplicativo completo.
-- `manifest.webmanifest`: metadados de instalação PWA.
-- `service-worker.js`: cache e funcionamento básico offline.
-- `icon.svg`, `icon-192.png`, `icon-512.png`, `icon-180.png`, `icon-32.png`, `favicon.png`: ícones.
-- `.nojekyll`: evita processamento do GitHub Pages.
+1. Suba todos os arquivos deste pacote para o repositório.
+2. Vá em **Settings → Pages**.
+3. Em **Source**, selecione **Deploy from a branch**.
+4. Escolha **main** e a pasta **/root**.
+5. Salve e aguarde o link.
 
-## Como publicar no GitHub Pages
+## Arquivos principais
 
-1. Envie todos os arquivos para a raiz do repositório.
-2. Abra **Settings > Pages**.
-3. Em **Build and deployment**, escolha **Deploy from a branch**.
-4. Selecione a branch `main` e a pasta `/root`.
-5. Clique em **Save**.
-6. Aguarde o link ser gerado.
-
-## Atualização importante
-
-O `service-worker.js` usa cache. Quando trocar arquivos no GitHub, aguarde alguns minutos e recarregue o app. Se o celular continuar mostrando a versão antiga, remova o app instalado e instale novamente pelo navegador.
-
-## Dados
-
-Os dados ficam em `localStorage`, no próprio navegador/aparelho. Se limpar dados do navegador ou trocar de celular, o histórico não acompanha automaticamente.
+- `index.html`: app completo.
+- `manifest.webmanifest`: instalação como PWA.
+- `service-worker.js`: cache local.
+- `.nojekyll`: evita problemas de publicação no GitHub Pages.
