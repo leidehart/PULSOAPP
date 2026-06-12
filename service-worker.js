@@ -1,4 +1,4 @@
-const CACHE_NAME = "pulso40-tcc-biblioteca-v5";
+const CACHE_NAME = "pulso40-tcc-apego-autoestima-v6";
 const ASSETS = [
   "./",
   "./index.html",
