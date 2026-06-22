@@ -1,11 +1,12 @@
-# Opção para aplicar pelo terminal
+# Aplicar pelo terminal
 
+# 1. Clone o repositório
 git clone https://github.com/leidehart/PULSOAPP.git
 cd PULSOAPP
 
-# Copie o index.html deste pacote para dentro da pasta do repositório,
-# substituindo o index.html antigo.
+# 2. Substitua o index.html pelo index.html deste pacote
 
+# 3. Faça commit e envie
 git add index.html
-git commit -m "Melhora exercícios, avaliação final e evolução real do PulsoApp"
+git commit -m "Ajusta teste individual, privacidade e evolução por perfil"
 git push

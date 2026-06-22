@@ -1,0 +1,15 @@
+MODELO DE LINKS PARA TESTADORES
+
+Troque SEU-LINK-DO-APP pelo link publicado do PULSOAPP.
+
+Amiga 1:
+https://SEU-LINK-DO-APP/?tester=amiga-1
+
+Amigo 2:
+https://SEU-LINK-DO-APP/?tester=amigo-2
+
+Teste 03:
+https://SEU-LINK-DO-APP/?tester=teste-03
+
+Observação:
+Cada pessoa também pode abrir o link normal e criar o próprio perfil no primeiro acesso.
