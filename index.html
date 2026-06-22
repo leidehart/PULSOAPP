@@ -4,21 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#120a17" />
-  <title>PULSO 40+ | TCC profunda, idiomas e evolução</title>
+  <title>PULSOAPP | exercícios, check-in e evolução real</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="icon-180.png" />
   <style>
     :root{
-      --bg:#120a17; --bg2:#1c1024; --surface:rgba(27,18,34,.94); --surface2:#25182e; --surface3:#342141;
-      --text:#fff8ef; --muted:#d8cadb; --soft:#ab9ab1; --line:rgba(255,248,239,.14); --line2:rgba(255,248,239,.25);
-      --rose:#e18b98; --rose2:#f3b4ac; --gold:#f2c879; --green:#9fd2b2; --blue:#9bc3ec; --violet:#b68add; --red:#ef8f98;
-      --shadow:0 24px 76px rgba(0,0,0,.44); --r:26px; --rm:18px; --rs:14px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      --bg:#120a17;--bg2:#1c1024;--surface:rgba(27,18,34,.94);--surface2:#25182e;--surface3:#342141;
+      --text:#fff8ef;--muted:#d8cadb;--soft:#ab9ab1;--line:rgba(255,248,239,.14);--line2:rgba(255,248,239,.25);
+      --rose:#e18b98;--rose2:#f3b4ac;--gold:#f2c879;--green:#9fd2b2;--blue:#9bc3ec;--violet:#b68add;--red:#ef8f98;
+      --shadow:0 24px 76px rgba(0,0,0,.44);--r:26px;--rm:18px;--rs:14px;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 4% -5%,rgba(225,139,152,.28),transparent 32%),radial-gradient(circle at 98% 2%,rgba(242,200,121,.18),transparent 30%),linear-gradient(135deg,#08050b 0%,#120a17 46%,#21112a 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility} body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,248,239,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,248,239,.06) 1px,transparent 1px);background-size:34px 34px;opacity:.09;mask-image:linear-gradient(to bottom,#000 0%,transparent 76%)}
-    button,input,textarea,select{font:inherit} button{cursor:pointer} a{color:inherit}.shell{position:relative;width:min(100%,720px);margin:0 auto;padding:0 16px 116px}.hero{padding:max(30px,env(safe-area-inset-top)) 4px 10px}.hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:950;font-size:.72rem;margin:0 0 8px}.eyebrow.small{font-size:.63rem;margin-bottom:6px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.6rem,10vw,5rem);line-height:.88;letter-spacing:-.08em;text-transform:uppercase;margin:0 0 12px;font-weight:980}h2{font-size:1.25rem;margin-bottom:0;letter-spacing:-.035em;font-weight:930}h3{font-size:1.04rem;margin-bottom:7px;letter-spacing:-.02em;font-weight:900}.subtitle,.helper,.support,.book-card p,.path-card p,.level-card p,.result-box p,.habit-card p,.small-copy{color:var(--muted);line-height:1.55}.subtitle{font-weight:560;margin:0}.support,.small-copy{font-size:.86rem}.top-tabs{position:sticky;top:0;z-index:8;display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:8px 0 12px;background:linear-gradient(180deg,#120a17 0%,rgba(18,10,23,.94) 76%,transparent 100%)}.tab,.bottom-nav button{min-height:44px;border-radius:15px;border:1px solid var(--line);background:rgba(255,248,239,.045);color:var(--muted);font-weight:890;font-size:.66rem}.tab.active,.tab:hover,.bottom-nav button.active{background:rgba(225,139,152,.18);border-color:rgba(225,139,152,.58);color:var(--text)}.card,.mini-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin:0 0 16px;overflow:hidden;backdrop-filter:blur(14px)}.card:before,.mini-card:before{content:"";position:absolute;left:18px;right:18px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,248,239,.38),transparent)}.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:15px}.pill,.progress-pill,.tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;font-size:.70rem;font-weight:900;white-space:nowrap}.pill{padding:8px 10px;background:rgba(242,200,121,.10);border:1px solid rgba(242,200,121,.26);color:var(--gold)}.progress-pill{padding:8px 10px;background:rgba(159,210,178,.10);border:1px solid rgba(159,210,178,.28);color:var(--green)}.tag{padding:6px 8px;background:rgba(242,200,121,.08);border:1px solid rgba(242,200,121,.22);color:var(--gold)}.tag.green{background:rgba(159,210,178,.09);border-color:rgba(159,210,178,.28);color:var(--green)}.tag.blue{background:rgba(155,195,236,.09);border-color:rgba(155,195,236,.28);color:var(--blue)}.ghost,.primary,.secondary,.danger{min-height:48px;border-radius:16px;padding:0 16px;font-weight:900;letter-spacing:.01em}.ghost{background:rgba(255,248,239,.055);color:var(--text);border:1px solid var(--line)}.primary{background:var(--rose);color:#150c11;border:0;box-shadow:0 14px 30px rgba(225,139,152,.18);width:100%}.secondary{background:rgba(242,200,121,.10);color:var(--gold);border:1px solid rgba(242,200,121,.25)}.danger{background:rgba(239,143,152,.10);color:#ffcbd0;border:1px solid rgba(239,143,152,.28)}.hidden{display:none!important}.panel{display:none}.panel.active{display:block}.dashboard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{background:rgba(255,248,239,.048);border:1px solid var(--line);border-radius:18px;padding:12px 8px;text-align:center}.metric span{display:block;color:var(--gold);font-size:1.35rem;font-weight:970;line-height:1;margin-bottom:6px}.metric p{margin:0;color:var(--muted);font-size:.67rem;line-height:1.18;font-weight:810}.choice-grid{display:grid;gap:10px}.cols-2{grid-template-columns:repeat(2,1fr)}.cols-3{grid-template-columns:repeat(3,1fr)}.cols-4{grid-template-columns:repeat(4,1fr)}.cols-5{grid-template-columns:repeat(5,1fr)}.choice{width:100%;min-height:54px;text-align:left;border:1px solid var(--line);background:rgba(255,248,239,.05);color:var(--text);border-radius:18px;padding:12px;font-weight:800;line-height:1.28;transition:.16s ease}.choice.center{text-align:center;display:grid;place-items:center}.choice small{display:block;color:var(--soft);font-weight:740;margin-top:4px}.choice:hover{border-color:rgba(225,139,152,.52);background:rgba(255,248,239,.074);transform:translateY(-1px)}.choice.selected{background:rgba(225,139,152,.18);border-color:rgba(225,139,152,.72);box-shadow:0 0 0 4px rgba(225,139,152,.11)}textarea,input,select{width:100%;border-radius:18px;border:1px solid var(--line);background:rgba(255,248,239,.055);color:var(--text);padding:13px;outline:none}textarea{min-height:130px;resize:vertical}select option{background:#1b1222;color:#fff}.block-title{color:var(--muted);font-weight:880;font-size:.82rem;margin:15px 0 9px}.meta-row{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0 12px}.icon{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:rgba(242,200,121,.10);border:1px solid rgba(242,200,121,.25);font-size:1.35rem;flex:0 0 auto}.path-card,.book-card,.habit-card,.level-card{background:linear-gradient(135deg,rgba(255,248,239,.055),rgba(225,139,152,.075));border:1px solid var(--line);border-radius:22px;padding:16px;margin-bottom:12px}.category-top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}.card-actions{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.note{color:var(--green);font-weight:850;font-size:.78rem;margin:10px 0 0}.today-line{color:var(--soft);font-size:.9rem;font-weight:760;margin-bottom:5px}.index-main{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center}.pulse-number{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gold) var(--angle),rgba(255,248,239,.08) 0);border:1px solid rgba(242,200,121,.28);box-shadow:inset 0 0 0 12px rgba(18,10,23,.75);font-size:1.9rem;font-weight:980;color:var(--gold)}.insight,.result-box{background:linear-gradient(135deg,rgba(159,210,178,.11),rgba(242,200,121,.08));border:1px solid rgba(159,210,178,.24);border-radius:22px;padding:16px;margin-top:12px}.axis-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.axis-card{background:rgba(255,248,239,.048);border:1px solid var(--line);border-radius:18px;padding:14px}.axis-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.axis-value{font-size:1.5rem;color:var(--gold);font-weight:970}.track{height:12px;border-radius:999px;background:rgba(255,248,239,.07);border:1px solid var(--line);overflow:hidden;margin-top:10px}.fill{height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px}.habit-list,.book-list,.history-list,.program-grid{display:grid;gap:10px}.book-links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.book-links a{text-decoration:none;display:grid;place-items:center;min-height:42px;border-radius:14px;border:1px solid var(--line);background:rgba(255,248,239,.055);font-weight:900;color:var(--text);font-size:.82rem}.book-links a:first-child{border-color:rgba(155,195,236,.3);color:var(--blue)}.book-links a:last-child{border-color:rgba(242,200,121,.28);color:var(--gold)}.level-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}.level-badge{display:grid;place-items:center;min-width:58px;height:42px;border-radius:15px;background:rgba(242,200,121,.1);border:1px solid rgba(242,200,121,.25);color:var(--gold);font-weight:980}.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.skill-box{border:1px solid var(--line);background:rgba(255,248,239,.045);border-radius:15px;padding:10px;color:var(--muted);font-size:.78rem;line-height:1.35}.skill-box strong{color:var(--text);display:block;margin-bottom:4px}.runner{position:fixed;inset:0;background:rgba(8,5,11,.84);backdrop-filter:blur(13px);z-index:40;padding:14px;overflow:auto}.runner-card{width:min(100%,720px);margin:max(18px,env(safe-area-inset-top)) auto 30px}.progress-bar{height:10px;background:rgba(255,248,239,.07);border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:12px 0 16px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px;transition:width .22s ease}.question-text{font-size:1.13rem;line-height:1.38;font-weight:910;margin:8px 0 16px}.feedback{margin:12px 0 0;border-radius:17px;padding:12px;border:1px solid var(--line);background:rgba(255,248,239,.045);color:var(--muted);font-weight:760;line-height:1.4}.feedback.good{background:rgba(159,210,178,.12);border-color:rgba(159,210,178,.28);color:var(--green)}.empty{color:var(--muted);background:rgba(255,248,239,.045);border-radius:16px;padding:14px;margin:0}.day-row{display:grid;grid-template-columns:64px 1fr 54px;gap:10px;align-items:center;color:var(--muted);font-weight:790;font-size:.82rem}.day-track{height:13px;background:rgba(255,248,239,.06);border-radius:999px;border:1px solid var(--line);overflow:hidden}.day-fill{height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px}.history-item{border:1px solid var(--line);border-radius:18px;padding:12px;background:rgba(255,248,239,.044)}.history-top{display:flex;justify-content:space-between;gap:10px;color:var(--gold);font-weight:910;margin-bottom:6px}.history-item p{margin:0;color:var(--muted);line-height:1.42}.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:10;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:9px 10px max(9px,env(safe-area-inset-bottom));background:rgba(16,9,21,.94);backdrop-filter:blur(16px);border-top:1px solid var(--line)}.bottom-nav button{font-size:.63rem;min-height:47px}.toast{position:fixed;left:16px;right:16px;bottom:84px;z-index:60;background:#fff8ef;color:#1c1024;border-radius:18px;padding:13px 16px;box-shadow:0 18px 50px rgba(0,0,0,.34);font-weight:880;display:none}.toast.show{display:block}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--gold)}
-    @media(max-width:620px){.top-tabs{grid-template-columns:repeat(3,1fr)}.dashboard-grid,.axis-grid,.skill-grid{grid-template-columns:repeat(2,1fr)}.cols-3,.cols-4,.cols-5,.cols-2{grid-template-columns:1fr}.index-main{grid-template-columns:1fr}.book-links{grid-template-columns:1fr}.bottom-nav button{font-size:.58rem;padding:0 2px}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 4% -5%,rgba(225,139,152,.28),transparent 32%),radial-gradient(circle at 98% 2%,rgba(242,200,121,.18),transparent 30%),linear-gradient(135deg,#08050b 0%,#120a17 46%,#21112a 100%);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,248,239,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,248,239,.06) 1px,transparent 1px);background-size:34px 34px;opacity:.09;mask-image:linear-gradient(to bottom,#000 0%,transparent 76%)}
+    button,input,textarea,select{font:inherit}button{cursor:pointer}a{color:inherit}.shell{position:relative;width:min(100%,760px);margin:0 auto;padding:0 16px 116px}.hero{padding:max(30px,env(safe-area-inset-top)) 4px 10px}.hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--gold);font-weight:950;font-size:.72rem;margin:0 0 8px}.eyebrow.small{font-size:.63rem;margin-bottom:6px}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.5rem,10vw,4.8rem);line-height:.88;letter-spacing:-.08em;text-transform:uppercase;margin:0 0 12px;font-weight:980}h2{font-size:1.25rem;margin-bottom:0;letter-spacing:-.035em;font-weight:930}h3{font-size:1.04rem;margin-bottom:7px;letter-spacing:-.02em;font-weight:900}.subtitle,.helper,.support,.small-copy,.exercise-card p,.result-box p,.history-item p,.writing-prompt p{color:var(--muted);line-height:1.55}.subtitle{font-weight:560;margin:0}.support,.small-copy{font-size:.86rem}.hidden{display:none!important}
+    .top-tabs{position:sticky;top:0;z-index:8;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:8px 0 12px;background:linear-gradient(180deg,#120a17 0%,rgba(18,10,23,.94) 76%,transparent 100%)}.tab,.bottom-nav button{min-height:44px;border-radius:15px;border:1px solid var(--line);background:rgba(255,248,239,.045);color:var(--muted);font-weight:890;font-size:.66rem}.tab.active,.tab:hover,.bottom-nav button.active{background:rgba(225,139,152,.18);border-color:rgba(225,139,152,.58);color:var(--text)}.panel{display:none}.panel.active{display:block}.card,.mini-card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;margin:0 0 16px;overflow:hidden;backdrop-filter:blur(14px)}.card:before,.mini-card:before{content:"";position:absolute;left:18px;right:18px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,248,239,.38),transparent)}.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:15px}.pill,.progress-pill,.tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;font-size:.70rem;font-weight:900;white-space:nowrap}.pill{padding:8px 10px;background:rgba(242,200,121,.10);border:1px solid rgba(242,200,121,.26);color:var(--gold)}.progress-pill{padding:8px 10px;background:rgba(159,210,178,.10);border:1px solid rgba(159,210,178,.28);color:var(--green)}.tag{padding:6px 8px;background:rgba(242,200,121,.08);border:1px solid rgba(242,200,121,.22);color:var(--gold)}.tag.green{background:rgba(159,210,178,.09);border-color:rgba(159,210,178,.28);color:var(--green)}.tag.blue{background:rgba(155,195,236,.09);border-color:rgba(155,195,236,.28);color:var(--blue)}.tag.rose{background:rgba(225,139,152,.12);border-color:rgba(225,139,152,.28);color:var(--rose2)}
+    .ghost,.primary,.secondary,.danger{min-height:48px;border-radius:16px;padding:0 16px;font-weight:900;letter-spacing:.01em}.ghost{background:rgba(255,248,239,.055);color:var(--text);border:1px solid var(--line)}.primary{background:var(--rose);color:#150c11;border:0;box-shadow:0 14px 30px rgba(225,139,152,.18);width:100%}.secondary{background:rgba(242,200,121,.10);color:var(--gold);border:1px solid rgba(242,200,121,.25)}.danger{background:rgba(239,143,152,.10);color:#ffcbd0;border:1px solid rgba(239,143,152,.28)}.dashboard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{background:rgba(255,248,239,.048);border:1px solid var(--line);border-radius:18px;padding:12px 8px;text-align:center}.metric span{display:block;color:var(--gold);font-size:1.35rem;font-weight:970;line-height:1;margin-bottom:6px}.metric p{margin:0;color:var(--muted);font-size:.67rem;line-height:1.18;font-weight:810}.choice-grid{display:grid;gap:10px}.cols-2{grid-template-columns:repeat(2,1fr)}.cols-3{grid-template-columns:repeat(3,1fr)}.cols-4{grid-template-columns:repeat(4,1fr)}.cols-5{grid-template-columns:repeat(5,1fr)}.choice{width:100%;min-height:54px;text-align:left;border:1px solid var(--line);background:rgba(255,248,239,.05);color:var(--text);border-radius:18px;padding:12px;font-weight:800;line-height:1.28;transition:.16s ease}.choice.center{text-align:center;display:grid;place-items:center}.choice small{display:block;color:var(--soft);font-weight:740;margin-top:4px}.choice:hover{border-color:rgba(225,139,152,.52);background:rgba(255,248,239,.074);transform:translateY(-1px)}.choice.selected{background:rgba(225,139,152,.18);border-color:rgba(225,139,152,.72);box-shadow:0 0 0 4px rgba(225,139,152,.11)}textarea,input,select{width:100%;border-radius:18px;border:1px solid var(--line);background:rgba(255,248,239,.055);color:var(--text);padding:13px;outline:none}textarea{min-height:130px;resize:vertical}select option{background:#1b1222;color:#fff}.block-title{color:var(--muted);font-weight:880;font-size:.82rem;margin:15px 0 9px}.meta-row{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0 12px}.exercise-card,.writing-prompt{background:linear-gradient(135deg,rgba(255,248,239,.055),rgba(225,139,152,.075));border:1px solid var(--line);border-radius:22px;padding:16px;margin-bottom:12px}.exercise-top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}.icon{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:rgba(242,200,121,.10);border:1px solid rgba(242,200,121,.25);font-size:1.35rem;flex:0 0 auto}.note{color:var(--green);font-weight:850;font-size:.78rem;margin:10px 0 0}.today-line{color:var(--soft);font-size:.9rem;font-weight:760;margin-bottom:5px}.index-main{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center}.pulse-number{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gold) var(--angle),rgba(255,248,239,.08) 0);border:1px solid rgba(242,200,121,.28);box-shadow:inset 0 0 0 12px rgba(18,10,23,.75);font-size:1.9rem;font-weight:980;color:var(--gold)}.insight,.result-box{background:linear-gradient(135deg,rgba(159,210,178,.11),rgba(242,200,121,.08));border:1px solid rgba(159,210,178,.24);border-radius:22px;padding:16px;margin-top:12px}.axis-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.axis-card{background:rgba(255,248,239,.048);border:1px solid var(--line);border-radius:18px;padding:14px}.axis-top{display:flex;justify-content:space-between;align-items:center;gap:10px}.axis-value{font-size:1.5rem;color:var(--gold);font-weight:970}.track{height:12px;border-radius:999px;background:rgba(255,248,239,.07);border:1px solid var(--line);overflow:hidden;margin-top:10px}.fill{height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px}.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.day-dot{border:1px solid var(--line);background:rgba(255,248,239,.045);border-radius:15px;min-height:48px;padding:6px;text-align:center;color:var(--soft);font-size:.72rem;font-weight:850}.day-dot.active{background:rgba(159,210,178,.12);border-color:rgba(159,210,178,.32);color:var(--green)}.day-dot.exercise{box-shadow:inset 0 -3px 0 rgba(242,200,121,.7)}.history-list,.exercise-list{display:grid;gap:10px}.history-item{border:1px solid var(--line);border-radius:18px;padding:12px;background:rgba(255,248,239,.044)}.history-top{display:flex;justify-content:space-between;gap:10px;color:var(--gold);font-weight:910;margin-bottom:6px}.history-item p{margin:0;color:var(--muted);line-height:1.42}.runner{position:fixed;inset:0;background:rgba(8,5,11,.84);backdrop-filter:blur(13px);z-index:40;padding:14px;overflow:auto}.runner-card{width:min(100%,720px);margin:max(18px,env(safe-area-inset-top)) auto 30px}.progress-bar{height:10px;background:rgba(255,248,239,.07);border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:12px 0 16px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold));border-radius:999px;transition:width .22s ease}.question-text{font-size:1.13rem;line-height:1.38;font-weight:910;margin:8px 0 16px}.feedback{margin:12px 0 0;border-radius:17px;padding:12px;border:1px solid var(--line);background:rgba(255,248,239,.045);color:var(--muted);font-weight:760;line-height:1.4}.feedback.good{background:rgba(159,210,178,.12);border-color:rgba(159,210,178,.28);color:var(--green)}.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:10;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;padding:9px 10px max(9px,env(safe-area-inset-bottom));background:rgba(16,9,21,.94);backdrop-filter:blur(16px);border-top:1px solid var(--line)}.bottom-nav button{font-size:.63rem;min-height:47px}.toast{position:fixed;left:16px;right:16px;bottom:84px;z-index:60;background:#fff8ef;color:#1c1024;border-radius:18px;padding:13px 16px;box-shadow:0 18px 50px rgba(0,0,0,.34);font-weight:880;display:none}.toast.show{display:block}.filters{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.empty{color:var(--muted);background:rgba(255,248,239,.045);border-radius:16px;padding:14px;margin:0}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--gold)}
+    @media(max-width:620px){.top-tabs{grid-template-columns:repeat(3,1fr)}.bottom-nav button{font-size:.58rem;padding:0 2px}.dashboard-grid,.axis-grid{grid-template-columns:repeat(2,1fr)}.cols-3,.cols-4,.cols-5,.cols-2,.filters{grid-template-columns:1fr}.index-main{grid-template-columns:1fr}.section-head{display:block}.section-head>*+*{margin-top:10px}.calendar-grid{gap:5px}.day-dot{min-height:42px}}
   </style>
 </head>
 <body>
@@ -26,9 +28,9 @@
     <header class="hero">
       <div class="hero-top">
         <div>
-          <p class="eyebrow">PULSO 40+ · versão 7</p>
-          <h1>clareza<br>prática</h1>
-          <p class="subtitle">TCC profunda, apego ansioso, autoestima, português avançado e inglês progressivo do A1 ao C2, com leitura diária indicada pelo seu estado emocional.</p>
+          <p class="eyebrow">PULSOAPP · versão melhorada</p>
+          <h1>pulso<br>real</h1>
+          <p class="subtitle">Check-in emocional, exercícios variados, avaliação final e contagem real dos dias em que você interagiu.</p>
         </div>
         <button id="installBtn" class="ghost hidden" type="button">Instalar</button>
       </div>
@@ -36,131 +38,95 @@
 
     <nav class="top-tabs" aria-label="Seções principais">
       <button class="tab active" data-panel="hoje" type="button">Hoje</button>
-      <button class="tab" data-panel="terapia" type="button">Terapia</button>
-      <button class="tab" data-panel="portugues" type="button">Português</button>
-      <button class="tab" data-panel="ingles" type="button">English</button>
+      <button class="tab" data-panel="exercicios" type="button">Exercícios</button>
+      <button class="tab" data-panel="escrita" type="button">Escrita</button>
       <button class="tab" data-panel="evolucao" type="button">Evolução</button>
-      <button class="tab" data-panel="biblioteca" type="button">Livros</button>
+      <button class="tab" data-panel="historico" type="button">Histórico</button>
     </nav>
 
     <main>
       <section id="panel-hoje" class="panel active">
+        <section class="card" id="dashboardCard"></section>
+
         <section class="card">
           <div class="section-head">
-            <div><p class="eyebrow small">Check-in diário</p><h2>Termômetro TCC + vínculo</h2></div><span class="progress-pill" id="todayStatus">não salvo</span>
+            <div><p class="eyebrow small">Check-in diário</p><h2>Como você está hoje?</h2></div>
+            <span class="progress-pill" id="todayStatus">não salvo</span>
           </div>
-          <p class="helper">Responda em menos de 2 minutos. O app usa suas respostas para gerar micro-hábitos, leitura do dia e indicadores de evolução. Ele não fecha diagnóstico; organiza material para a terapia.</p>
-          <label class="block-title" for="triggerText">Qual foi a situação ou pensamento que mais mexeu com você hoje?</label>
-          <textarea id="triggerText" placeholder="Ex.: uma demora de resposta, uma crítica, uma comparação, insegurança para falar, medo de decepcionar..."></textarea>
+          <p class="helper">Responda rápido. O app usa isso para sugerir exercícios e gerar uma leitura final mais pessoal. Não é diagnóstico, é material de autoconsciência para apoiar sua terapia.</p>
+
+          <label class="block-title" for="triggerText">O que mais mexeu com você hoje?</label>
+          <textarea id="triggerText" placeholder="Ex.: uma demora de resposta, uma crítica, comparação, cansaço, insegurança, medo de decepcionar..."></textarea>
 
           <p class="block-title">Humor geral</p>
           <div class="choice-grid cols-5" data-choice-group="mood"><button class="choice center" data-value="1">1<br><small>baixo</small></button><button class="choice center" data-value="2">2</button><button class="choice center" data-value="3">3</button><button class="choice center" data-value="4">4</button><button class="choice center" data-value="5">5<br><small>bom</small></button></div>
+
           <p class="block-title">Ansiedade</p>
           <div class="choice-grid cols-5" data-choice-group="anxiety"><button class="choice center" data-value="1">1<br><small>baixa</small></button><button class="choice center" data-value="2">2</button><button class="choice center" data-value="3">3</button><button class="choice center" data-value="4">4</button><button class="choice center" data-value="5">5<br><small>alta</small></button></div>
+
           <p class="block-title">Apego ansioso ativado</p>
           <div class="choice-grid cols-5" data-choice-group="attachment"><button class="choice center" data-value="1">1<br><small>leve</small></button><button class="choice center" data-value="2">2</button><button class="choice center" data-value="3">3</button><button class="choice center" data-value="4">4</button><button class="choice center" data-value="5">5<br><small>forte</small></button></div>
+
           <p class="block-title">Autoestima em ação</p>
           <div class="choice-grid cols-5" data-choice-group="esteem"><button class="choice center" data-value="1">1<br><small>frágil</small></button><button class="choice center" data-value="2">2</button><button class="choice center" data-value="3">3</button><button class="choice center" data-value="4">4</button><button class="choice center" data-value="5">5<br><small>presente</small></button></div>
+
           <p class="block-title">Insegurança</p>
           <div class="choice-grid cols-5" data-choice-group="insecurity"><button class="choice center" data-value="1">1<br><small>baixa</small></button><button class="choice center" data-value="2">2</button><button class="choice center" data-value="3">3</button><button class="choice center" data-value="4">4</button><button class="choice center" data-value="5">5<br><small>alta</small></button></div>
 
-          <p class="block-title">Padrão mais provável hoje</p>
+          <p class="block-title">Padrão mais forte hoje</p>
           <div class="choice-grid cols-2" data-choice-group="pattern">
-            <button class="choice" data-value="apego">Apego ansioso<small>busca de confirmação, medo de abandono, leitura de sinais</small></button>
-            <button class="choice" data-value="autoestima">Autoestima ferida<small>comparação, vergonha, sentimento de insuficiência</small></button>
-            <button class="choice" data-value="inseguranca">Insegurança de capacidade<small>medo de errar, travamento, autocobrança</small></button>
-            <button class="choice" data-value="limites">Limites e culpa<small>dificuldade de dizer não ou sustentar necessidade</small></button>
+            <button class="choice" data-value="apego">Apego ansioso<small>urgência de confirmação, medo de abandono</small></button>
+            <button class="choice" data-value="autoestima">Autoestima ferida<small>comparação, insuficiência, vergonha</small></button>
+            <button class="choice" data-value="inseguranca">Insegurança<small>medo de errar, travamento, autocobrança</small></button>
+            <button class="choice" data-value="limites">Limites e culpa<small>dizer sim querendo dizer não</small></button>
           </div>
+
           <p class="block-title">Voz interna dominante</p>
           <div class="choice-grid cols-2" data-choice-group="voice"><button class="choice" data-value="crítica">Crítica e punitiva</button><button class="choice" data-value="ansiosa">Ansiosa e urgente</button><button class="choice" data-value="adulta">Adulta e cuidadosa</button><button class="choice" data-value="exausta">Exausta e sobrecarregada</button></div>
-          <p class="block-title">Foco terapêutico de amanhã</p>
-          <div class="choice-grid cols-2" data-choice-group="focus"><button class="choice" data-value="pausa">Pausar antes de reagir</button><button class="choice" data-value="evidencia">Checar evidências</button><button class="choice" data-value="limite">Sustentar limite</button><button class="choice" data-value="exposicao">Exposição pequena à insegurança</button></div>
-          <button id="saveCheckin" class="primary" type="button" style="margin-top:14px">Salvar check-in e gerar plano</button>
+
+          <button id="saveCheckin" class="primary" type="button" style="margin-top:14px">Salvar check-in e atualizar meu pulso</button>
         </section>
 
         <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">Plano automático</p><h2>Hábitos rápidos de hoje</h2></div><span class="progress-pill">3 a 9 min</span></div>
-          <p class="helper">São ações pequenas para repetir diariamente. A meta é acelerar consistência, não produzir culpa.</p>
-          <div id="dailyHabits" class="habit-list"></div>
-        </section>
-
-        <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">Leitura do dia</p><h2>Livro indicado pelo seu check-in</h2></div><button class="ghost" data-panel="biblioteca" type="button">Biblioteca</button></div>
-          <div id="todayBooks" class="book-list"></div>
-        </section>
-
-        <section class="card">
-          <h2>Protocolo de 90 segundos</h2>
-          <p class="helper">Quando houver impulso de mandar mensagem, buscar garantia, se atacar ou desistir: primeiro regule, depois interprete.</p>
-          <div class="choice-grid cols-2">
-            <button class="choice" data-sos="Respire soltando o ar mais longo do que inspira. Três ciclos. Pés no chão. Nomeie: isto é ativação, não sentença." type="button">1. Voltar ao corpo</button>
-            <button class="choice" data-sos="Pergunte: estou reagindo a um fato ou a uma previsão de abandono, rejeição ou fracasso?" type="button">2. Separar fato de previsão</button>
-            <button class="choice" data-sos="Adie a resposta impulsiva por 10 minutos. Escreva primeiro: o que eu preciso? o que eu temo?" type="button">3. Atrasar o impulso</button>
-            <button class="choice" data-sos="Escolha uma microação adulta: água, banho, caminhada curta, limite educado ou mensagem clara sem cobrança." type="button">4. Ação segura</button>
+          <div class="section-head">
+            <div><p class="eyebrow small">Treino sugerido</p><h2>Exercício para hoje</h2></div>
+            <button id="startSuggested" class="secondary" type="button">Começar</button>
           </div>
-          <p id="sosResult" class="feedback"></p>
-          <p class="support">Em crise, risco de se machucar ou emergência, procure atendimento presencial imediatamente. O app é apoio educacional e de registro.</p>
+          <div id="suggestedExercise"></div>
         </section>
       </section>
 
-      <section id="panel-terapia" class="panel">
+      <section id="panel-exercicios" class="panel">
         <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">TCC + análise profunda</p><h2>Práticas terapêuticas guiadas</h2></div><span class="progress-pill" id="therapyDone">0 feitas</span></div>
-          <p class="helper">As práticas conectam pensamento automático, emoção, comportamento, crença central e experimento. O toque profundo aparece como pergunta de investigação, não como verdade absoluta.</p>
-          <div id="therapyList"></div>
-        </section>
-        <section class="card">
-          <h2>Formulação para levar à terapia</h2>
-          <p class="helper">Preencha como rascunho. O app salva no histórico.</p>
-          <textarea id="therapyWriting" placeholder="Situação: ...\nPensamento automático: ...\nEmoção no corpo: ...\nComportamento que tive vontade de fazer: ...\nCrença tocada: ...\nResposta adulta: ...\nExperimento comportamental: ..."></textarea>
-          <button id="saveTherapyWriting" class="secondary" type="button" style="margin-top:10px;width:100%">Salvar formulação</button>
+          <div class="section-head"><div><p class="eyebrow small">Perguntas variadas</p><h2>Exercícios guiados</h2></div><span class="progress-pill" id="exerciseDone">0 feitos</span></div>
+          <p class="helper">Cada vez que você inicia, o app embaralha as perguntas e as alternativas. A resposta certa não fica sempre no mesmo lugar.</p>
+          <div class="filters" id="filters"></div>
+          <div id="exerciseList" class="exercise-list"></div>
         </section>
       </section>
 
-      <section id="panel-portugues" class="panel">
+      <section id="panel-escrita" class="panel">
         <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">Programa completo</p><h2>Português: fala, escrita e leitura</h2></div><span class="progress-pill" id="ptDone">0 feitos</span></div>
-          <p class="helper">Um percurso para transformar pensamento em linguagem: precisão, elegância, clareza pública, argumentação e presença oral.</p>
-          <div id="ptProgram" class="program-grid"></div>
-        </section>
-        <section class="card">
-          <h2>Ateliê de escrita em português</h2>
-          <p class="helper">Tema do dia: escreva um parágrafo com tese, nuance e fechamento. Use uma palavra sofisticada sem perder clareza.</p>
-          <textarea id="ptWriting" placeholder="Ex.: A maturidade emocional não elimina a insegurança; ela muda a forma como respondemos a ela..."></textarea>
-          <button id="savePtWriting" class="secondary" type="button" style="margin-top:10px;width:100%">Salvar texto</button>
-        </section>
-      </section>
-
-      <section id="panel-ingles" class="panel">
-        <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">A1 → C2</p><h2>English: speaking, writing, reading and conversation</h2></div><span class="progress-pill" id="enDone">0 done</span></div>
-          <p class="helper">Programa progressivo com todos os níveis. Ele começa com frases essenciais e avança até leitura crítica, escrita persuasiva e conversação espontânea.</p>
-          <div id="enProgram" class="program-grid"></div>
-        </section>
-        <section class="card">
-          <h2>English writing + speaking lab</h2>
-          <p class="helper">Prompt: <span class="mono" id="enPrompt">What am I learning to say with more confidence?</span></p>
-          <textarea id="enWriting" placeholder="I am learning to express myself with more confidence. I can pause, organize my ideas and speak clearly..."></textarea>
-          <div class="choice-grid cols-2" style="margin-top:10px"><button id="speakPrompt" class="secondary" type="button">Ouvir prompt</button><button id="saveEnWriting" class="primary" type="button">Salvar escrita</button></div>
+          <div class="section-head"><div><p class="eyebrow small">Diário guiado</p><h2>Escrita terapêutica</h2></div><button id="newPrompt" class="secondary" type="button">Novo tema</button></div>
+          <div id="writingPrompt" class="writing-prompt"></div>
+          <textarea id="writingText" placeholder="Escreva sem tentar ficar perfeito. A ideia é nomear, organizar e se escutar..."></textarea>
+          <button id="saveWriting" class="primary" type="button" style="margin-top:10px">Salvar escrita</button>
         </section>
       </section>
 
       <section id="panel-evolucao" class="panel">
         <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">Efeito percebido</p><h2>Evolução automática</h2></div><button id="exportSummary" class="secondary" type="button">Copiar resumo</button></div>
+          <div class="section-head"><div><p class="eyebrow small">Leitura do processo</p><h2>Como você está caminhando</h2></div><button id="exportSummary" class="secondary" type="button">Copiar resumo</button></div>
           <div id="therapyEffect"></div>
         </section>
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">Eixos de cuidado</p><h2>Apego, autoestima e insegurança</h2></div></div><div id="domainEvolution" class="axis-grid"></div></section>
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">Idiomas</p><h2>Progresso em português e inglês</h2></div></div><div id="languageEvolution" class="axis-grid"></div></section>
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">14 dias</p><h2>Mapa de continuidade</h2></div></div><div id="weekChart" class="history-list"></div></section>
-        <section class="card"><div class="section-head"><div><p class="eyebrow small">Registros recentes</p><h2>Histórico</h2></div><button id="clearData" class="ghost" type="button">Apagar</button></div><div id="historyList" class="history-list"></div></section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">Eixos emocionais</p><h2>Apego, autoestima e regulação</h2></div></div><div id="domainEvolution" class="axis-grid"></div></section>
+        <section class="card"><div class="section-head"><div><p class="eyebrow small">30 dias</p><h2>Mapa real de interação</h2></div></div><div id="calendarGrid" class="calendar-grid"></div><p class="support" style="margin-top:12px">Verde = teve alguma interação. Linha dourada = teve exercício concluído.</p></section>
       </section>
 
-      <section id="panel-biblioteca" class="panel">
+      <section id="panel-historico" class="panel">
         <section class="card">
-          <div class="section-head"><div><p class="eyebrow small">Biblioterapia + idiomas</p><h2>Livros para ler online ou comprar físico</h2></div><span class="progress-pill">sugestão diária</span></div>
-          <p class="helper">As indicações são de apoio: TCC, apego, autoestima, insegurança, escrita, leitura e inglês. Use plataformas legais: biblioteca pública, e-book, amostra autorizada, livrarias ou sebos. Conversar sobre a leitura na terapia é mais seguro do que transformar livro em diagnóstico.</p>
-          <div id="libraryList" class="book-list"></div>
+          <div class="section-head"><div><p class="eyebrow small">Registros</p><h2>Histórico recente</h2></div><button id="clearData" class="ghost" type="button">Apagar dados</button></div>
+          <div id="historyList" class="history-list"></div>
         </section>
       </section>
     </main>
@@ -176,7 +142,7 @@
     </section>
   </div>
 
-  <nav class="bottom-nav" aria-label="Navegação inferior"><button class="active" data-panel="hoje" type="button">Hoje</button><button data-panel="terapia" type="button">Terapia</button><button data-panel="portugues" type="button">Português</button><button data-panel="ingles" type="button">English</button><button data-panel="evolucao" type="button">Evolução</button><button data-panel="biblioteca" type="button">Livros</button></nav>
+  <nav class="bottom-nav" aria-label="Navegação inferior"><button class="active" data-panel="hoje" type="button">Hoje</button><button data-panel="exercicios" type="button">Exercícios</button><button data-panel="escrita" type="button">Escrita</button><button data-panel="evolucao" type="button">Evolução</button><button data-panel="historico" type="button">Histórico</button></nav>
   <div id="toast" class="toast"></div>
 
 <script>
@@ -186,185 +152,284 @@ const todayKey = () => new Date().toISOString().slice(0,10);
 const escapeHTML = str => String(str ?? "").replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
 const avg = arr => arr.length ? arr.reduce((a,b)=>a+Number(b||0),0)/arr.length : 0;
 const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
-const fmt = n => Number.isFinite(n) ? (Math.round(n*10)/10).toString().replace('.',',') : "0";
-const dateLabel = d => d.split('-').reverse().slice(0,2).join('/');
-const makeQuery = q => encodeURIComponent(q);
-const buyLink = book => `https://www.google.com/search?q=${makeQuery(book.title + ' ' + book.author + ' comprar livro físico')}`;
-const onlineLink = book => `https://www.google.com/search?q=${makeQuery(book.title + ' ' + book.author + ' ler online ebook legal')}`;
-const state = { selected:{}, runner:null };
-
-const BOOKS = [
-  {id:"mente-humor", title:"A Mente Vencendo o Humor", author:"Dennis Greenberger e Christine A. Padesky", area:"TCC", lang:"Português", level:"base prática", tags:["tcc","evidencia","ansiedade","autoestima"], when:"Quando você precisa transformar emoção em mapa: situação, pensamento, evidência, resposta alternativa e experimento.", why:"É prático para levar para a sessão e revisar padrões com mais clareza."},
-  {id:"mind-over-mood", title:"Mind Over Mood", author:"Dennis Greenberger and Christine A. Padesky", area:"CBT + English", lang:"English", level:"B1–B2", tags:["cbt","writing","anxiety","self-esteem"], when:"Quando quiser treinar inglês e TCC ao mesmo tempo, com vocabulário emocional estruturado.", why:"Ajuda a escrever melhor em inglês enquanto organiza pensamentos."},
-  {id:"judith-beck", title:"Terapia Cognitivo-Comportamental: Teoria e Prática", author:"Judith S. Beck", area:"TCC", lang:"Português", level:"intermediário/técnico", tags:["tcc","crencas","formulacao"], when:"Quando você quer entender a lógica da formulação cognitiva e das crenças centrais.", why:"Aprofunda sem abandonar método."},
-  {id:"reinvente", title:"Reinvente sua Vida", author:"Jeffrey E. Young e Janet S. Klosko", area:"Padrões profundos", lang:"Português", level:"profundo", tags:["esquemas","apego","abandono","autoestima"], when:"Quando aparecem ciclos repetidos de abandono, desvalor, exigência ou autossacrifício.", why:"Conecta TCC e análise de esquemas com linguagem acessível."},
-  {id:"insecure-love", title:"Insecure in Love", author:"Leslie Becker-Phelps", area:"Apego ansioso", lang:"English", level:"B1–B2", tags:["apego","relationships","reassurance"], when:"Quando a urgência de confirmação, medo de rejeição ou leitura de sinais estiver alta.", why:"Dá linguagem para entender o apego ansioso sem transformar vínculo em campo de controle."},
-  {id:"attached", title:"Attached", author:"Amir Levine e Rachel Heller", area:"Apego", lang:"English", level:"B1–B2", tags:["apego","relationships","rejection"], when:"Quando você quer nomear padrões de vínculo para conversar em terapia.", why:"É uma leitura direta sobre estilos de apego."},
-  {id:"self-esteem-workbook", title:"The Self-Esteem Workbook", author:"Glenn R. Schiraldi", area:"Autoestima", lang:"English", level:"B1–B2", tags:["autoestima","self-esteem","practice"], when:"Quando a autoestima precisa virar prática e não apenas frase motivacional.", why:"Trabalha valor pessoal com exercícios objetivos."},
-  {id:"self-compassion", title:"Self-Compassion", author:"Kristin Neff", area:"Autocompaixão", lang:"English", level:"B1–B2", tags:["autoestima","shame","critic"], when:"Quando a voz crítica estiver cruel e você precisar de firmeza com cuidado.", why:"Complementa TCC reduzindo punição interna."},
-  {id:"boundaries", title:"Set Boundaries, Find Peace", author:"Nedra Glover Tawwab", area:"Limites", lang:"English", level:"B1–B2", tags:["limites","assertiveness","relationships"], when:"Quando há culpa ao dizer não, medo de desagradar ou excesso de adaptação.", why:"Transforma limite em frases concretas e treináveis."},
-  {id:"cnv", title:"Comunicação Não Violenta", author:"Marshall B. Rosenberg", area:"Comunicação", lang:"Português", level:"relações", tags:["limites","comunicacao","necessidades"], when:"Quando você precisa pedir, explicar necessidade ou discordar sem submissão e sem dureza.", why:"Ajuda a construir fala adulta: observar, sentir, precisar e pedir."},
-  {id:"coragem", title:"A Coragem de Ser Imperfeito", author:"Brené Brown", area:"Vergonha e autoestima", lang:"Português", level:"reflexivo", tags:["autoestima","shame","inseguranca"], when:"Quando vergonha e insegurança travam presença, voz e exposição.", why:"Ajuda a diferenciar vulnerabilidade de fraqueza."},
-  {id:"atomic", title:"Hábitos Atômicos / Atomic Habits", author:"James Clear", area:"Hábitos", lang:"Português ou English", level:"comportamental", tags:["habitos","exposicao","consistencia"], when:"Quando a evolução depende de constância mínima, rotina e desenho de ambiente.", why:"Complementa ativação comportamental com microações."},
-  {id:"english-grammar", title:"English Grammar in Use", author:"Raymond Murphy", area:"Inglês", lang:"English", level:"A2–B1", tags:["english","grammar","writing"], when:"Quando a base gramatical precisa ficar segura para destravar fala e escrita.", why:"É direto, progressivo e bom para estudo independente."},
-  {id:"practical-usage", title:"Practical English Usage", author:"Michael Swan", area:"Inglês", lang:"English", level:"B2–C1", tags:["english","advanced","writing"], when:"Quando você já escreve, mas quer resolver dúvidas finas de uso real.", why:"Aprofunda precisão sem ficar presa a regra escolar."},
-  {id:"style", title:"The Elements of Style", author:"William Strunk Jr. and E. B. White", area:"Escrita", lang:"English", level:"B2–C1", tags:["english","writing","style"], when:"Quando o foco for escrever com clareza, concisão e presença.", why:"Treina economia verbal e escolha precisa."},
-  {id:"ler-escrever", title:"Para Ler como um Escritor", author:"Francine Prose", area:"Leitura e escrita", lang:"Português", level:"avançado", tags:["portugues","leitura","escrita"], when:"Quando você quer ler melhor para escrever melhor.", why:"Aumenta percepção de frase, ritmo, detalhe e intenção."},
-  {id:"escrever", title:"Sobre a Escrita", author:"Stephen King", area:"Escrita", lang:"Português", level:"prático", tags:["portugues","writing","rotina"], when:"Quando a trava é excesso de julgamento antes da prática.", why:"Ajuda a criar rotina e coragem de reescrita."}
-];
-
-const HABITS = {
-  apego:[
-    {title:"Pausa de confirmação", time:"5 min", text:"Antes de pedir garantia, escreva: fato observável, medo ativado e pedido adulto possível. Só depois decida se envia algo."},
-    {title:"Mensagem não impulsiva", time:"3 min", text:"Troque cobrança por clareza: 'Eu percebi que fiquei ansiosa. Vou me regular antes de interpretar.'"},
-    {title:"Autonomia de vínculo", time:"7 min", text:"Faça uma ação só sua antes de checar o outro: banho, caminhada, café, leitura ou tarefa curta."}
-  ],
-  autoestima:[
-    {title:"Evidência diária de valor", time:"4 min", text:"Registre uma ação concreta que prova competência, cuidado ou coragem. Não vale elogio genérico; precisa ser observável."},
-    {title:"Promessa pequena cumprida", time:"5 min", text:"Escolha uma promessa mínima para você e cumpra hoje. Autoestima cresce quando você vira alguém confiável para si mesma."},
-    {title:"Resposta à crítica interna", time:"3 min", text:"Escreva uma resposta adulta para a voz cruel: firme, específica, sem romantizar e sem se humilhar."}
-  ],
-  inseguranca:[
-    {title:"Exposição de 2%", time:"7 min", text:"Faça uma versão pequena daquilo que evita: mandar um rascunho, gravar 30 segundos, perguntar algo, publicar um detalhe."},
-    {title:"Fato, medo, próximo passo", time:"4 min", text:"Divida: o que é fato? o que é medo? qual ação mínima posso fazer sem esperar confiança total?"},
-    {title:"Treino de voz", time:"3 min", text:"Leia em voz alta um parágrafo seu. Não busque perfeição; busque presença, ritmo e conclusão."}
-  ],
-  limites:[
-    {title:"Frase de limite", time:"3 min", text:"Complete: 'Eu entendo, mas neste momento eu não consigo...' ou 'Posso responder amanhã com mais calma.'"},
-    {title:"Culpa tolerável", time:"5 min", text:"Sustente 5 minutos de culpa sem se corrigir. Culpa não é prova de erro; às vezes é abstinência de agradar."},
-    {title:"Pedido claro", time:"4 min", text:"Transforme ressentimento em pedido: 'Eu preciso de...' ou 'Para mim seria importante...'"}
-  ],
-  default:[
-    {title:"Registro mínimo TCC", time:"5 min", text:"Situação, pensamento, emoção, ação provável e resposta alternativa. Simples e feito é melhor que perfeito."},
-    {title:"Uma página", time:"6 min", text:"Leia uma página do livro indicado e destaque uma frase para levar à terapia."},
-    {title:"Microvitória", time:"3 min", text:"Faça uma ação pequena que confirme a identidade que você está construindo."}
-  ]
-};
-
-const THERAPY = [
-  {id:"thought-record", title:"Registro TCC profundo", level:"base essencial", goal:"Separar fato, pensamento automático, emoção, comportamento e resposta alternativa.", questions:[
-    {prompt:"Qual frase diferencia melhor fato de interpretação?", options:["Fato: demorou a responder. Interpretação: não se importa comigo.","Fato: fui rejeitada de novo.","Fato: sou insuficiente.","Fato: nada muda."], answer:0, tip:"A TCC começa onde a câmera termina e a mente começa."},
-    {prompt:"A pergunta mais útil para revisar um pensamento automático é:", options:["Que evidências apoiam e contradizem essa leitura?","Como posso ter certeza absoluta?","Quem é culpado?","Como escondo isso?"], answer:0, tip:"Evidência abre espaço entre impulso e ação."},
-    {prompt:"Uma resposta alternativa madura deve ser:", options:["Realista, específica e menos punitiva","Positiva a qualquer custo","Fria e sem emoção","Uma ordem para parar de sentir"], answer:0, tip:"Não é negar dor; é ampliar leitura."},
-    {prompt:"O experimento comportamental serve para:", options:["Testar uma hipótese na vida real","Provar que estou certa","Evitar desconforto","Controlar a reação do outro"], answer:0, tip:"A vida vira laboratório cuidadoso, não tribunal."}
-  ]},
-  {id:"attachment-pause", title:"Apego ansioso: pausa antes da garantia", level:"vínculos", goal:"Reduzir reação automática de checagem, cobrança ou busca urgente de confirmação.", questions:[
-    {prompt:"Quando o apego ansioso ativa, a mente tende a confundir:", options:["Ambiguidade com abandono","Cuidado com desinteresse","Silêncio com descanso","Limite com clareza"], answer:0, tip:"Ambiguidade não é prova; é gatilho."},
-    {prompt:"Antes de pedir confirmação, uma atitude adulta é:", options:["Regular o corpo e escrever o medo antes de agir","Mandar várias mensagens","Testar o outro","Desaparecer para punir"], answer:0, tip:"Pausa não é repressão; é autocuidado."},
-    {prompt:"Qual frase é mais segura?", options:["Fiquei ansiosa e vou me regular antes de interpretar.","Você nunca se importa comigo.","Eu sabia que ia ser abandonada.","Vou fingir que não senti nada."], answer:0, tip:"Ela reconhece emoção sem acusar nem se abandonar."},
-    {prompt:"Sinal de evolução no apego ansioso:", options:["Demorar alguns minutos antes de reagir","Nunca precisar de ninguém","Não sentir saudade","Controlar o outro"], answer:0, tip:"Segurança interna cresce por pequenos intervalos de pausa."}
-  ]},
-  {id:"self-esteem-action", title:"Autoestima como comportamento", level:"identidade", goal:"Transformar valor pessoal em ações observáveis, não só em afirmações.", questions:[
-    {prompt:"Autoestima em ação significa:", options:["Cumprir pequenas promessas consigo mesma","Se achar melhor que os outros","Nunca duvidar","Esperar elogios para agir"], answer:0, tip:"Valor se fortalece quando você se trata como alguém que importa."},
-    {prompt:"Qual registro fortalece mais a autoestima?", options:["Hoje fiz X mesmo com medo, isso mostra Y","Eu preciso ser perfeita","Alguém me validou","Não posso falhar"], answer:0, tip:"Evidência concreta vence discurso genérico."},
-    {prompt:"Quando a voz crítica diz 'você é incapaz', a resposta TCC é:", options:["Qual evidência real existe? Qual exceção já aconteceu?","Ela deve estar certa","Vou desistir","Preciso provar tudo hoje"], answer:0, tip:"Responda com investigação, não com briga interna."},
-    {prompt:"Sinal de evolução em autoestima:", options:["Agir com respeito próprio mesmo sem se sentir confiante","Nunca sentir vergonha","Ser admirada por todos","Evitar exposição"], answer:0, tip:"Confiança muitas vezes vem depois da ação."}
-  ]},
-  {id:"insecurity-exposure", title:"Insegurança: exposição mínima", level:"coragem prática", goal:"Treinar ação pequena mesmo sem certeza, diminuindo evitação.", questions:[
-    {prompt:"A insegurança diminui mais quando você:", options:["Faz exposições pequenas e repetidas","Espera confiança total","Evita até se sentir pronta","Pede aprovação para tudo"], answer:0, tip:"O corpo aprende segurança pela experiência."},
-    {prompt:"Exposição de 2% é:", options:["Uma versão pequena e possível do que assusta","Se forçar até travar","Provar valor em um grande gesto","Ignorar limites"], answer:0, tip:"Pequeno o bastante para fazer, real o bastante para ensinar."},
-    {prompt:"A frase adulta diante do medo é:", options:["Eu posso agir com medo e medir o resultado depois.","Se tenho medo, é porque não consigo.","Preciso ter certeza.","Melhor não tentar."], answer:0, tip:"Medo não é veto; é sinal para ajustar escala."},
-    {prompt:"Sinal de evolução em insegurança:", options:["Aumentar tolerância ao imperfeito","Esperar aplauso","Nunca errar","Fugir de crítica"], answer:0, tip:"Tolerar o imperfeito libera crescimento."}
-  ]},
-  {id:"boundaries-guilt", title:"Limites sem culpa obediente", level:"relações", goal:"Diferenciar culpa, cuidado, submissão e responsabilidade real.", questions:[
-    {prompt:"Culpa depois de dizer não pode significar:", options:["Que estou saindo de um padrão antigo de agradar","Que fiz algo errado sempre","Que devo voltar atrás","Que sou egoísta"], answer:0, tip:"Culpa também pode ser abstinência de submissão."},
-    {prompt:"Um limite claro tem:", options:["respeito, especificidade e consequência possível","justificativa infinita","agressividade","silêncio punitivo"], answer:0, tip:"Limite bom não precisa virar tribunal."},
-    {prompt:"Frase mais adulta:", options:["Eu não consigo assumir isso agora, mas posso ajudar de outro modo.","Você não entende nada.","Tudo bem, eu faço mesmo exausta.","Nunca mais fale comigo."], answer:0, tip:"Clareza com respeito protege vínculo e pessoa."},
-    {prompt:"Sinal de evolução em limites:", options:["Sustentar desconforto sem se abandonar","Não sentir culpa nunca","Agradar para evitar conflito","Cortar todo mundo"], answer:0, tip:"Limite é maturidade relacional, não dureza."}
-  ]}
-];
-
-const PT_LEVELS = [
-  {id:"pt1", level:"Base", title:"Clareza e presença", goal:"Escrever e falar sem excesso de desculpas, com começo, meio e fechamento.", tags:["clareza","voz","organização"], skills:{fala:"Ler em voz alta, pausar, concluir.", escrita:"Parágrafo com tese simples.", leitura:"Identificar ideia central."}, task:"Escreva 4 frases sobre seu dia: fato, emoção, aprendizado e próximo passo.", questions:[
-    {prompt:"Um parágrafo claro precisa principalmente de:", options:["ideia central, desenvolvimento e fechamento","palavras difíceis sempre","frases enormes","mistério"], answer:0, tip:"Clareza vem de direção."},
-    {prompt:"Qual frase é mais precisa?", options:["Senti ansiedade quando interpretei a demora como rejeição.","Foi tudo horrível.","Nada presta.","Eu sou assim mesmo."], answer:0, tip:"Precisão reduz drama e aumenta compreensão."}
-  ]},
-  {id:"pt2", level:"Intermediário", title:"Vocabulário e nuance", goal:"Aumentar repertório sem soar artificial.", tags:["nuance","vocabulário","transição"], skills:{fala:"Explicar uma ideia em 60 segundos.", escrita:"Usar conectores: embora, portanto, por outro lado.", leitura:"Reconhecer tom e intenção."}, task:"Reescreva uma frase comum usando nuance: 'isso me incomodou' → 'isso tocou uma insegurança que eu ainda estou aprendendo a nomear'.", questions:[
-    {prompt:"Nuance é:", options:["perceber diferença fina entre ideias parecidas","complicar por vaidade","falar difícil","evitar opinião"], answer:0, tip:"Nuance amadurece a comunicação."},
-    {prompt:"Qual conector mostra contraste?", options:["por outro lado","portanto","além disso","em suma"], answer:0, tip:"Contraste organiza pensamento complexo."}
-  ]},
-  {id:"pt3", level:"Avançado", title:"Argumentação e autoridade", goal:"Defender ideias com elegância, evidência e conclusão.", tags:["argumento","presença","autoridade"], skills:{fala:"Sustentar posição sem endurecer.", escrita:"Tese + evidência + implicação.", leitura:"Avaliar argumento e pressuposto."}, task:"Escreva uma tese sobre autocuidado sem clichê e defenda com uma evidência pessoal.", questions:[
-    {prompt:"Um argumento forte combina:", options:["tese, justificativa e consequência","opinião repetida","ataque pessoal","frase bonita sem prova"], answer:0, tip:"Elegância precisa de estrutura."},
-    {prompt:"Autoridade comunicacional não é:", options:["falar mais alto que todos","clareza","coerência","capacidade de concluir"], answer:0, tip:"Autoridade sem escuta vira dureza."}
-  ]},
-  {id:"pt4", level:"Excelência", title:"Estilo, discurso e leitura crítica", goal:"Criar textos e falas com ritmo, densidade e personalidade.", tags:["estilo","leitura crítica","discurso"], skills:{fala:"Discurso de 2 minutos com abertura forte.", escrita:"Texto com ritmo, imagem e precisão.", leitura:"Ler como escritora: escolha lexical, ritmo, subtexto."}, task:"Escreva uma abertura de apresentação sobre o PULSO 40+ em tom sofisticado, humano e convincente.", questions:[
-    {prompt:"Estilo maduro é:", options:["a forma coerente de pensar e escolher palavras","enfeite vazio","excesso de adjetivo","dificultar a leitura"], answer:0, tip:"Estilo serve à intenção."},
-    {prompt:"Leitura crítica pergunta:", options:["que escolha o autor fez e com que efeito?","quantas páginas faltam?","qual palavra é mais rara?","como copiar o estilo?"], answer:0, tip:"Ler melhor ensina a escrever melhor."}
-  ]}
-];
-
-const EN_LEVELS = [
-  {id:"en-a1", level:"A1", title:"Survival English", goal:"Apresentar-se, falar de rotina, emoções básicas e necessidades simples.", tags:["speaking","basic","confidence"], skills:{speaking:"I am... I feel... I need...", writing:"3 frases curtas sobre o dia.", reading:"textos curtos e familiares"}, task:"Say out loud: My name is Leide. I am learning English. Today I feel calm and focused.", prompt:"Introduce yourself in three simple sentences.", questions:[
-    {prompt:"Complete: I ___ learning English.", options:["am","is","are","be"], answer:0, tip:"I am."},
-    {prompt:"Which sentence is correct?", options:["I feel anxious today.","I feels anxious today.","I feeling anxious today.","I am feel anxious today."], answer:0, tip:"Use feel after I."}
-  ]},
-  {id:"en-a2", level:"A2", title:"Everyday communication", goal:"Falar de passado simples, preferências, planos e situações comuns.", tags:["routine","past","daily life"], skills:{speaking:"falar sobre ontem e amanhã", writing:"mensagem simples", reading:"e-mails e instruções"}, task:"Write 5 sentences: yesterday, today and tomorrow.", prompt:"Describe one thing you did yesterday and one thing you will do tomorrow.", questions:[
-    {prompt:"Choose the correct sentence:", options:["Yesterday, I worked and studied.","Yesterday, I work and study.","Yesterday, I working.","Yesterday, I am work."], answer:0, tip:"Past simple: worked, studied."},
-    {prompt:"A polite request is:", options:["Could you help me, please?","Help me now.","You help.","Why not help?"], answer:0, tip:"Could you...? is polite."}
-  ]},
-  {id:"en-b1", level:"B1", title:"Independent voice", goal:"Contar experiências, explicar opiniões e participar de conversas previsíveis.", tags:["conversation","opinion","storytelling"], skills:{speaking:"opinião com理由", writing:"parágrafo conectado", reading:"artigos simples"}, task:"Record yourself answering: What are you learning about yourself this week?", prompt:"What are you learning about yourself this week?", questions:[
-    {prompt:"The best connector to give a reason is:", options:["because","although","however","finally"], answer:0, tip:"Because explains why."},
-    {prompt:"Choose a B1-level opinion:", options:["I believe therapy helps me because it gives me tools to understand my thoughts.","Good.","Therapy yes.","I not know."], answer:0, tip:"Opinion + reason = stronger conversation."}
-  ]},
-  {id:"en-b2", level:"B2", title:"Fluent argument", goal:"Discutir temas complexos com clareza, defender pontos de vista e conversar com mais espontaneidade.", tags:["fluency","argument","meetings"], skills:{speaking:"defender ideia e responder pergunta", writing:"texto argumentativo", reading:"textos técnicos e profissionais"}, task:"Speak for 90 seconds: Why should digital tools be more human-centered?", prompt:"Why should digital tools be more human-centered?", questions:[
-    {prompt:"Which sentence sounds more B2?", options:["Digital tools should be human-centered because access, clarity and trust affect real people's decisions.","Apps good for people.","Digital is nice.","People need things."], answer:0, tip:"B2 adds abstraction and explanation."},
-    {prompt:"To show contrast, use:", options:["however","therefore","for example","also"], answer:0, tip:"However signals contrast."}
-  ]},
-  {id:"en-c1", level:"C1", title:"Strategic communication", goal:"Expressar ideias complexas com precisão, tom profissional e flexibilidade.", tags:["strategy","pitch","advanced writing"], skills:{speaking:"pitch e negociação", writing:"texto estratégico", reading:"subtexto e implicação"}, task:"Write a short pitch for your app using: accessible, evidence-informed, user-centered, and sustainable.", prompt:"Present your app as an accessible and evidence-informed digital health companion.", questions:[
-    {prompt:"A C1 sentence usually shows:", options:["precision, nuance and controlled structure","only short isolated words","random complexity","no connectors"], answer:0, tip:"C1 is flexible and precise, not just difficult."},
-    {prompt:"Choose the most strategic phrase:", options:["The app translates therapeutic reflection into daily micro-actions and measurable self-observation.","The app is very good.","People use app.","It helps maybe."], answer:0, tip:"Strategic language connects value and mechanism."}
-  ]},
-  {id:"en-c2", level:"C2", title:"Conversation mastery", goal:"Conversar com naturalidade, nuance, humor leve, síntese e pensamento crítico.", tags:["conversation","mastery","critical reading"], skills:{speaking:"debate e improviso", writing:"ensaio ou narrativa", reading:"leitura crítica avançada"}, task:"Debate with yourself: Can self-development become another form of pressure? Give both sides.", prompt:"Can self-development become another form of pressure? Give both sides with nuance.", questions:[
-    {prompt:"At C2, conversation should include:", options:["spontaneity, precision and subtle shades of meaning","perfect accent only","memorized sentences only","no hesitation ever"], answer:0, tip:"C2 is nuanced and natural, not robotic."},
-    {prompt:"A nuanced answer often includes:", options:["both a position and a qualification","only certainty","no examples","avoidance"], answer:0, tip:"Nuance allows complexity without losing direction."}
-  ]}
-];
+const dateLabel = d => d ? d.split('-').reverse().slice(0,2).join('/') : "";
+const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+const state = {selected:{}, runner:null, filter:"Todos", writingPromptIndex:0};
 
 function defaultData(){return {checkins:[], sessions:[], writings:[], habits:[]};}
 function loadData(){try{return {...defaultData(), ...JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}")}}catch(e){return defaultData()}}
 function saveData(data){localStorage.setItem(STORAGE_KEY, JSON.stringify(data));}
-function toast(msg){const el=$("toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2400)}
+function toast(msg){const el=$("toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2600)}
 function lastNDays(n){const arr=[];for(let i=n-1;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);arr.push(d.toISOString().slice(0,10))}return arr}
-function latestCheckin(){return loadData().checkins.slice().sort((a,b)=>b.date.localeCompare(a.date))[0]}
-function scoreCheckin(c){if(!c)return 0;const mood=Number(c.mood||3), anxiety=Number(c.anxiety||3), attachment=Number(c.attachment||3), esteem=Number(c.esteem||3), insecurity=Number(c.insecurity||3);return clamp(Math.round(((mood+esteem+(6-anxiety)+(6-attachment)+(6-insecurity))/25)*100),0,100)}
-function pulseScore(){const data=loadData();const days=lastNDays(14);const recent=data.checkins.filter(x=>days.includes(x.date));const sessions=data.sessions.filter(x=>days.includes(x.date));const habits=data.habits.filter(x=>days.includes(x.date));const base=recent.length?avg(recent.map(scoreCheckin)):45;const consistency=Math.min(20, recent.length*2 + sessions.length + habits.length*.8);return clamp(Math.round(base*.78 + consistency),0,100)}
-function categoryName(cat){return {therapy:"Terapia",portugues:"Português",ingles:"English"}[cat]||cat}
-function setPanel(name){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active', p.id===`panel-${name}`));document.querySelectorAll('[data-panel]').forEach(b=>b.classList.toggle('active', b.dataset.panel===name));window.scrollTo({top:0,behavior:'smooth'});renderAll()}
-function renderChoiceMemory(){const c=loadData().checkins.find(x=>x.date===todayKey());if(!c)return;state.selected={...c};$("triggerText").value=c.trigger||"";document.querySelectorAll('[data-choice-group]').forEach(group=>{const val=c[group.dataset.choiceGroup];group.querySelectorAll('.choice').forEach(btn=>btn.classList.toggle('selected', btn.dataset.value==val))})}
-function saveCheckin(){const required=["mood","anxiety","attachment","esteem","insecurity","pattern","voice","focus"];for(const k of required){if(!state.selected[k]){toast("Preencha todos os campos do check-in.");return}}const data=loadData();const entry={date:todayKey(),createdAt:new Date().toISOString(),trigger:$("triggerText").value.trim(),...state.selected};data.checkins=data.checkins.filter(x=>x.date!==entry.date);data.checkins.push(entry);saveData(data);toast("Check-in salvo. Plano e leitura atualizados.");renderAll();}
-function pickHabits(){const c=latestCheckin();const pattern=c?.pattern || "default";let list=[...(HABITS[pattern]||HABITS.default)];if(Number(c?.attachment||0)>=4)list.unshift(HABITS.apego[0]);if(Number(c?.esteem||5)<=2)list.unshift(HABITS.autoestima[0]);if(Number(c?.insecurity||0)>=4)list.unshift(HABITS.inseguranca[0]);return [...new Map(list.map(h=>[h.title,h])).values()].slice(0,4)}
-function completeHabit(i,title){const data=loadData();data.habits.push({id:`habit-${Date.now()}`,date:todayKey(),createdAt:new Date().toISOString(),title:title||"Hábito diário"});saveData(data);toast("Hábito registrado na evolução.");renderAll()}
-function renderHabits(){const list=pickHabits();$("dailyHabits").innerHTML=list.map((h,i)=>`<article class="habit-card"><div class="level-header"><div><h3>${escapeHTML(h.title)}</h3><p>${escapeHTML(h.text)}</p></div><span class="pill">${escapeHTML(h.time)}</span></div><button class="secondary" style="width:100%" data-complete-habit="${i}" data-habit-title="${escapeHTML(h.title)}" type="button">Marcar como feito</button></article>`).join("")}
-function suggestedBooks(){const c=latestCheckin();if(!c)return BOOKS.filter(b=>["mente-humor","english-grammar","ler-escrever"].includes(b.id));let tags=[];if(c.pattern)tags.push(c.pattern);if(Number(c.attachment)>=4)tags.push("apego","reassurance");if(Number(c.esteem)<=3)tags.push("autoestima","self-esteem","critic");if(Number(c.insecurity)>=4)tags.push("inseguranca","shame");if(c.focus==="evidencia")tags.push("tcc","evidencia");if(c.focus==="limite")tags.push("limites");tags.push("english","portugues");return BOOKS.map(b=>({b,score:b.tags.reduce((s,t)=>s+(tags.includes(t)?2:0),0)+(b.lang==="English"?0.4:0)})).sort((a,b)=>b.score-a.score).slice(0,4).map(x=>x.b)}
-function renderBook(b,compact=false){return `<article class="book-card"><div class="level-header"><div><p class="eyebrow small">${escapeHTML(b.area)} · ${escapeHTML(b.lang)}</p><h3>${escapeHTML(b.title)}</h3><p><strong>${escapeHTML(b.author)}</strong> · ${escapeHTML(b.level)}</p></div><span class="pill">${escapeHTML(b.area)}</span></div><div class="meta-row">${b.tags.slice(0,5).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("")}</div><p><strong>Quando ler:</strong> ${escapeHTML(b.when)}</p>${compact?"":`<p><strong>Por que ajuda:</strong> ${escapeHTML(b.why)}</p>`}<div class="book-links"><a href="${onlineLink(b)}" target="_blank" rel="noopener">Ler online / e-book legal</a><a href="${buyLink(b)}" target="_blank" rel="noopener">Comprar físico</a></div></article>`}
-function renderTodayBooks(){const c=latestCheckin();$("todayBooks").innerHTML=(c?suggestedBooks().slice(0,2):BOOKS.filter(b=>["mente-humor","english-grammar"].includes(b.id))).map(b=>renderBook(b,true)).join("")}
-function renderLibrary(){$("libraryList").innerHTML=BOOKS.map(b=>renderBook(b,false)).join("")}
-function renderTherapy(){const data=loadData();$("therapyDone").textContent=`${data.sessions.filter(s=>s.category==='therapy').length} feitas`;$("therapyList").innerHTML=THERAPY.map(x=>renderPracticeCard(x,"therapy")).join("")}
-function renderProgramCard(item, category){const skills=item.skills;return `<article class="level-card"><div class="level-header"><div><p class="eyebrow small">${category==='ingles'?'English level':'Português'}</p><h3>${escapeHTML(item.title)}</h3><p>${escapeHTML(item.goal)}</p></div><span class="level-badge">${escapeHTML(item.level)}</span></div><div class="meta-row">${item.tags.map(t=>`<span class="tag ${category==='ingles'?'blue':''}">${escapeHTML(t)}</span>`).join('')}</div><div class="skill-grid"><div class="skill-box"><strong>${category==='ingles'?'Speaking':'Fala'}</strong>${escapeHTML(skills.speaking||skills.fala)}</div><div class="skill-box"><strong>${category==='ingles'?'Writing':'Escrita'}</strong>${escapeHTML(skills.writing||skills.escrita)}</div><div class="skill-box"><strong>${category==='ingles'?'Reading':'Leitura'}</strong>${escapeHTML(skills.reading||skills.leitura)}</div></div><p class="note">Prática sugerida: ${escapeHTML(item.task)}</p><div class="card-actions" style="margin-top:12px"><button class="secondary" data-start-category="${category}" data-start-id="${escapeHTML(item.id)}" type="button">Fazer treino</button>${category==='ingles'?`<button class="ghost" data-speak="${escapeHTML(item.prompt||item.task)}" type="button">Ouvir</button>`:""}</div></article>`}
-function renderPrograms(){const data=loadData();$("ptDone").textContent=`${data.sessions.filter(s=>s.category==='portugues').length} feitos`;$("enDone").textContent=`${data.sessions.filter(s=>s.category==='ingles').length} done`;$("ptProgram").innerHTML=PT_LEVELS.map(x=>renderProgramCard(x,"portugues")).join("");$("enProgram").innerHTML=EN_LEVELS.map(x=>renderProgramCard(x,"ingles")).join("")}
-function renderPracticeCard(x,category){return `<article class="path-card"><div class="category-top"><div class="icon">${category==='therapy'?'🧠':category==='ingles'?'🌍':'🗣️'}</div><div style="flex:1"><h3>${escapeHTML(x.title)}</h3><p>${escapeHTML(x.goal)}</p><div class="meta-row"><span class="tag">${escapeHTML(x.level)}</span><span class="tag green">${x.questions.length} perguntas</span></div></div></div><button class="secondary" data-start-category="${category}" data-start-id="${escapeHTML(x.id)}" style="width:100%" type="button">Iniciar</button></article>`}
-function findPractice(category,id){if(category==='therapy')return THERAPY.find(x=>x.id===id);if(category==='portugues')return PT_LEVELS.find(x=>x.id===id);if(category==='ingles')return EN_LEVELS.find(x=>x.id===id)}
-function startPractice(category,id){const item=findPractice(category,id);if(!item)return;state.runner={category,item,index:0,score:0,answers:[]};$("runner").classList.remove("hidden");$("runnerCategory").textContent=categoryName(category);$("runnerTitle").textContent=item.title;$("runnerGoal").textContent=item.goal;renderQuestion()}
-function renderQuestion(){const r=state.runner;if(!r)return;const q=r.item.questions[r.index];$("runnerProgressFill").style.width=`${(r.index/r.item.questions.length)*100}%`;$("runnerProgressText").textContent=`Pergunta ${r.index+1} de ${r.item.questions.length}`;$("resultArea").classList.add('hidden');$("questionArea").innerHTML=`<p class="question-text">${escapeHTML(q.prompt)}</p><div class="choice-grid">${q.options.map((opt,i)=>`<button class="choice" data-answer="${i}" type="button">${escapeHTML(opt)}</button>`).join('')}</div><p id="runnerFeedback" class="feedback hidden"></p>`}
-function answerQuestion(i){const r=state.runner;if(!r)return;const q=r.item.questions[r.index];const ok=i===q.answer;if(ok)r.score++;r.answers.push({ok});document.querySelectorAll('[data-answer]').forEach(btn=>{btn.disabled=true;if(Number(btn.dataset.answer)===q.answer)btn.classList.add('selected')});const fb=$("runnerFeedback");fb.className=`feedback ${ok?'good':''}`;fb.textContent=(ok?'Boa. ':'Observe: ')+q.tip;setTimeout(()=>nextQuestion(),900)}
-function nextQuestion(){const r=state.runner;if(!r)return;r.index++;if(r.index>=r.item.questions.length)finishPractice();else renderQuestion()}
-function finishPractice(){const r=state.runner;const grade=Math.round((r.score/r.item.questions.length)*10);const data=loadData();data.sessions.push({id:`session-${Date.now()}`,date:todayKey(),completedAt:new Date().toISOString(),category:r.category,title:r.item.title,level:r.item.level,grade});saveData(data);$("runnerProgressFill").style.width="100%";$("questionArea").innerHTML="";$("resultArea").classList.remove('hidden');$("resultArea").innerHTML=`<div class="result-box"><p class="eyebrow small">Concluído</p><div class="pulse-number" style="--angle:${grade*36}deg">${grade}</div><h3>${grade>=8?'Excelente prática':'Prática registrada'}</h3><p>${grade>=8?'Você respondeu com clareza. Agora transforme em uma microação.':'A repetição importa mais que a nota. Revise a prática amanhã.'}</p><button class="primary" data-close-runner type="button">Fechar e atualizar evolução</button></div>`;renderAll()}
-function closeRunner(){$("runner").classList.add('hidden');state.runner=null}
-function speak(text,lang="en-US"){if(!('speechSynthesis' in window)){toast('Áudio indisponível neste navegador.');return}const u=new SpeechSynthesisUtterance(text);u.lang=lang;u.rate=.84;window.speechSynthesis.cancel();window.speechSynthesis.speak(u)}
-function saveWriting(language,text){if(!text.trim()){toast('Escreva algumas linhas antes de salvar.');return}const data=loadData();data.writings.push({id:`writing-${Date.now()}`,date:todayKey(),createdAt:new Date().toISOString(),language,title:language==='English'?'English writing lab':language==='Português'?'Ateliê de português':'Formulação terapêutica',text:text.trim()});saveData(data);toast('Texto salvo na evolução.');renderAll()}
-function trendText(){const data=loadData();const days=lastNDays(14);const ch=data.checkins.filter(x=>days.includes(x.date)).sort((a,b)=>a.date.localeCompare(b.date));if(ch.length<3)return {label:'em construção',text:'Ainda há poucos registros. Com 5 a 7 dias, o app começa a mostrar tendências mais úteis.'};const half=Math.ceil(ch.length/2);const first=avg(ch.slice(0,half).map(scoreCheckin));const last=avg(ch.slice(half).map(scoreCheckin));const diff=last-first;if(diff>8)return {label:'melhora percebida',text:'Os registros recentes mostram melhora no pulso emocional: mais autoestima em ação e/ou menos ansiedade, apego ativado e insegurança.'};if(diff<-8)return {label:'atenção terapêutica',text:'Os registros recentes sugerem maior carga emocional. Leve o resumo para a terapia e reduza a meta para hábitos mínimos.'};return {label:'estável',text:'O processo parece estável. A próxima etapa é repetir hábitos pequenos para transformar insight em comportamento.'}}
-function renderEvolution(){const data=loadData();const pulse=pulseScore();const tr=trendText();const c=latestCheckin();$("todayStatus").textContent=data.checkins.some(x=>x.date===todayKey())?'salvo hoje':'não salvo';$("therapyEffect").innerHTML=`<div class="index-main"><div class="pulse-number" style="--angle:${pulse*3.6}deg">${pulse}</div><div><h3>${escapeHTML(tr.label)}</h3><p>${escapeHTML(tr.text)}</p><p class="support">Este índice combina autorrelato, práticas concluídas e hábitos registrados. É material de autoconsciência, não laudo clínico.</p></div></div><div class="insight"><h3>Leitura do momento</h3><p>${c?`Padrão mais recente: ${escapeHTML(c.pattern)}. Voz interna: ${escapeHTML(c.voice)}. Foco escolhido: ${escapeHTML(c.focus)}.`:'Faça o check-in de hoje para gerar uma leitura personalizada.'}</p></div>`;renderDomains();renderLanguages();renderWeek();renderHistory()}
-function renderDomains(){const days=lastNDays(14);const ch=loadData().checkins.filter(x=>days.includes(x.date));const axes=[{name:'Apego ansioso',val:ch.length?100-avg(ch.map(x=>Number(x.attachment||3)))*20:0,desc:'Quanto menor a urgência de confirmação, maior a segurança interna.'},{name:'Autoestima em ação',val:ch.length?avg(ch.map(x=>Number(x.esteem||3)))*20:0,desc:'Valor pessoal observado por ações concretas.'},{name:'Segurança interna',val:ch.length?100-avg(ch.map(x=>Number(x.insecurity||3)))*20:0,desc:'Tolerância à dúvida, erro e exposição.'},{name:'Regulação emocional',val:ch.length?100-avg(ch.map(x=>Number(x.anxiety||3)))*20:0,desc:'Capacidade de pausar antes de obedecer ao impulso.'}];$("domainEvolution").innerHTML=axes.map(a=>`<article class="axis-card"><div class="axis-top"><h3>${escapeHTML(a.name)}</h3><span class="axis-value">${Math.round(clamp(a.val,0,100))}%</span></div><p class="small-copy">${escapeHTML(a.desc)}</p><div class="track"><div class="fill" style="width:${clamp(a.val,0,100)}%"></div></div></article>`).join('')}
-function renderLanguages(){const data=loadData();const pt=data.sessions.filter(s=>s.category==='portugues');const en=data.sessions.filter(s=>s.category==='ingles');const axes=[{name:'Português',val:Math.min(100,pt.length*12+avg(pt.map(x=>x.grade))*4),desc:'Treinos de fala, escrita, leitura e argumento.'},{name:'English',val:Math.min(100,en.length*10+avg(en.map(x=>x.grade))*5),desc:'Progressão A1–C2, conversação e escrita.'}];$("languageEvolution").innerHTML=axes.map(a=>`<article class="axis-card"><div class="axis-top"><h3>${escapeHTML(a.name)}</h3><span class="axis-value">${Math.round(clamp(a.val,0,100))}%</span></div><p class="small-copy">${escapeHTML(a.desc)}</p><div class="track"><div class="fill" style="width:${clamp(a.val,0,100)}%"></div></div></article>`).join('')}
-function renderWeek(){const data=loadData();const days=lastNDays(14);$("weekChart").innerHTML=days.map(day=>{const ch=data.checkins.find(x=>x.date===day);const sessions=data.sessions.filter(x=>x.date===day).length;const habits=data.habits.filter(x=>x.date===day).length;const score=clamp((ch?scoreCheckin(ch):0)*.7 + Math.min(30,(sessions+habits)*10),0,100);return `<div class="day-row"><span>${dateLabel(day)}</span><div class="day-track"><div class="day-fill" style="width:${score}%"></div></div><strong>${Math.round(score)}%</strong></div>`}).join('')}
-function renderHistory(){const data=loadData();const all=[...data.checkins.map(x=>({...x,type:'check-in',title:'Termômetro TCC'})),...data.sessions.map(x=>({...x,type:'prática'})),...data.writings.map(x=>({...x,type:'escrita'})),...data.habits.map(x=>({...x,type:'hábito'}))].sort((a,b)=>(b.completedAt||b.createdAt||b.date).localeCompare(a.completedAt||a.createdAt||a.date)).slice(0,18);$("historyList").innerHTML=all.length?all.map(item=>`<article class="history-item"><div class="history-top"><span>${escapeHTML(item.title||item.type)}</span><span>${dateLabel(item.date)}</span></div><p>${item.type==='check-in'?`Pulso ${scoreCheckin(item)}/100 · padrão: ${escapeHTML(item.pattern)} · voz: ${escapeHTML(item.voice)}`:item.type==='prática'?`${categoryName(item.category)} · ${escapeHTML(item.level||'')} · nota ${item.grade}/10`:item.type==='hábito'?`Hábito concluído: ${escapeHTML(item.title)}`:`${escapeHTML(item.language)} · ${escapeHTML((item.text||'').slice(0,110))}`}</p></article>`).join(''):`<p class="empty">Ainda não há histórico.</p>`}
-function renderDashboard(){const data=loadData();const pulse=pulseScore();const todaySessions=data.sessions.filter(x=>x.date===todayKey()).length;const todayHabits=data.habits.filter(x=>x.date===todayKey()).length;const c=latestCheckin();const domain=c?.pattern||'—';const html=`<section class="card"><div class="section-head"><div><p class="eyebrow small">Resumo vivo</p><h2>Seu painel de hoje</h2></div><span class="progress-pill">${dateLabel(todayKey())}</span></div><div class="dashboard-grid"><div class="metric"><span>${pulse}</span><p>Índice Pulso</p></div><div class="metric"><span>${todaySessions}</span><p>práticas hoje</p></div><div class="metric"><span>${todayHabits}</span><p>hábitos feitos</p></div><div class="metric"><span>${escapeHTML(domain)}</span><p>padrão recente</p></div></div></section>`;const first=document.querySelector('#panel-hoje .card');if(!document.getElementById('dashboardCard')){first.insertAdjacentHTML('beforebegin',html.replace('<section class="card"','<section id="dashboardCard" class="card"'))}else{$('dashboardCard').outerHTML=html.replace('<section class="card"','<section id="dashboardCard" class="card"')}}
-function exportSummary(){const data=loadData();const tr=trendText();const c=latestCheckin();const books=suggestedBooks().map(b=>`- ${b.title} (${b.author})`).join('\n');const text=`PULSO 40+ | Resumo\nPeríodo: últimos 14 dias\nÍndice Pulso: ${pulseScore()}/100\nTendência: ${tr.label}\nLeitura: ${tr.text}\nÚltimo padrão: ${c?.pattern||'sem dado'}\nVoz interna: ${c?.voice||'sem dado'}\nFoco: ${c?.focus||'sem dado'}\nPráticas concluídas: ${data.sessions.length}\nHábitos registrados: ${data.habits.length}\nLivros sugeridos:\n${books}\nObservação: dados de autorrelato para conversar em terapia, não diagnóstico.`;navigator.clipboard?.writeText(text).then(()=>toast('Resumo copiado.'),()=>alert(text))}
-function setupInstall(){let deferred;const btn=$("installBtn");window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;btn.classList.remove('hidden')});btn.addEventListener('click',async()=>{if(!deferred)return;deferred.prompt();await deferred.userChoice;deferred=null;btn.classList.add('hidden')})}
-function renderAll(){renderChoiceMemory();renderDashboard();renderHabits();renderTodayBooks();renderTherapy();renderPrograms();renderEvolution();renderLibrary()}
-function wire(){document.addEventListener('click',e=>{const panel=e.target.closest('[data-panel]');if(panel){setPanel(panel.dataset.panel);return}const choice=e.target.closest('[data-choice-group] .choice');if(choice){const group=choice.closest('[data-choice-group]');group.querySelectorAll('.choice').forEach(b=>b.classList.remove('selected'));choice.classList.add('selected');state.selected[group.dataset.choiceGroup]=choice.dataset.value;return}const start=e.target.closest('[data-start-category]');if(start){startPractice(start.dataset.startCategory,start.dataset.startId);return}const answer=e.target.closest('[data-answer]');if(answer){answerQuestion(Number(answer.dataset.answer));return}const close=e.target.closest('[data-close-runner]');if(close){closeRunner();return}const speakBtn=e.target.closest('[data-speak]');if(speakBtn){speak(speakBtn.dataset.speak);return}const habit=e.target.closest('[data-complete-habit]');if(habit){completeHabit(habit.dataset.completeHabit,habit.dataset.habitTitle);return}const sos=e.target.closest('[data-sos]');if(sos){$("sosResult").textContent=sos.dataset.sos;$("sosResult").className='feedback good';return}});$("saveCheckin").addEventListener('click',saveCheckin);$("closeRunner").addEventListener('click',closeRunner);$("saveTherapyWriting").addEventListener('click',()=>saveWriting('Terapia',$("therapyWriting").value));$("savePtWriting").addEventListener('click',()=>saveWriting('Português',$("ptWriting").value));$("saveEnWriting").addEventListener('click',()=>saveWriting('English',$("enWriting").value));$("speakPrompt").addEventListener('click',()=>speak($("enPrompt").textContent));$("exportSummary").addEventListener('click',exportSummary);$("clearData").addEventListener('click',()=>{if(confirm('Apagar todos os dados salvos neste aparelho?')){localStorage.removeItem(STORAGE_KEY);state.selected={};renderAll();toast('Histórico apagado.')}})}
-function init(){renderAll();wire();setupInstall();if('serviceWorker' in navigator)navigator.serviceWorker.register('service-worker.js').catch(()=>{})}
-document.addEventListener('DOMContentLoaded',init);
+function latestCheckin(){return loadData().checkins.slice().sort((a,b)=>(b.createdAt||b.date).localeCompare(a.createdAt||a.date))[0]}
+function categoryName(cat){return cat || "Exercício"}
+
+const EXERCISES = [
+  {id:"tcc-pensamento", category:"Terapia", icon:"🧠", level:"base", title:"Pensamento ansioso: fato ou interpretação?", goal:"Separar o que aconteceu do que a mente completou sozinha.", questions:[
+    {prompt:"Qual frase separa melhor fato de interpretação?", options:["Fato: a pessoa demorou. Interpretação: ela não liga para mim.","Fato: fui abandonada de novo.","Fato: eu sou insuficiente.","Fato: nada vai dar certo."], answer:0, tip:"A câmera mostra o fato; a mente cria a interpretação."},
+    {prompt:"Quando um pensamento vem muito forte, o primeiro passo mais útil é:", options:["pausar e perguntar que evidências existem","obedecer ao pensamento","mandar mensagem no impulso","se culpar por sentir"], answer:0, tip:"Pensamento forte não é necessariamente pensamento verdadeiro."},
+    {prompt:"Uma resposta alternativa madura deve ser:", options:["realista, específica e menos punitiva","positiva a qualquer custo","fria, como se não doesse","uma ordem para parar de sentir"], answer:0, tip:"A resposta alternativa não nega a dor; ela amplia a leitura."},
+    {prompt:"A pergunta mais terapêutica diante de uma conclusão rápida é:", options:["que outra explicação também pode existir?","como provo que estou certa?","quem tem culpa?","como evito sentir isso?"], answer:0, tip:"Alternativas reduzem a urgência emocional."},
+    {prompt:"Um experimento comportamental serve para:", options:["testar uma hipótese na vida real","controlar a reação do outro","provar que eu estava errada sempre","evitar desconforto"], answer:0, tip:"A vida vira laboratório cuidadoso, não tribunal."},
+    {prompt:"Quando a mente diz 'sempre acontece isso', uma boa resposta é:", options:["sempre mesmo? quais exceções existem?","então não adianta tentar","isso prova tudo","melhor desistir"], answer:0, tip:"Palavras como sempre e nunca costumam aumentar sofrimento."},
+    {prompt:"O que mais ajuda a organizar uma emoção intensa?", options:["nomear situação, pensamento, emoção e ação","procurar certeza absoluta","fingir que nada aconteceu","resolver tudo na hora"], answer:0, tip:"Nomear cria espaço entre sentir e agir."},
+    {prompt:"Uma frase de autocuidado realista é:", options:["eu posso sentir isso sem agir no impulso","eu não deveria sentir nada","eu preciso resolver agora","se eu sinto, é porque é verdade"], answer:0, tip:"Sentir não obriga reação imediata."}
+  ]},
+  {id:"apego-pausa", category:"Terapia", icon:"💬", level:"vínculos", title:"Apego ansioso: pausa antes da confirmação", goal:"Reduzir checagem, cobrança e leitura de sinais.", questions:[
+    {prompt:"Quando o apego ansioso ativa, a mente pode confundir:", options:["ambiguidade com abandono","limite com carinho","descanso com presença","clareza com ameaça"], answer:0, tip:"Ambiguidade não é prova; é gatilho."},
+    {prompt:"Antes de pedir confirmação, uma atitude adulta é:", options:["regular o corpo e escrever o medo antes de agir","mandar várias mensagens","testar se a pessoa se importa","sumir para provocar reação"], answer:0, tip:"Pausa não é repressão; é cuidado."},
+    {prompt:"Qual frase é mais segura?", options:["fiquei ansiosa e vou me regular antes de interpretar","você nunca se importa comigo","eu sabia que ia ser abandonada","vou fingir que não senti"], answer:0, tip:"Ela reconhece emoção sem acusar nem se abandonar."},
+    {prompt:"Sinal de evolução no apego ansioso:", options:["demorar alguns minutos antes de reagir","nunca precisar de ninguém","não sentir saudade","controlar o outro"], answer:0, tip:"Segurança interna cresce em pequenos intervalos de pausa."},
+    {prompt:"Quando a pessoa demora a responder, uma leitura mais equilibrada é:", options:["há várias explicações possíveis, não só rejeição","ela com certeza me abandonou","eu preciso insistir agora","isso define meu valor"], answer:0, tip:"Demora é informação incompleta."},
+    {prompt:"A busca de confirmação fica mais saudável quando vira:", options:["pedido claro, respeitoso e sem urgência de controle","cobrança disfarçada","teste emocional","silêncio punitivo"], answer:0, tip:"Pedido adulto não tenta controlar o outro."},
+    {prompt:"Uma microação antes de checar o outro é:", options:["fazer algo por mim por 10 minutos","olhar o celular sem parar","ensaiar briga","imaginar o pior"], answer:0, tip:"Voltar para si diminui dependência da resposta externa."},
+    {prompt:"Quando o medo de abandono aparece, o foco inicial é:", options:["cuidar do meu corpo e da minha leitura","provar que o outro está errado","conseguir garantia imediata","se punir por sentir"], answer:0, tip:"Regulação vem antes de conversa difícil."}
+  ]},
+  {id:"autoestima-acao", category:"Terapia", icon:"🌱", level:"identidade", title:"Autoestima como comportamento", goal:"Transformar valor pessoal em pequenas ações observáveis.", questions:[
+    {prompt:"Autoestima em ação significa:", options:["cumprir pequenas promessas comigo mesma","esperar aprovação para agir","nunca duvidar","se sentir superior"], answer:0, tip:"Valor se fortalece quando você se trata como alguém que importa."},
+    {prompt:"Qual registro fortalece mais autoestima?", options:["hoje fiz X mesmo com medo, isso mostra Y","sou perfeita","alguém me elogiou","não posso falhar"], answer:0, tip:"Evidência concreta vence frase genérica."},
+    {prompt:"Quando a crítica diz 'você é incapaz', a resposta TCC é:", options:["qual evidência real existe? qual exceção já aconteceu?","ela deve estar certa","vou desistir","preciso provar tudo hoje"], answer:0, tip:"Investigue, não brigue com a mente."},
+    {prompt:"Sinal de evolução em autoestima:", options:["agir com respeito próprio mesmo sem confiança total","nunca sentir vergonha","ser admirada por todos","evitar exposição"], answer:0, tip:"Confiança muitas vezes vem depois da ação."},
+    {prompt:"Uma frase mais adulta diante da autocrítica é:", options:["eu posso melhorar sem me destruir","eu não presto para isso","nunca vou conseguir","preciso acertar tudo hoje"], answer:0, tip:"Firmeza sem crueldade ajuda mais que punição."},
+    {prompt:"O que mais alimenta autoestima prática?", options:["consistência pequena","perfeição imediata","comparação constante","esperar vontade aparecer"], answer:0, tip:"Pequeno repetido muda a relação consigo."},
+    {prompt:"Quando erro, uma resposta saudável é:", options:["o que aprendo e qual é o próximo passo?","isso prova que sou incapaz","vou esconder tudo","não posso tentar de novo"], answer:0, tip:"Erro vira dado, não sentença."},
+    {prompt:"Uma atitude de respeito próprio é:", options:["não se abandonar para agradar","dizer sim para tudo","sumir quando incomoda","aceitar qualquer tratamento"], answer:0, tip:"Respeito próprio aparece em escolhas concretas."}
+  ]},
+  {id:"limites-culpa", category:"Terapia", icon:"🧭", level:"relações", title:"Limites sem culpa obediente", goal:"Dizer não com respeito, sem se abandonar.", questions:[
+    {prompt:"Culpa depois de dizer não pode significar:", options:["que estou saindo de um padrão antigo de agradar","que errei sempre","que devo voltar atrás","que sou egoísta"], answer:0, tip:"Culpa também pode ser abstinência de submissão."},
+    {prompt:"Um limite claro tem:", options:["respeito, especificidade e consequência possível","explicação infinita","agressividade","silêncio punitivo"], answer:0, tip:"Limite bom não precisa virar tribunal."},
+    {prompt:"Frase mais adulta:", options:["eu não consigo assumir isso agora, mas posso ajudar de outro modo","você não entende nada","tudo bem, eu faço mesmo exausta","nunca mais fale comigo"], answer:0, tip:"Clareza com respeito protege a pessoa e o vínculo."},
+    {prompt:"Sinal de evolução em limites:", options:["sustentar desconforto sem se abandonar","não sentir culpa nunca","agradar para evitar conflito","cortar todo mundo"], answer:0, tip:"Limite é maturidade relacional, não dureza."},
+    {prompt:"Dizer não com respeito significa:", options:["cuidar do próprio limite sem atacar o outro","ser egoísta sempre","explicar até a pessoa aprovar","cortar relações automaticamente"], answer:0, tip:"Limite saudável protege a pessoa e o vínculo."},
+    {prompt:"Quando alguém não gosta do seu limite, isso quer dizer:", options:["que houve desconforto, não necessariamente erro","que você deve retirar o limite","que você é cruel","que toda relação acabou"], answer:0, tip:"Desconforto não é prova de erro."},
+    {prompt:"Um pedido saudável começa melhor com:", options:["observação, sentimento, necessidade e pedido claro","acusação e indireta","ameaça","teste para ver se adivinha"], answer:0, tip:"Clareza reduz ruído emocional."},
+    {prompt:"O oposto de limite saudável é:", options:["se abandonar para manter paz aparente","falar com calma","pedir tempo","ser honesta"], answer:0, tip:"Paz aparente pode custar caro por dentro."}
+  ]},
+  {id:"regulacao-corpo", category:"Terapia", icon:"🌬️", level:"regulação", title:"Ansiedade no corpo: voltar para o presente", goal:"Diminuir urgência antes de decidir.", questions:[
+    {prompt:"Quando a ansiedade sobe, o primeiro alvo é:", options:["regular o corpo antes de resolver tudo","decidir imediatamente","buscar certeza total","se culpar"], answer:0, tip:"Corpo ativado costuma interpretar tudo como ameaça."},
+    {prompt:"Uma técnica simples de aterramento é:", options:["notar 5 coisas que vejo, 4 que sinto, 3 que ouço","rolar feed sem parar","repetir o problema mentalmente","mandar mensagem no susto"], answer:0, tip:"Aterramento traz a atenção para o agora."},
+    {prompt:"Respirar melhor em ansiedade significa:", options:["alongar a expiração e reduzir a pressa","prender o ar","hiperventilar","forçar calma imediata"], answer:0, tip:"Expiração longa sinaliza segurança ao corpo."},
+    {prompt:"Uma decisão tomada com ansiedade muito alta pode:", options:["vir mais do medo do que da clareza","ser sempre perfeita","resolver tudo","não ter consequência"], answer:0, tip:"Às vezes a melhor decisão é esperar baixar."},
+    {prompt:"Qual frase ajuda na regulação?", options:["isso é ativação, não emergência obrigatória","preciso resolver agora","se estou ansiosa, é verdade","vou me atacar até passar"], answer:0, tip:"Nomear ativação diminui fusão com o medo."},
+    {prompt:"Antes de uma conversa difícil, vale:", options:["respirar, escrever objetivo e escolher uma frase inicial","entrar brigando","falar tudo sem ordem","testar a pessoa"], answer:0, tip:"Preparar reduz arrependimento."},
+    {prompt:"Sinal de evolução em regulação:", options:["pausar antes de obedecer ao impulso","nunca sentir ansiedade","evitar tudo","controlar todos"], answer:0, tip:"Regulação é pausa treinável."},
+    {prompt:"Quando o corpo está em alerta, uma microação útil é:", options:["água, banho, caminhada curta ou alongamento","mais cafeína","discussão por texto","ruminação"], answer:0, tip:"Corpo também precisa de cuidado concreto."}
+  ]},
+  {id:"portugues-clareza", category:"Português", icon:"🗣️", level:"comunicação", title:"Português: falar com clareza", goal:"Organizar pensamento em fala simples, firme e compreensível.", questions:[
+    {prompt:"Uma fala clara começa melhor quando você:", options:["organiza a ideia principal antes de explicar","fala tudo de uma vez","usa palavras difíceis para impressionar","evita concluir"], answer:0, tip:"Clareza vem de direção."},
+    {prompt:"Um bom parágrafo precisa de:", options:["ideia central, desenvolvimento e fechamento","frases enormes sempre","palavras raras","mistério"], answer:0, tip:"Texto bom conduz o leitor."},
+    {prompt:"Qual frase é mais precisa?", options:["senti ansiedade quando interpretei a demora como rejeição","foi tudo horrível","nada presta","sou assim mesmo"], answer:0, tip:"Precisão reduz drama e aumenta compreensão."},
+    {prompt:"Na comunicação, maturidade aparece quando você:", options:["fala com firmeza e respeito","engole tudo","explode para ser ouvida","foge de toda conversa"], answer:0, tip:"Firmeza e respeito podem caminhar juntos."},
+    {prompt:"Um fechamento bom de fala é:", options:["por isso, meu próximo passo será...","e é isso, sei lá","não sei concluir","esquece"], answer:0, tip:"Fechar dá segurança à mensagem."},
+    {prompt:"Para soar menos insegura, evite excesso de:", options:["desculpas antes de apresentar uma ideia","pausas conscientes","exemplos","clareza"], answer:0, tip:"Desculpa demais pode enfraquecer uma fala legítima."},
+    {prompt:"Um argumento forte combina:", options:["tese, motivo e exemplo","opinião repetida","ataque pessoal","frase bonita sem prova"], answer:0, tip:"Argumento precisa de sustentação."},
+    {prompt:"Nuance é:", options:["perceber diferença fina entre ideias parecidas","complicar por vaidade","falar difícil","evitar opinião"], answer:0, tip:"Nuance amadurece a comunicação."}
+  ]},
+  {id:"ingles-base", category:"English", icon:"🌍", level:"A1-B2", title:"English: confidence practice", goal:"Treinar frases úteis para falar de si, emoções e rotina.", questions:[
+    {prompt:"Choose the best sentence:", options:["I am learning to speak with more confidence.","I learning speak confidence.","I am learn speaking confident.","I speaks with confidence more."], answer:0, tip:"Use: I am learning to..."},
+    {prompt:"Complete: I ___ feeling anxious today.", options:["am","is","are","be"], answer:0, tip:"Use 'I am'."},
+    {prompt:"A good way to express an opinion is:", options:["I believe this is important because...","Important yes.","I opinion this.","Because important."], answer:0, tip:"Opinion + because = clearer communication."},
+    {prompt:"To show contrast, the best word is:", options:["however","because","also","finally"], answer:0, tip:"However shows contrast."},
+    {prompt:"Choose the polite request:", options:["Could you help me, please?","Help me now.","You help.","Why not help?"], answer:0, tip:"Could you...? is polite."},
+    {prompt:"Which sentence talks about yesterday?", options:["Yesterday, I studied and worked.","Yesterday, I study and work.","Yesterday, I studying.","Yesterday, I am work."], answer:0, tip:"Past simple: studied, worked."},
+    {prompt:"A more advanced sentence is:", options:["Therapy helps me understand my thoughts before I react.","Therapy good.","I react thoughts.","Understand yes."], answer:0, tip:"Use subject + verb + object + reason."},
+    {prompt:"Complete: I need a moment ___ breathe.", options:["to","for","at","in"], answer:0, tip:"Need + to + verb."}
+  ]}
+];
+
+const WRITING_PROMPTS = [
+  {title:"Fato, medo e cuidado", text:"Escreva 3 partes: o que aconteceu, que medo apareceu, e qual seria uma resposta adulta e cuidadosa."},
+  {title:"Carta para mim mesma", text:"Escreva como você falaria com uma amiga que sente exatamente o que você está sentindo hoje."},
+  {title:"Limite possível", text:"Escreva uma frase começando com: 'Eu entendo, mas neste momento eu preciso...'"},
+  {title:"Evidências", text:"Escolha um pensamento difícil e escreva: evidências a favor, evidências contra e uma leitura mais equilibrada."},
+  {title:"Autoestima prática", text:"Liste 3 pequenas atitudes que mostrariam respeito por você hoje, mesmo que o dia esteja difícil."},
+  {title:"English mini journal", text:"Write 4 simple sentences: Today I feel... I need... I can... My next small step is..."},
+  {title:"Fala com começo, meio e fim", text:"Escreva um parágrafo curto com: ideia principal, explicação e fechamento."}
+];
+
+function scoreCheckin(c){
+  if(!c)return 0;
+  const mood=Number(c.mood||3), anxiety=Number(c.anxiety||3), attachment=Number(c.attachment||3), esteem=Number(c.esteem||3), insecurity=Number(c.insecurity||3);
+  return clamp(Math.round(((mood+esteem+(6-anxiety)+(6-attachment)+(6-insecurity))/25)*100),0,100);
+}
+function interactionDates(data){return [...data.checkins.map(x=>x.date),...data.sessions.map(x=>x.date),...data.writings.map(x=>x.date),...data.habits.map(x=>x.date)].filter(Boolean)}
+function activeDays(data){return new Set(interactionDates(data)).size}
+function exerciseDays(data){return new Set(data.sessions.map(x=>x.date).filter(Boolean)).size}
+function streakFromDates(dates){const set=new Set(dates);let streak=0;const d=new Date(todayKey()+"T12:00:00");while(set.has(d.toISOString().slice(0,10))){streak++;d.setDate(d.getDate()-1)}return streak}
+function currentStreak(data){return streakFromDates(interactionDates(data))}
+function exerciseStreak(data){return streakFromDates(data.sessions.map(x=>x.date).filter(Boolean))}
+function pulseScore(){const data=loadData();const days=lastNDays(14);const recent=data.checkins.filter(x=>days.includes(x.date));const sessions=data.sessions.filter(x=>days.includes(x.date));const writings=data.writings.filter(x=>days.includes(x.date));const base=recent.length?avg(recent.map(scoreCheckin)):45;const consistency=Math.min(24, recent.length*2 + sessions.length*1.4 + writings.length);return clamp(Math.round(base*.76 + consistency),0,100)}
+function feelingReading(){
+  const c=latestCheckin();
+  if(!c)return {title:"Ainda sem leitura emocional", text:"Faça o check-in de hoje para o app entender melhor seu momento e sugerir uma prática mais alinhada.", pattern:"sem dado", action:"Comece pelo check-in de 2 minutos."};
+  const mood=Number(c.mood||3), anxiety=Number(c.anxiety||3), attachment=Number(c.attachment||3), esteem=Number(c.esteem||3), insecurity=Number(c.insecurity||3);
+  if(anxiety>=4 || attachment>=4)return {title:"Seu corpo parece mais ativado hoje", text:"Pode haver urgência, medo de rejeição ou vontade de resolver tudo rápido. O cuidado principal é pausar antes de reagir e buscar evidências antes de concluir.", pattern:c.pattern, action:"Faça 5 minutos de respiração, escreva o medo e espere antes de agir."};
+  if(esteem<=2 || insecurity>=4)return {title:"Sua autoconfiança parece pedindo cuidado", text:"Talvez a crítica interna esteja alta. Hoje vale fazer uma ação pequena, possível e imperfeita para mostrar para si mesma que você não precisa esperar confiança total.", pattern:c.pattern, action:"Escolha uma microação de 2% e registre como foi."};
+  if(mood>=4 && anxiety<=2)return {title:"Você parece mais regulada hoje", text:"Há mais espaço interno para praticar algo que costuma evitar. Aproveite para fortalecer autonomia, clareza ou um limite pequeno.", pattern:c.pattern, action:"Use esse estado para fazer um exercício de exposição leve."};
+  if(c.voice==="exausta")return {title:"Seu sistema parece cansado", text:"O foco não precisa ser performance. Pode ser reduzir exigência, fazer o básico e cuidar do corpo antes de puxar mais metas.", pattern:c.pattern, action:"Faça uma prática curta e encerre com descanso real."};
+  return {title:"Você parece em um meio-termo emocional", text:"Não parece um dia extremo, mas há sinais para observar. O melhor caminho é consistência pequena: check-in, uma pergunta boa e uma ação concreta.", pattern:c.pattern, action:"Faça um exercício curto e anote um próximo passo."};
+}
+function suggestedExercise(){
+  const c=latestCheckin();
+  if(!c)return EXERCISES.find(x=>x.id==="tcc-pensamento");
+  if(Number(c.attachment)>=4 || c.pattern==="apego")return EXERCISES.find(x=>x.id==="apego-pausa");
+  if(Number(c.esteem)<=2 || c.pattern==="autoestima")return EXERCISES.find(x=>x.id==="autoestima-acao");
+  if(c.pattern==="limites")return EXERCISES.find(x=>x.id==="limites-culpa");
+  if(Number(c.anxiety)>=4)return EXERCISES.find(x=>x.id==="regulacao-corpo");
+  if(c.pattern==="inseguranca")return EXERCISES.find(x=>x.id==="autoestima-acao");
+  return shuffle(EXERCISES.filter(x=>x.category==="Terapia"))[0];
+}
+function prepareQuestion(q){
+  const original=q.options.map((text,index)=>({text,correct:index===q.answer}));
+  const shuffled=shuffle(original);
+  return {...q, options:shuffled.map(x=>x.text), answer:shuffled.findIndex(x=>x.correct)};
+}
+function pickQuestions(item){return shuffle(item.questions).slice(0,Math.min(5,item.questions.length)).map(prepareQuestion)}
+
+function setPanel(name){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===`panel-${name}`));document.querySelectorAll('[data-panel]').forEach(b=>b.classList.toggle('active',b.dataset.panel===name));window.scrollTo({top:0,behavior:'smooth'});renderAll()}
+function renderChoiceMemory(){
+  const c=loadData().checkins.find(x=>x.date===todayKey());
+  if(!c)return;
+  state.selected={...c};$("triggerText").value=c.trigger||"";
+  document.querySelectorAll('[data-choice-group]').forEach(group=>{const val=c[group.dataset.choiceGroup];group.querySelectorAll('.choice').forEach(btn=>btn.classList.toggle('selected',btn.dataset.value==val))});
+}
+function saveCheckin(){
+  const required=["mood","anxiety","attachment","esteem","insecurity","pattern","voice"];
+  for(const k of required){if(!state.selected[k]){toast("Preencha todos os campos do check-in.");return}}
+  const data=loadData();
+  const entry={date:todayKey(),createdAt:new Date().toISOString(),trigger:$("triggerText").value.trim(),...state.selected};
+  data.checkins=data.checkins.filter(x=>x.date!==entry.date);
+  data.checkins.push(entry);saveData(data);toast("Check-in salvo. Pulso atualizado.");renderAll();
+}
+function saveWriting(){
+  const text=$("writingText").value.trim();
+  if(text.length<8){toast("Escreva algumas linhas antes de salvar.");return}
+  const prompt=WRITING_PROMPTS[state.writingPromptIndex%WRITING_PROMPTS.length];
+  const data=loadData();
+  data.writings.push({id:`writing-${Date.now()}`,date:todayKey(),createdAt:new Date().toISOString(),title:prompt.title,text});
+  saveData(data);$("writingText").value="";toast("Escrita salva e dia contabilizado.");renderAll();
+}
+function newWritingPrompt(){state.writingPromptIndex=(state.writingPromptIndex+1)%WRITING_PROMPTS.length;renderWritingPrompt()}
+
+function startPractice(id){
+  const item=EXERCISES.find(x=>x.id===id);if(!item)return;
+  state.runner={item,questions:pickQuestions(item),index:0,score:0,answers:[]};
+  $("runner").classList.remove("hidden");$("runnerCategory").textContent=item.category;$("runnerTitle").textContent=item.title;$("runnerGoal").textContent=item.goal;renderQuestion();
+}
+function renderQuestion(){
+  const r=state.runner;if(!r)return;const q=r.questions[r.index];
+  $("runnerProgressFill").style.width=`${(r.index/r.questions.length)*100}%`;
+  $("runnerProgressText").textContent=`Pergunta ${r.index+1} de ${r.questions.length}`;
+  $("resultArea").classList.add("hidden");
+  $("questionArea").innerHTML=`<p class="question-text">${escapeHTML(q.prompt)}</p><div class="choice-grid">${q.options.map((opt,i)=>`<button class="choice" data-answer="${i}" type="button">${escapeHTML(opt)}</button>`).join("")}</div><p id="runnerFeedback" class="feedback hidden"></p><button id="nextQuestionBtn" class="primary hidden" type="button" style="margin-top:12px">Próxima</button>`;
+}
+function answerQuestion(i){
+  const r=state.runner;if(!r)return;const q=r.questions[r.index];const ok=i===q.answer;if(ok)r.score++;
+  r.answers.push({prompt:q.prompt,chosen:q.options[i],correct:q.options[q.answer],ok});
+  document.querySelectorAll('[data-answer]').forEach(btn=>{btn.disabled=true;if(Number(btn.dataset.answer)===q.answer)btn.classList.add('selected')});
+  const fb=$("runnerFeedback");fb.className=`feedback ${ok?'good':''}`;fb.textContent=(ok?'Boa. ':'Observe com carinho: ')+q.tip;
+  $("nextQuestionBtn").classList.remove("hidden");
+}
+function nextQuestion(){const r=state.runner;if(!r)return;r.index++;if(r.index>=r.questions.length)finishPractice();else renderQuestion()}
+function finalPracticeFeedback(r,grade){
+  const feeling=feelingReading();
+  let performance="";
+  if(grade>=8)performance="Você foi muito bem. Sua clareza nas respostas mostra boa compreensão do tema.";
+  else if(grade>=5)performance="Você está no caminho. Algumas respostas pedem revisão, mas a prática já ajuda a perceber padrões.";
+  else performance="Hoje parece ter sido mais difícil. Isso não é fracasso; é sinal de que esse tema precisa de mais cuidado e repetição.";
+  const misses=r.answers.filter(a=>!a.ok);
+  const review=misses.length?`Revise com calma: ${misses.map(x=>x.prompt).slice(0,2).join(' | ')}`:"Você não teve erros nesta prática. Agora transforme em uma ação pequena.";
+  return {title:feeling.title,text:`${performance} Você acertou ${r.score} de ${r.questions.length}. ${feeling.text}`,next:feeling.action,review};
+}
+function finishPractice(){
+  const r=state.runner;const grade=Math.round((r.score/r.questions.length)*10);const feedback=finalPracticeFeedback(r,grade);const data=loadData();
+  data.sessions.push({id:`session-${Date.now()}`,date:todayKey(),completedAt:new Date().toISOString(),category:r.item.category,title:r.item.title,level:r.item.level,grade,score:r.score,total:r.questions.length,answers:r.answers,feeling:feedback.title});
+  saveData(data);
+  $("runnerProgressFill").style.width="100%";$("questionArea").innerHTML="";$("resultArea").classList.remove("hidden");
+  $("resultArea").innerHTML=`<div class="result-box"><p class="eyebrow small">Avaliação final</p><div class="index-main"><div class="pulse-number" style="--angle:${grade*36}deg">${grade}</div><div><h3>${escapeHTML(feedback.title)}</h3><p>${escapeHTML(feedback.text)}</p></div></div><div class="insight"><h3>Leitura para levar como reflexão</h3><p>${escapeHTML(feedback.next)}</p><p>${escapeHTML(feedback.review)}</p><p class="support">Isso é apoio de autoconsciência. Não substitui acompanhamento profissional nem fecha diagnóstico.</p></div><button class="primary" data-close-runner type="button" style="margin-top:12px">Fechar e atualizar evolução</button></div>`;
+  renderAll();
+}
+function closeRunner(){$("runner").classList.add("hidden");state.runner=null}
+
+function trendText(){
+  const data=loadData();const days=lastNDays(14);const ch=data.checkins.filter(x=>days.includes(x.date)).sort((a,b)=>a.date.localeCompare(b.date));
+  if(ch.length<3)return {label:"em construção",text:"Ainda há poucos registros. Com 5 a 7 dias, o app começa a mostrar tendências mais úteis."};
+  const half=Math.ceil(ch.length/2);const first=avg(ch.slice(0,half).map(scoreCheckin));const last=avg(ch.slice(half).map(scoreCheckin));const diff=last-first;
+  if(diff>8)return {label:"melhora percebida",text:"Os registros recentes mostram melhora no pulso emocional: mais autoestima em ação e/ou menos ansiedade, apego ativado e insegurança."};
+  if(diff<-8)return {label:"atenção carinhosa",text:"Os registros recentes sugerem maior carga emocional. Reduza a meta para o mínimo viável e leve o resumo para sua terapia."};
+  return {label:"estável",text:"O processo parece estável. A próxima etapa é repetir hábitos pequenos para transformar insight em comportamento."};
+}
+function renderDashboard(){
+  const data=loadData();const reading=feelingReading();
+  const todayInteractions=interactionDates(data).filter(d=>d===todayKey()).length;
+  $("todayStatus").textContent=data.checkins.some(x=>x.date===todayKey())?"salvo hoje":"não salvo";
+  $("dashboardCard").innerHTML=`<div class="section-head"><div><p class="eyebrow small">Resumo vivo</p><h2>Seu painel de hoje</h2></div><span class="progress-pill">${dateLabel(todayKey())}</span></div><div class="dashboard-grid"><div class="metric"><span>${pulseScore()}</span><p>Índice Pulso</p></div><div class="metric"><span>${activeDays(data)}</span><p>dias ativos</p></div><div class="metric"><span>${currentStreak(data)}</span><p>dias seguidos</p></div><div class="metric"><span>${data.sessions.length}</span><p>exercícios feitos</p></div></div><div class="insight"><h3>${escapeHTML(reading.title)}</h3><p>${escapeHTML(reading.text)}</p><p class="support">Hoje: ${todayInteractions} interação${todayInteractions===1?'':'es'} registrada${todayInteractions===1?'':'s'}.</p></div>`;
+}
+function renderSuggested(){
+  const s=suggestedExercise();
+  $("suggestedExercise").innerHTML=`<article class="exercise-card"><div class="exercise-top"><div class="icon">${s.icon}</div><div style="flex:1"><h3>${escapeHTML(s.title)}</h3><p>${escapeHTML(s.goal)}</p><div class="meta-row"><span class="tag">${escapeHTML(s.category)}</span><span class="tag green">perguntas variadas</span><span class="tag blue">resposta embaralhada</span></div></div></div></article>`;
+}
+function renderFilters(){const cats=["Todos",...new Set(EXERCISES.map(x=>x.category))];$("filters").innerHTML=cats.map(c=>`<button class="${state.filter===c?'primary':'ghost'}" data-filter="${escapeHTML(c)}" type="button">${escapeHTML(c)}</button>`).join("")}
+function renderExercises(){
+  const data=loadData();$("exerciseDone").textContent=`${data.sessions.length} feitos`;
+  const list=EXERCISES.filter(x=>state.filter==="Todos"||x.category===state.filter);
+  $("exerciseList").innerHTML=list.map(x=>`<article class="exercise-card"><div class="exercise-top"><div class="icon">${x.icon}</div><div style="flex:1"><h3>${escapeHTML(x.title)}</h3><p>${escapeHTML(x.goal)}</p><div class="meta-row"><span class="tag">${escapeHTML(x.category)}</span><span class="tag green">${x.questions.length} perguntas no banco</span><span class="tag blue">5 por sessão</span></div><button class="secondary" style="width:100%" data-start-id="${escapeHTML(x.id)}" type="button">Iniciar exercício</button></div></div></article>`).join("") || `<p class="empty">Nenhum exercício nesta categoria.</p>`;
+}
+function renderWritingPrompt(){const p=WRITING_PROMPTS[state.writingPromptIndex%WRITING_PROMPTS.length];$("writingPrompt").innerHTML=`<p class="eyebrow small">Tema do dia</p><h3>${escapeHTML(p.title)}</h3><p>${escapeHTML(p.text)}</p>`}
+function renderEvolution(){
+  const data=loadData();const tr=trendText();const reading=feelingReading();
+  $("therapyEffect").innerHTML=`<div class="index-main"><div class="pulse-number" style="--angle:${pulseScore()*3.6}deg">${pulseScore()}</div><div><h3>${escapeHTML(tr.label)}</h3><p>${escapeHTML(tr.text)}</p><p><strong>Leitura de agora:</strong> ${escapeHTML(reading.title)}. ${escapeHTML(reading.action)}</p><p class="support">Este índice combina check-ins, exercícios e escritas. É material de autoconsciência, não laudo clínico.</p></div></div><div class="dashboard-grid" style="margin-top:14px"><div class="metric"><span>${activeDays(data)}</span><p>dias com interação</p></div><div class="metric"><span>${exerciseDays(data)}</span><p>dias com exercício</p></div><div class="metric"><span>${currentStreak(data)}</span><p>sequência geral</p></div><div class="metric"><span>${exerciseStreak(data)}</span><p>sequência exercícios</p></div></div>`;
+  renderDomains();renderCalendar();
+}
+function renderDomains(){
+  const days=lastNDays(14);const ch=loadData().checkins.filter(x=>days.includes(x.date));
+  const axes=[
+    {name:"Apego ansioso",val:ch.length?100-avg(ch.map(x=>Number(x.attachment||3)))*20:0,desc:"Quanto menor a urgência de confirmação, maior a segurança interna."},
+    {name:"Autoestima em ação",val:ch.length?avg(ch.map(x=>Number(x.esteem||3)))*20:0,desc:"Valor pessoal observado por ações concretas."},
+    {name:"Regulação emocional",val:ch.length?100-avg(ch.map(x=>Number(x.anxiety||3)))*20:0,desc:"Capacidade de pausar antes de obedecer ao impulso."},
+    {name:"Segurança interna",val:ch.length?100-avg(ch.map(x=>Number(x.insecurity||3)))*20:0,desc:"Tolerância à dúvida, erro e exposição."}
+  ];
+  $("domainEvolution").innerHTML=axes.map(a=>`<article class="axis-card"><div class="axis-top"><h3>${escapeHTML(a.name)}</h3><span class="axis-value">${Math.round(clamp(a.val,0,100))}%</span></div><p class="small-copy">${escapeHTML(a.desc)}</p><div class="track"><div class="fill" style="width:${clamp(a.val,0,100)}%"></div></div></article>`).join("");
+}
+function renderCalendar(){
+  const data=loadData();const days=lastNDays(30);const active=new Set(interactionDates(data));const exercised=new Set(data.sessions.map(x=>x.date));
+  $("calendarGrid").innerHTML=days.map(d=>`<div class="day-dot ${active.has(d)?'active':''} ${exercised.has(d)?'exercise':''}"><strong>${dateLabel(d)}</strong><br><small>${active.has(d)?'feito':'-'}</small></div>`).join("");
+}
+function renderHistory(){
+  const data=loadData();
+  const all=[...data.checkins.map(x=>({...x,type:"check-in",title:"Check-in emocional"})),...data.sessions.map(x=>({...x,type:"exercício"})),...data.writings.map(x=>({...x,type:"escrita"})),...data.habits.map(x=>({...x,type:"hábito"}))].sort((a,b)=>(b.completedAt||b.createdAt||b.date).localeCompare(a.completedAt||a.createdAt||a.date)).slice(0,30);
+  $("historyList").innerHTML=all.length?all.map(item=>`<article class="history-item"><div class="history-top"><span>${escapeHTML(item.title||item.type)}</span><span>${dateLabel(item.date)}</span></div><p>${item.type==='check-in'?`Pulso ${scoreCheckin(item)}/100 · padrão: ${escapeHTML(item.pattern||'')} · voz: ${escapeHTML(item.voice||'')}`:item.type==='exercício'?`${escapeHTML(item.category||'')} · nota ${item.grade}/10 · ${escapeHTML(item.feeling||'')}`:item.type==='escrita'?`${escapeHTML((item.text||'').slice(0,150))}`:`${escapeHTML(item.title||'Hábito concluído')}`}</p></article>`).join(""):`<p class="empty">Ainda não há histórico.</p>`;
+}
+function exportSummary(){
+  const data=loadData();const tr=trendText();const reading=feelingReading();const c=latestCheckin();
+  const lastSessions=data.sessions.slice(-5).map(s=>`- ${s.date}: ${s.title} · nota ${s.grade}/10 · ${s.feeling||''}`).join("\n");
+  const text=`PULSOAPP | Resumo para reflexão/terapia\n\nÍndice Pulso: ${pulseScore()}/100\nTendência: ${tr.label}\nLeitura: ${tr.text}\n\nComo estou agora: ${reading.title}\nAção sugerida: ${reading.action}\n\nDias reais de interação: ${activeDays(data)}\nDias com exercício: ${exerciseDays(data)}\nSequência geral: ${currentStreak(data)} dia(s)\nSequência de exercícios: ${exerciseStreak(data)} dia(s)\nExercícios concluídos: ${data.sessions.length}\nCheck-ins feitos: ${data.checkins.length}\nEscritas salvas: ${data.writings.length}\n\nÚltimo check-in:\nPadrão: ${c?.pattern||'sem dado'}\nVoz interna: ${c?.voice||'sem dado'}\nGatilho: ${c?.trigger||'sem dado'}\n\nÚltimos exercícios:\n${lastSessions||'sem exercícios ainda'}\n\nObservação: dados de autorrelato para conversar em terapia, não diagnóstico.`;
+  navigator.clipboard?.writeText(text).then(()=>toast("Resumo copiado."),()=>alert(text));
+}
+function clearData(){if(confirm("Apagar todos os dados salvos neste aparelho?")){localStorage.removeItem(STORAGE_KEY);state.selected={};toast("Dados apagados.");renderAll();renderChoiceMemory()}}
+function renderAll(){renderDashboard();renderSuggested();renderFilters();renderExercises();renderWritingPrompt();renderEvolution();renderHistory()}
+function bindEvents(){
+  document.body.addEventListener('click',e=>{
+    const panel=e.target.closest('[data-panel]');if(panel){setPanel(panel.dataset.panel);return}
+    const group=e.target.closest('[data-choice-group] .choice');if(group){const parent=group.closest('[data-choice-group]');parent.querySelectorAll('.choice').forEach(b=>b.classList.remove('selected'));group.classList.add('selected');state.selected[parent.dataset.choiceGroup]=group.dataset.value;return}
+    const ans=e.target.closest('[data-answer]');if(ans){answerQuestion(Number(ans.dataset.answer));return}
+    const start=e.target.closest('[data-start-id]');if(start){startPractice(start.dataset.startId);return}
+    const filter=e.target.closest('[data-filter]');if(filter){state.filter=filter.dataset.filter;renderExercises();renderFilters();return}
+    if(e.target.closest('[data-close-runner]')){closeRunner();return}
+  });
+  $("saveCheckin").addEventListener('click',saveCheckin);
+  $("startSuggested").addEventListener('click',()=>startPractice(suggestedExercise().id));
+  $("closeRunner").addEventListener('click',closeRunner);
+  $("newPrompt").addEventListener('click',newWritingPrompt);
+  $("saveWriting").addEventListener('click',saveWriting);
+  $("exportSummary").addEventListener('click',exportSummary);
+  $("clearData").addEventListener('click',clearData);
+  document.addEventListener('click',e=>{if(e.target&&e.target.id==='nextQuestionBtn')nextQuestion()});
+}
+let deferredPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$("installBtn").classList.remove("hidden")});$("installBtn").addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();deferredPrompt=null;$("installBtn").classList.add("hidden")});
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
+
+bindEvents();renderAll();renderChoiceMemory();
 </script>
 </body>
 </html>

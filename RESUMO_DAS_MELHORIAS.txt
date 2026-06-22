@@ -1,0 +1,37 @@
+PULSOAPP — RESUMO DAS MELHORIAS
+
+1. Exercícios variados
+- Banco maior de perguntas por tema.
+- 5 perguntas sorteadas por sessão.
+- Perguntas aparecem em ordem diferente.
+- Alternativas aparecem embaralhadas.
+
+2. Avaliação final
+- Nota de 0 a 10.
+- Quantidade de acertos.
+- Leitura emocional do momento.
+- Próximo passo sugerido.
+- Perguntas para revisar quando houver erro.
+
+3. Experiência com cara de diário terapêutico
+- Check-in emocional diário.
+- Leitura baseada em ansiedade, apego, autoestima e insegurança.
+- Escrita terapêutica guiada.
+- Resumo copiável para levar à terapia.
+
+4. Acompanhamento real
+- Dias ativos.
+- Dias com exercício.
+- Sequência geral.
+- Sequência de exercícios.
+- Calendário de 30 dias.
+- Histórico recente.
+
+5. Categorias de exercícios
+- Terapia / TCC.
+- Apego ansioso.
+- Autoestima.
+- Limites.
+- Regulação emocional.
+- Português.
+- English.
